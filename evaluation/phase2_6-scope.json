@@ -1,0 +1,702 @@
+{
+  "all_profiles": {
+    "users": 275,
+    "debit_events": 23609,
+    "profile_categories": {
+      "protect": {
+        "debt_repayment": 56,
+        "education": 60,
+        "family_support": 25,
+        "groceries": 166,
+        "healthcare": 44,
+        "housing": 43,
+        "insurance": 46,
+        "rent": 232,
+        "transport": 109,
+        "utilities": 105
+      },
+      "reduce": {
+        "dining": 153,
+        "entertainment": 44,
+        "gym": 14,
+        "shopping": 72,
+        "streaming": 66
+      },
+      "stop": {
+        "cloud_storage": 109,
+        "delivery_membership": 41,
+        "gym": 12,
+        "music_subscription": 58,
+        "streaming": 84
+      },
+      "priorities": {
+        "debt_repayment": 56,
+        "education": 94,
+        "emergency_savings": 171,
+        "family_support": 49,
+        "healthcare": 44,
+        "housing": 29,
+        "retirement_investment": 61,
+        "travel": 46
+      }
+    },
+    "overlaps": {
+      "protect_reduce": {
+        "profiles": 0,
+        "categories": {}
+      },
+      "protect_stop": {
+        "profiles": 0,
+        "categories": {}
+      },
+      "reduce_stop": {
+        "profiles": 45,
+        "categories": {
+          "gym": 4,
+          "streaming": 41
+        }
+      }
+    },
+    "categories": {
+      "cloud_storage": {
+        "debit_events": 833,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 286,
+          "stoppable": 547
+        },
+        "statuses": {
+          "settled": 833
+        }
+      },
+      "debt_repayment": {
+        "debit_events": 553,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 553
+        },
+        "statuses": {
+          "settled": 553
+        }
+      },
+      "delivery_membership": {
+        "debit_events": 351,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 146,
+          "stoppable": 205
+        },
+        "statuses": {
+          "settled": 351
+        }
+      },
+      "dining": {
+        "debit_events": 3479,
+        "variable_estimator": true,
+        "flexibility": {
+          "fixed": 1554,
+          "reducible": 1925
+        },
+        "statuses": {
+          "settled": 3479
+        }
+      },
+      "education": {
+        "debit_events": 306,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 306
+        },
+        "statuses": {
+          "scheduled": 5,
+          "settled": 301
+        }
+      },
+      "entertainment": {
+        "debit_events": 521,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 301,
+          "reducible": 220
+        },
+        "statuses": {
+          "settled": 521
+        }
+      },
+      "family_support": {
+        "debit_events": 125,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 125
+        },
+        "statuses": {
+          "settled": 125
+        }
+      },
+      "groceries": {
+        "debit_events": 5812,
+        "variable_estimator": true,
+        "flexibility": {
+          "fixed": 5812
+        },
+        "statuses": {
+          "pending": 1,
+          "settled": 5811
+        }
+      },
+      "gym": {
+        "debit_events": 170,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 60,
+          "reducible": 50,
+          "reducible_or_stoppable": 20,
+          "stoppable": 40
+        },
+        "statuses": {
+          "settled": 170
+        }
+      },
+      "healthcare": {
+        "debit_events": 356,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 356
+        },
+        "statuses": {
+          "pending": 14,
+          "scheduled": 1,
+          "settled": 341
+        }
+      },
+      "housing": {
+        "debit_events": 246,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 246
+        },
+        "statuses": {
+          "settled": 246
+        }
+      },
+      "insurance": {
+        "debit_events": 456,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 456
+        },
+        "statuses": {
+          "scheduled": 5,
+          "settled": 451
+        }
+      },
+      "investment": {
+        "debit_events": 29,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 29
+        },
+        "statuses": {
+          "settled": 29
+        }
+      },
+      "music_subscription": {
+        "debit_events": 451,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 161,
+          "stoppable": 290
+        },
+        "statuses": {
+          "settled": 451
+        }
+      },
+      "rent": {
+        "debit_events": 1355,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 1355
+        },
+        "statuses": {
+          "scheduled": 1,
+          "settled": 1354
+        }
+      },
+      "shopping": {
+        "debit_events": 798,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 438,
+          "reducible": 360
+        },
+        "statuses": {
+          "cancelled": 22,
+          "pending": 33,
+          "settled": 743
+        }
+      },
+      "streaming": {
+        "debit_events": 683,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 136,
+          "reducible": 127,
+          "reducible_or_stoppable": 205,
+          "stoppable": 215
+        },
+        "statuses": {
+          "settled": 683
+        }
+      },
+      "transport": {
+        "debit_events": 5626,
+        "variable_estimator": true,
+        "flexibility": {
+          "fixed": 5626
+        },
+        "statuses": {
+          "pending": 14,
+          "settled": 5612
+        }
+      },
+      "utilities": {
+        "debit_events": 1452,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 1452
+        },
+        "statuses": {
+          "failed": 21,
+          "pending": 1,
+          "scheduled": 11,
+          "settled": 1419
+        }
+      },
+      "work_expense": {
+        "debit_events": 7,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 7
+        },
+        "statuses": {
+          "settled": 7
+        }
+      }
+    },
+    "minimum_allowed_amount_by_currency": {
+      "EUR": {
+        "rows": 5200,
+        "missing": 4614,
+        "zero": 0,
+        "positive": 586,
+        "min": "9.5",
+        "median": "25.25",
+        "max": "51.6",
+        "median_fraction_of_event": "0.5"
+      },
+      "IDR": {
+        "rows": 4655,
+        "missing": 4121,
+        "zero": 0,
+        "positive": 534,
+        "min": "58900",
+        "median": "501600",
+        "max": "810350",
+        "median_fraction_of_event": "0.5"
+      },
+      "INR": {
+        "rows": 6104,
+        "missing": 5364,
+        "zero": 0,
+        "positive": 740,
+        "min": "530",
+        "median": "2105",
+        "max": "4796",
+        "median_fraction_of_event": "0.4969798531913913535326344688"
+      },
+      "USD": {
+        "rows": 3474,
+        "missing": 3033,
+        "zero": 0,
+        "positive": 441,
+        "min": "8",
+        "median": "32",
+        "max": "64.5",
+        "median_fraction_of_event": "0.5"
+      },
+      "ZAR": {
+        "rows": 4176,
+        "missing": 3570,
+        "zero": 0,
+        "positive": 606,
+        "min": "161.04",
+        "median": "545.6",
+        "max": "1197.9",
+        "median_fraction_of_event": "0.4843366975905156375039338540"
+      }
+    },
+    "minimum_by_flexibility": {
+      "fixed": {
+        "missing": 19405
+      },
+      "reducible": {
+        "positive": 2682
+      },
+      "reducible_or_stoppable": {
+        "positive": 225
+      },
+      "stoppable": {
+        "missing": 1297
+      }
+    }
+  },
+  "evaluation_users": {
+    "users": 250,
+    "debit_events": 21479,
+    "profile_categories": {
+      "protect": {
+        "debt_repayment": 51,
+        "education": 53,
+        "family_support": 21,
+        "groceries": 149,
+        "healthcare": 39,
+        "housing": 39,
+        "insurance": 43,
+        "rent": 211,
+        "transport": 101,
+        "utilities": 96
+      },
+      "reduce": {
+        "dining": 141,
+        "entertainment": 39,
+        "gym": 12,
+        "shopping": 65,
+        "streaming": 62
+      },
+      "stop": {
+        "cloud_storage": 99,
+        "delivery_membership": 36,
+        "gym": 11,
+        "music_subscription": 51,
+        "streaming": 78
+      },
+      "priorities": {
+        "debt_repayment": 51,
+        "education": 83,
+        "emergency_savings": 158,
+        "family_support": 42,
+        "healthcare": 39,
+        "housing": 28,
+        "retirement_investment": 56,
+        "travel": 43
+      }
+    },
+    "overlaps": {
+      "protect_reduce": {
+        "profiles": 0,
+        "categories": {}
+      },
+      "protect_stop": {
+        "profiles": 0,
+        "categories": {}
+      },
+      "reduce_stop": {
+        "profiles": 41,
+        "categories": {
+          "gym": 4,
+          "streaming": 37
+        }
+      }
+    },
+    "categories": {
+      "cloud_storage": {
+        "debit_events": 757,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 260,
+          "stoppable": 497
+        },
+        "statuses": {
+          "settled": 757
+        }
+      },
+      "debt_repayment": {
+        "debit_events": 502,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 502
+        },
+        "statuses": {
+          "settled": 502
+        }
+      },
+      "delivery_membership": {
+        "debit_events": 311,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 131,
+          "stoppable": 180
+        },
+        "statuses": {
+          "settled": 311
+        }
+      },
+      "dining": {
+        "debit_events": 3201,
+        "variable_estimator": true,
+        "flexibility": {
+          "fixed": 1425,
+          "reducible": 1776
+        },
+        "statuses": {
+          "settled": 3201
+        }
+      },
+      "education": {
+        "debit_events": 270,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 270
+        },
+        "statuses": {
+          "scheduled": 4,
+          "settled": 266
+        }
+      },
+      "entertainment": {
+        "debit_events": 471,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 276,
+          "reducible": 195
+        },
+        "statuses": {
+          "settled": 471
+        }
+      },
+      "family_support": {
+        "debit_events": 105,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 105
+        },
+        "statuses": {
+          "settled": 105
+        }
+      },
+      "groceries": {
+        "debit_events": 5264,
+        "variable_estimator": true,
+        "flexibility": {
+          "fixed": 5264
+        },
+        "statuses": {
+          "pending": 1,
+          "settled": 5263
+        }
+      },
+      "gym": {
+        "debit_events": 150,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 55,
+          "reducible": 40,
+          "reducible_or_stoppable": 20,
+          "stoppable": 35
+        },
+        "statuses": {
+          "settled": 150
+        }
+      },
+      "healthcare": {
+        "debit_events": 314,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 314
+        },
+        "statuses": {
+          "pending": 12,
+          "scheduled": 1,
+          "settled": 301
+        }
+      },
+      "housing": {
+        "debit_events": 223,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 223
+        },
+        "statuses": {
+          "settled": 223
+        }
+      },
+      "insurance": {
+        "debit_events": 419,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 419
+        },
+        "statuses": {
+          "scheduled": 4,
+          "settled": 415
+        }
+      },
+      "investment": {
+        "debit_events": 25,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 25
+        },
+        "statuses": {
+          "settled": 25
+        }
+      },
+      "music_subscription": {
+        "debit_events": 406,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 151,
+          "stoppable": 255
+        },
+        "statuses": {
+          "settled": 406
+        }
+      },
+      "rent": {
+        "debit_events": 1232,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 1232
+        },
+        "statuses": {
+          "settled": 1232
+        }
+      },
+      "shopping": {
+        "debit_events": 729,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 404,
+          "reducible": 325
+        },
+        "statuses": {
+          "cancelled": 20,
+          "pending": 30,
+          "settled": 679
+        }
+      },
+      "streaming": {
+        "debit_events": 637,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 120,
+          "reducible": 127,
+          "reducible_or_stoppable": 185,
+          "stoppable": 205
+        },
+        "statuses": {
+          "settled": 637
+        }
+      },
+      "transport": {
+        "debit_events": 5137,
+        "variable_estimator": true,
+        "flexibility": {
+          "fixed": 5137
+        },
+        "statuses": {
+          "pending": 12,
+          "settled": 5125
+        }
+      },
+      "utilities": {
+        "debit_events": 1320,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 1320
+        },
+        "statuses": {
+          "failed": 19,
+          "scheduled": 11,
+          "settled": 1290
+        }
+      },
+      "work_expense": {
+        "debit_events": 6,
+        "variable_estimator": false,
+        "flexibility": {
+          "fixed": 6
+        },
+        "statuses": {
+          "settled": 6
+        }
+      }
+    },
+    "minimum_allowed_amount_by_currency": {
+      "EUR": {
+        "rows": 4494,
+        "missing": 3962,
+        "zero": 0,
+        "positive": 532,
+        "min": "9.5",
+        "median": "25",
+        "max": "51.6",
+        "median_fraction_of_event": "0.5"
+      },
+      "IDR": {
+        "rows": 4228,
+        "missing": 3728,
+        "zero": 0,
+        "positive": 500,
+        "min": "148200",
+        "median": "501600",
+        "max": "810350",
+        "median_fraction_of_event": "0.5"
+      },
+      "INR": {
+        "rows": 5485,
+        "missing": 4840,
+        "zero": 0,
+        "positive": 645,
+        "min": "530",
+        "median": "2105",
+        "max": "4796",
+        "median_fraction_of_event": "0.4977347987729313532291814802"
+      },
+      "USD": {
+        "rows": 3410,
+        "missing": 2988,
+        "zero": 0,
+        "positive": 422,
+        "min": "8",
+        "median": "32",
+        "max": "64.5",
+        "median_fraction_of_event": "0.5"
+      },
+      "ZAR": {
+        "rows": 3862,
+        "missing": 3293,
+        "zero": 0,
+        "positive": 569,
+        "min": "193.6",
+        "median": "545.6",
+        "max": "1197.9",
+        "median_fraction_of_event": "0.4895181734701085463578497932"
+      }
+    },
+    "minimum_by_flexibility": {
+      "fixed": {
+        "missing": 17639
+      },
+      "reducible": {
+        "positive": 2463
+      },
+      "reducible_or_stoppable": {
+        "positive": 205
+      },
+      "stoppable": {
+        "missing": 1172
+      }
+    }
+  }
+}
