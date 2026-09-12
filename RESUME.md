@@ -1,16 +1,16 @@
 # Runtime checkpoint
 
 ## Current phase
-Phase 2.6 complete — Forecast Semantics Audit. Checkpoint D is the commit containing this final state.
+Phase 3A — Evidence Contract & Reconciliation Foundation. Starting point verified.
 
 ## Current branch
-feat/forecast-semantics
+feat/evidence-contract
 
 ## Last known good commit
-Checkpoint C `32f1b05`; B `8c5dfc7`; A `3130e43`; restart `a586391`; accepted Phase 2.5 `226adac`. Final good checkpoint D: resolve with `git log -1 --format=%H -- evaluation/phase2_6-review.md` (cannot embed a commit's own hash inside itself).
+`b04f7ad` completed Phase 2.6. 84 tests verified passing; initial tree clean.
 
 ## Last completed checkpoint
-Checkpoint D: semantics, tests, reproducible results and adversarial review complete. 84 tests pass; 250 requests run without exceptions (50 complete, 200 provisional). 0/250 changes in amount/date/safety. Six-case metrics unchanged: 1/6 amounts, 4/6 dates, normalized MAE 18.8738%. No production changes or unresolved P0/P1/P2 finding.
+Phase 3A restart state. A schema, B validation/reconciliation, C fixture integration/inventory, D adversarial review remain.
 
 ## Last passing test command
 `.\.venv\Scripts\python.exe -m unittest discover -s tests -v`
@@ -36,7 +36,7 @@ Checkpoint D: semantics, tests, reproducible results and adversarial review comp
 - Statistical expense-model residuals remain intentional; do not fit them.
 
 ## Files currently being changed
-None after final commit. Phase 2.6 files are committed; source dataset, production core, virtualenv and ignored transcript preserved.
+RESUME.md only; deterministic core frozen after Phase 2.6.
 
 ## Reproduction commands
 ```powershell
@@ -50,7 +50,7 @@ git diff --exit-code HEAD -- dataset
 ```
 
 ## Exact next action
-READY FOR PHASE 3 — Evidence Normalization Layer. Wait for the user to authorize Phase 3; then implement validated, scoped evidence normalization. Do not restart baseline calibration. Reproduce Phase 2.6 with the two scope_audit.py / semantics.py commands above; Git history containing 226adac is required. Intentional residuals: 05 expense budget, 09 endpoint, 13 future expense shortfall, 21 small estimator difference, 25 pre-payroll budget. Details: evaluation/phase2_6-results.md.
+Commit restart state; implement Checkpoint A typed evidence schema, provenance and tests, then commit before reconciliation. New request is Phase 3A only: no model extractor. Keep candidate, validation and normalized amendment distinct. Scope and certainty must govern interpretation; confidence never authorizes money.
 
 ## Do-not-do list
 Do not optimize plans, integrate LLM/VLM, generate output.csv, change dataset, chase request_21, introduce overrides, or begin another estimator search. Stage explicit paths only. Keep log.txt ignored and append-only. Preserve existing commits.
