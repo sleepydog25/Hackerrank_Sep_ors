@@ -1,6 +1,6 @@
 # HackerRank Orchestrate
 
-## Implemented financial core (Phase 2.5)
+## Implemented financial core (Phase 2.6)
 
 The deterministic baseline engine and tests are now available. See
 [financial core documentation](docs/financial-core.md) for policies, limitations,
@@ -27,6 +27,20 @@ The controlled calibration report is [Phase 2.5 experiments](evaluation/phase2_5
 Its command regenerates the policy matrix, raw per-case comparisons, and before/after
 ledgers. The audit verifies dataset integrity and smoke-tests all evaluation requests.
 See [validation commands](evaluation/phase2_5-validation.md) for the executed checks.
+
+Phase 2.6 completed the [specification audit](evaluation/phase2_6-semantics-audit.md)
+and [dataset-wide comparison](evaluation/phase2_6-results.md), retaining production
+behavior with 84 passing tests. Start with [RESUME.md](RESUME.md) to continue work.
+The next phase is evidence normalization; payment-plan optimization remains deferred.
+Reproduce the latest audit with:
+
+```powershell
+.\.venv\Scripts\python.exe code/evaluation/scope_audit.py
+.\.venv\Scripts\python.exe code/evaluation/semantics.py
+```
+
+The comparison command requires Git history containing the accepted Phase 2.5
+commit `226adac`. The standalone financial core does not require Git.
 
 Starter repository for the **HackerRank Orchestrate** 24-hour hackathon (September 2026).
 
