@@ -1,22 +1,22 @@
 # Runtime checkpoint
 
 ## Current phase
-Phase 3A — Evidence Contract & Reconciliation Foundation. Checkpoint A complete.
+Phase 3A — Evidence Contract & Reconciliation Foundation. Checkpoint B complete.
 
 ## Current branch
 feat/evidence-contract
 
 ## Last known good commit
-`d77b78f` restart; frozen baseline `b04f7ad`.
+`be3cb00` A; restart `d77b78f`; frozen baseline `b04f7ad`.
 
 ## Last completed checkpoint
-A: typed evidence schema, provenance, certainty/scope/amount labels and strict JSON transport complete. 92 tests pass; dataset unchanged. No reconciliation yet.
+B: deterministic validation, typed normalized state, exact-target replacement, conflict handling and provenance complete. 112 tests pass; all 84 frozen baseline tests unchanged. Integration has not been added yet.
 
 ## Last passing test command
 `.\.venv\Scripts\python.exe -m unittest discover -s tests -v`
 
 ## Last passing test count
-92. Windows Python 3.12.14, standard-library unittest; no PATH changes needed.
+112. Windows Python 3.12.14, standard-library unittest; no PATH changes needed.
 
 ## Accepted decisions
 - Calendar-day mean variable spending, provisionally; confirmed payroll bridge.
@@ -36,7 +36,7 @@ A: typed evidence schema, provenance, certainty/scope/amount labels and strict J
 - Statistical expense-model residuals remain intentional; do not fit them.
 
 ## Files currently being changed
-RESUME.md; evidence.py; docs/evidence-contract.md; tests/test_evidence.py.
+RESUME.md; evidence.py; evidence_validation.py; evidence_state.py; evidence_reconciliation.py; docs/evidence-contract.md; tests/test_evidence_reconciliation.py.
 
 ## Reproduction commands
 ```powershell
@@ -50,7 +50,7 @@ git diff --exit-code HEAD -- dataset
 ```
 
 ## Exact next action
-Commit A, then implement B deterministic validation and reconciliation. Validate canonical source identity, semantic meaning, certainty, scope and dates; conflict may remain unresolved. Only normalized amendments may feed the frozen financial engine. C fixture integration/inventory and D review remain.
+Commit B. Implement C fixture-driven forecast adapter: retain original recurrence evidence, apply normalized event/series amendments without duplicate occurrences, carry explicit credit confirmation, preserve provenance/completeness. Then dataset inventory and frozen-baseline smoke. No real evidence extraction. D adversarial review follows.
 
 ## Do-not-do list
 Do not optimize plans, integrate LLM/VLM, generate output.csv, change dataset, chase request_21, introduce overrides, or begin another estimator search. Stage explicit paths only. Keep log.txt ignored and append-only. Preserve existing commits.
