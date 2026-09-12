@@ -1,1 +1,11 @@
 log.txt
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+cache/
+.env
+evaluation/phase2-ledgers/
+evaluation/phase2-console.txt
