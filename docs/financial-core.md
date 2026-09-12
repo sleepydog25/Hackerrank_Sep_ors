@@ -105,9 +105,8 @@ These are likely causes, not quantified causal decompositions. No repeated thres
 
 ## Before Phase 3
 
-1. Establish supported recurrence for first-pay and variable freelance income, and improve expense grouping without merging separate obligations.
-2. Revisit the daily P75 expense estimator and same-day/horizon assumptions using explicit ledger differences, not arbitrary per-case constants.
-3. Add validated fact overrides with scope/effective date for messages and images; require evidence completeness before plan selection. Resolve pending-variable overlap and multi-job termination scope.
-4. Only then add payment plans, preferences, deadline validation, ranking, and independent plan replay. Keep raw sample expectations in evaluation only.
+Phase 2.6 has completed the final baseline semantics investigation. See [the semantics audit](../evaluation/phase2_6-semantics-audit.md), [results](../evaluation/phase2_6-results.md), and [adversarial review](../evaluation/phase2_6-review.md). No production rule change was justified; 84 tests pass and all 250 requests run. Keep the documented endpoint convention, unchanged baseline expense scope and continuing payment safety. Do not start Phase 2.7 to chase residuals.
+
+The next milestone is **Phase 3 — Evidence Normalization Layer**: scoped, effective-dated, provenance-preserving facts with validation and caching. Normalized facts may later clarify cancellations, amendments, missing amounts and employment sources. Unsupported freelance income remains excluded. Evidence incompleteness must remain visible. Payment-plan optimization is a later milestone, after normalized evidence is safely incorporated; it is not Phase 3 authorization.
 
 No external model calls were made by the engine. The final-run usage report remains untouched because this phase did not produce a final full-dataset prediction run.
