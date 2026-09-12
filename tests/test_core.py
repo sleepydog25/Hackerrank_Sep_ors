@@ -40,8 +40,9 @@ def history(category='rent', direction='debit', description='Monthly rent', amou
                  for n in range(1, 4))
 
 
-def run(events=(), p=None, q=None, rates=()):
-    return forecast(p or profile(), q or request(), tuple(events), RateBook(tuple(rates)))
+def run(events=(), p=None, q=None, rates=(), policy=None):
+    kwargs={'policy':policy} if policy is not None else {}
+    return forecast(p or profile(), q or request(), tuple(events), RateBook(tuple(rates)),**kwargs)
 
 
 class CoreTests(unittest.TestCase):
@@ -143,7 +144,7 @@ class CoreTests(unittest.TestCase):
         rows = [event(str(n), str(amount), START-timedelta(days=28-7*n), 'settled',
                       category='groceries', description=f'Shop {n}')
                 for n, amount in enumerate([70, 70, 70, 7000])]
-        result = run(rows, p=profile('5000'))
+        result = run(rows, p=profile('5000'),policy=ForecastPolicy())
         self.assertEqual(len(result.series), 1)
         self.assertEqual(result.series[0].amount, D('10'))
         self.assertEqual(sum(f.amount for f in result.cash_flows), D('910'))

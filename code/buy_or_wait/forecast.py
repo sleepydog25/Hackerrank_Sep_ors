@@ -7,7 +7,8 @@ from .models import (FinancialProfile, FinancialEvent, FinanceRequest, CashFlow,
                      ForecastResult, LedgerRow, Message, ImageReference)
 from .policy import DEFAULT_POLICY, ForecastPolicy
 from .reconcile import reconcile, salary_event
-from .recurrence import infer_series, project_dates, normalize
+from .recurrence import infer_series, project_dates, normalize, series_description
+from .income import supplement
 
 
 def forecast(profile: FinancialProfile, request: FinanceRequest,
@@ -31,6 +32,9 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
     flows = []
     notes = list(reconciled.notes)
     series = infer_series(reconciled.history, start, policy, notes)
+    added,income_evidence=supplement(reconciled.history,reconciled.obligations,series,start,policy)
+    series=series+tuple(added)
+    notes.extend(f'{e.source}: {e.state}: {e.reason}' for e in income_evidence)
 
     def add(day, amount, direction, source, reason, inferred, currency, rate_date):
         try:
@@ -54,10 +58,16 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
     for s in series:
         for day in project_dates(s, start, end):
             matches = []
-            for e in reconciled.obligations:
+            # Request-exclusive inference must not reintroduce an occurrence
+            # already paid today and included in the opening snapshot.
+            represented=reconciled.obligations+tuple(e for e in reconciled.history if e.settlement_date==start)
+            # A category accrual is not a discrete linked transaction. Its
+            # overlap is handled once, by the budget-substitution policy below.
+            if s.description=='*':represented=()
+            for e in represented:
                 if e.direction != s.direction or e.currency != s.currency or e.category != s.category:
                     continue
-                same_series = (normalize(e.description) == s.description
+                same_series = (series_description(e.description,policy.robust_grouping) == s.description
                                or e.linked_event_id in s.event_ids
                                or (salary_event(e) and s.direction == 'credit'
                                    and sum(x.direction == 'credit' and x.currency == s.currency for x in series) == 1))
@@ -69,7 +79,51 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
                 continue
             add(day, s.amount, s.direction, s.series_id, s.reason, True, s.currency, day)
 
-    flows.sort(key=lambda f: (f.date, 0 if f.direction == 'debit' else 1, f.source))
+    if policy.pending_overlap:
+        flows=resolve_overlap(flows,events,series,start,notes,policy)
+    ledger,low,baseline_safe,safe,earliest=simulate(profile,request,flows,policy)
+    return ForecastResult(request.request_id, start, end, profile.current_available_balance,
+                          profile.minimum_balance_to_keep, tuple(sorted(flows,key=lambda f:(f.date,0 if f.direction=='debit' else 1,f.source))), series, tuple(ledger),
+                          low, baseline_safe, safe, earliest, tuple(dict.fromkeys(issues)), tuple(notes))
+
+
+def resolve_overlap(flows,events,series,start,notes,policy):
+    """Only strong identity and near-term timing justify replacing a budget slice."""
+    from dataclasses import replace
+    output=list(flows)
+    by_id={e.event_id:e for e in events}
+    for hold in sorted(events,key=lambda e:e.event_id):
+        if hold.status!='pending' or hold.direction!='debit' or hold.amount is None:continue
+        # A settled replacement can have removed this hold during reconciliation.
+        # Such a hold must not also remove an inferred category budget.
+        if not any(f.source==hold.event_id and f.reason.startswith('pending') for f in output):continue
+        for s in series:
+            if s.description!='*' or s.currency!=hold.currency or s.category!=hold.category:continue
+            rows=[by_id[id] for id in s.event_ids]
+            # Category alone, generic "fuel authorization", or similar amount
+            # does not establish identity. Require exact prior description/link.
+            identity=hold.linked_event_id in s.event_ids or normalize(hold.description) in {normalize(e.description) for e in rows}
+            gaps=sorted((b.settlement_date-a.settlement_date).days for a,b in zip(rows,rows[1:]) if b.settlement_date>a.settlement_date)
+            if not gaps:continue
+            gap=gaps[len(gaps)//2]
+            typical=sorted(e.amount for e in rows)[len(rows)//2]
+            if not identity or not 0 <= (hold.settlement_date-start).days <= gap or not typical*policy.overlap_amount_min_ratio <= hold.amount <= typical*policy.overlap_amount_max_ratio:continue
+            remaining=hold.amount
+            for n,f in enumerate(output):
+                if f.source!=s.series_id or not start <= f.date < start+timedelta(days=gap):continue
+                reduction=min(remaining,f.original_amount)
+                output[n]=replace(f,original_amount=f.original_amount-reduction,amount=f.amount-reduction*f.rate,
+                                  reason=f.reason+f'; occurrence overlap {hold.event_id}')
+                remaining-=reduction
+                if remaining==0:break
+            notes.append(f'{hold.event_id}: matched variable occurrence; budget offset {hold.amount-remaining} {hold.currency}; reservation retained')
+    return output
+
+
+def simulate(profile,request,flows,policy=DEFAULT_POLICY):
+    """Pure ledger/capacity kernel also used by evaluation ablations."""
+    start=request.request_date
+    flows=sorted(flows,key=lambda f:(f.date,0 if f.direction=='debit' else 1,f.source))
     ledger = [LedgerRow(start, 'opening', Decimal(0), Decimal(0), profile.current_available_balance,
                         profile.minimum_balance_to_keep, 'opening snapshot; historical settled cash not replayed')]
     by_day = defaultdict(list)
@@ -80,7 +134,11 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
     closes = []
     for offset in range(policy.horizon_days + 1):
         day = start + timedelta(days=offset)
+        candidate_index=None
         for f in by_day[day]:
+            if policy.candidate_timing=='before_credit' and f.direction=='credit' and candidate_index is None:
+                ledger.append(LedgerRow(day,'candidate',Decimal(0),Decimal(0),balance,profile.minimum_balance_to_keep,'candidate before salary'))
+                candidate_index=len(ledger)-1
             inflow = f.amount if f.direction == 'credit' else Decimal(0)
             outflow = f.amount if f.direction == 'debit' else Decimal(0)
             balance += inflow - outflow
@@ -89,7 +147,7 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
                                     profile.minimum_balance_to_keep, provenance))
         ledger.append(LedgerRow(day, 'close', Decimal(0), Decimal(0), balance,
                                 profile.minimum_balance_to_keep, 'candidate payment occurs after this checkpoint'))
-        closes.append(len(ledger)-1)
+        closes.append(candidate_index if candidate_index is not None else len(ledger)-1)
     low = min(row.balance for row in ledger)
     baseline_safe = low >= profile.minimum_balance_to_keep
     # Payment on a date occurs after daily debits/credits. Prefix must already be
@@ -107,9 +165,7 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
             if suffix_min[checkpoint] - profile.minimum_balance_to_keep >= request.requested_amount:
                 earliest = ledger[checkpoint].date
                 break
-    return ForecastResult(request.request_id, start, end, profile.current_available_balance,
-                          profile.minimum_balance_to_keep, tuple(flows), series, tuple(ledger),
-                          low, baseline_safe, safe, earliest, tuple(dict.fromkeys(issues)), tuple(notes))
+    return ledger,low,baseline_safe,safe,earliest
 
 
 def forecast_request(dataset, request: FinanceRequest) -> ForecastResult:

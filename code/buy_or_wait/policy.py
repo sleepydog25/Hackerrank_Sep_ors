@@ -16,9 +16,21 @@ class ForecastPolicy:
     variable_quantile: Decimal = Decimal('0.75')
     variable_categories: frozenset[str] = frozenset({'groceries', 'transport', 'dining'})
     cent: Decimal = Decimal('0.01')
+    variable_estimator: str = 'p75_daily'
+    income_policy: str = 'legacy'  # legacy, confirmed_bridge, two_payrolls, freelance
+    candidate_timing: str = 'after_credit'
+    pending_overlap: bool = False
+    robust_grouping: bool = False
+    experimental_income_recent_days: int = 45
+    experimental_payroll_gap_min: int = 28
+    experimental_payroll_gap_max: int = 31
+    overlap_amount_min_ratio: Decimal = Decimal('0.5')
+    overlap_amount_max_ratio: Decimal = Decimal('2')
+    trim_fraction: Decimal = Decimal('0.10')
 
 
-DEFAULT_POLICY = ForecastPolicy()
+DEFAULT_POLICY = ForecastPolicy(variable_estimator='mean_daily', income_policy='confirmed_bridge',
+                                pending_overlap=True, robust_grouping=True)
 # These are semantic exclusions, not case IDs or exact dataset descriptions.
 NONRECURRING_WORDS = ('bonus', 'commission', 'arrears', 'refund', 'reimbursement',
                      'prize', 'lottery', 'windfall', 'internal transfer', 'own account', 'valuation',

@@ -8,10 +8,19 @@ from statistics import median
 from .models import FinancialEvent, RecurringSeries
 from .policy import DEFAULT_POLICY, NONRECURRING_WORDS, ENDED_INCOME_WORDS, ForecastPolicy
 from .reconcile import salary_event
+from .spending import estimate
 
 
 def normalize(text: str) -> str:
     return ' '.join(re.findall(r'[a-z0-9]+', text.casefold()))
+
+
+def series_description(text: str, robust: bool) -> str:
+    if robust:
+        # Strip billing period tokens, never account numbers or vendor identities.
+        text=re.sub(r'\b\d{4}-\d{2}(?:-\d{2})?\b','',text)
+        text=re.sub(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}\b','',text,flags=re.I)
+    return normalize(text)
 
 
 def quantile(values, fraction: Decimal) -> Decimal:
@@ -35,7 +44,7 @@ def infer_series(history: tuple[FinancialEvent, ...], start: date,
     groups = defaultdict(list)
     for e in history:
         if (e.amount is None or e.status != 'settled' or e.direction == 'non_cash'
-                or not start - timedelta(days=policy.history_days) <= e.settlement_date <= start):
+                or not start - timedelta(days=policy.history_days) <= e.settlement_date < start):
             continue
         if any(w in e.description.casefold() for w in NONRECURRING_WORDS):
             continue
@@ -45,7 +54,7 @@ def infer_series(history: tuple[FinancialEvent, ...], start: date,
         if e.direction == 'debit' and e.event_type not in {'expense', 'subscription', 'debt_payment'}:
             continue
         variable = e.direction == 'debit' and e.category in policy.variable_categories
-        key = (e.category, '*' if variable else normalize(e.description), e.direction, e.currency)
+        key = (e.category, '*' if variable else series_description(e.description,policy.robust_grouping), e.direction, e.currency)
         groups[key].append(e)
     series = []
     for key, rows in sorted(groups.items()):
@@ -73,9 +82,8 @@ def infer_series(history: tuple[FinancialEvent, ...], start: date,
                 continue
             # Robust upper-typical transaction amount spread over observed cadence.
             # Daily reservation avoids assuming groceries can wait until payday.
-            amount = (quantile(amounts, policy.variable_quantile) / Decimal(interval)).quantize(policy.cent, rounding=ROUND_CEILING)
-            cadence, interval = 'daily', 1
-            reason = f'variable daily reserve: P75 daily purchase / median gap; {len(dates)} observed days'
+            amount,cadence,interval,reason=estimate(daily,start,policy)
+            if cadence=='daily':interval=1
         else:
             if monthly:
                 cadence, interval = 'monthly', None

@@ -1,6 +1,6 @@
 # HackerRank Orchestrate
 
-## Implemented financial core (Phase 2)
+## Implemented financial core (Phase 2.5)
 
 The deterministic baseline engine and tests are now available. See
 [financial core documentation](docs/financial-core.md) for policies, limitations,
@@ -15,11 +15,18 @@ From repository root on Windows (no PATH changes or activation required):
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe code/main.py --requests sample_requests.csv --request request_21
 .\.venv\Scripts\python.exe code/evaluation/main.py --save
+.\.venv\Scripts\python.exe code/evaluation/experiments.py
+.\.venv\Scripts\python.exe code/evaluation/audit.py
 ```
 
 Python 3.12+; no third-party dependencies. Use any request ID in the selected input
 file. Add `--full` for all daily checkpoints. The evaluation command writes a
 baseline comparison report and diagnostic ledgers, not submission predictions.
+
+The controlled calibration report is [Phase 2.5 experiments](evaluation/phase2_5-experiments.md).
+Its command regenerates the policy matrix, raw per-case comparisons, and before/after
+ledgers. The audit verifies dataset integrity and smoke-tests all evaluation requests.
+See [validation commands](evaluation/phase2_5-validation.md) for the executed checks.
 
 Starter repository for the **HackerRank Orchestrate** 24-hour hackathon (September 2026).
 

@@ -1,0 +1,49 @@
+{
+  "dataset_unchanged": true,
+  "final_output_exists": false,
+  "complete_samples": [
+    {
+      "request": "request_01",
+      "user_messages": 0,
+      "user_images": 0,
+      "overlap_offsets": []
+    },
+    {
+      "request": "request_05",
+      "user_messages": 0,
+      "user_images": 0,
+      "overlap_offsets": []
+    },
+    {
+      "request": "request_09",
+      "user_messages": 0,
+      "user_images": 0,
+      "overlap_offsets": []
+    },
+    {
+      "request": "request_13",
+      "user_messages": 0,
+      "user_images": 0,
+      "overlap_offsets": []
+    },
+    {
+      "request": "request_21",
+      "user_messages": 0,
+      "user_images": 0,
+      "overlap_offsets": []
+    },
+    {
+      "request": "request_25",
+      "user_messages": 0,
+      "user_images": 0,
+      "overlap_offsets": []
+    }
+  ],
+  "pending_variable_descriptions": {
+    "Pending fuel authorization": 14,
+    "Large grocery tax invoice": 1
+  },
+  "fixed_history_groups_merged_by_period_normalization": 0,
+  "sample_ledger_checkpoints_verified": 9274,
+  "evaluation_requests_smoke_tested": 250
+}

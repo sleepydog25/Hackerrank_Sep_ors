@@ -63,18 +63,20 @@ The loader reads both request input sets for foreign-key validation, but creates
 - Explicit future entries replace matching inferred occurrences for the same monthly cycle or interval date. Exact normalized description or a lifecycle link identifies the series. A generic confirmed salary replaces the month's inferred payroll only when there is one same-currency income series; ambiguous multiple jobs are not silently merged.
 - Routine variable-category budgeting is independent of unmatched one-off pending charges. This can be conservative; the pending event itself is only reserved once. A later evidence layer should distinguish an authorization for the ordinary category purchase from an additional obligation.
 
-### Recurrence v1
+### Recurrence (Phase 2.5)
 
 All constants are in `ForecastPolicy`. They were chosen for interpretability, not fitted to sample outputs.
 
-- Use up to 180 days of settled history and at least three distinct observation dates.
-- Group stable obligations by category, normalized description, direction, and currency. Group groceries, transport, and dining across merchant descriptions. Dining remains in the unchanged baseline; omission would imply an unauthorized spending cut.
+- Use up to 180 days of settled history strictly before the request date and at least three distinct observation dates for ordinary inference.
+- Group stable obligations by category, normalized description, direction, and currency. Strip explicit billing-period date labels while retaining merchant names/account numbers. Group groceries, transport, and dining across merchant descriptions. Dining remains in the unchanged baseline; omission would imply an unauthorized spending cut.
 - Recognize consecutive calendar-month observations with day variation up to three days, including month-end schedules. Recognize regular day intervals up to 35 days with up to two days' deviation.
 - For recurring debit amounts, use the greater of latest amount and the nearest-rank 75th percentile. Keep flexible recurring spending in the baseline; do not apply optional reductions.
 - For regular salary, require salary/payroll semantics and stable cadence. Use the minimum of the last three amounts and reject a recent max/min ratio above 1.25 or a last observation more than 1.5 expected cycles old. Explicit final-payroll history stops old salary inference for that currency; the lack of employer identifiers means this is conservative for multi-job households.
 - Bonus, commission, arrears, reimbursement, windfall, internal transfer, and investment valuation/sale proceeds do not establish recurring salary. A rent paid by transfer is still an expense, not an internal transfer.
-- Variable-category reserve = nearest-rank P75 daily purchase total divided by median observed spacing, rounded up to cents and charged daily. This captures an upper-typical amount while avoiding a single bulk outlier setting every future purchase size. Reserving daily avoids assuming essential spending can wait until payday. This is an interpretable heuristic, not a guaranteed bound on spending; validation against samples shows it needs revision.
-- Rejected recurring income and stable-series groups are noted in the trace. Irregular freelance receipts are not assumed to recur, and a single first salary plus one scheduled paycheck does not invent subsequent payrolls.
+- Variable-category reserve = observed total spend divided by covered calendar days from the first purchase to the request, rounded up to cents and charged daily. High purchases remain included; unavailable history before coverage is not treated as zero spend. This is an interpretable expected-spend estimator with conservative timing, not an upper bound. Six alternatives remain available through policy configuration for controlled evaluation.
+- One historical salary plus an explicitly confirmed next salary can support monthly continuation when cadence/amount evidence agrees, allowing an explicitly prorated first payment. Continuation begins after the confirmed installment. Incompatible named payroll sources are rejected. Irregular freelance receipts do not establish future income. Trace entries expose the evidence-strength state.
+- `ForecastPolicy()` retains the legacy configuration for evaluation; `DEFAULT_POLICY` selects mean spending, confirmed payroll bridge, period-label grouping, and conservative pending overlap. Numeric policy thresholds are centralized in `policy.py`; `spending.py` and `income.py` implement the respective evidence rules.
+- A pending variable charge substitutes a near-term category budget slice only when it is actively reserved, has strong historical identity, and matches timing/amount bounds. Generic fuel authorizations remain additional. Fixed occurrence suppression never acts on daily category accruals. See the detailed overlap audit in the calibration report.
 
 ### FX and incomplete evidence
 
@@ -88,7 +90,7 @@ All constants are in `ForecastPolicy`. They were chosen for interpretability, no
 
 `code/evaluation/main.py --save` regenerates `evaluation/phase2-summary.md` and full per-request ledgers in `evaluation/phase2-ledgers/` (ignored because they are reproducible). The report includes all 25 rows, baseline amounts/dates, expected values, evidence gaps, and low-water summaries. The diagnostic writer never creates `output.csv`.
 
-Six samples have no unresolved message/image facts: 01, 05, 09, 13, 21, 25. Nineteen are provisional. On the six complete structured baselines, the current policy matches **0/6 safe amounts**, **3/6 earliest dates**, and **0/6 pairs** exactly. The matching dates include two absent dates. This is not a claim of prediction quality: it is a measured starting point for the next phase.
+Six samples have no unresolved message/image facts: 01, 05, 09, 13, 21, 25. Nineteen are provisional. The historical Phase 2 baseline matched **0/6 safe amounts**, **3/6 earliest dates**, and **0/6 pairs** exactly. The table below preserves that historical diagnosis. Phase 2.5 improves to **1/6 amounts and 4/6 dates**, with normalized mean absolute error falling from **35.6572% to 18.8738%**. The authoritative current comparison and numerical causal decomposition are in [Phase 2.5 experiments](../evaluation/phase2_5-experiments.md); reproduce them with `.venv\Scripts\python.exe code/evaluation/experiments.py`.
 
 | Sample | Likely cause, supported by the ledger |
 |---|---|

@@ -1,0 +1,4993 @@
+{
+  "policies": {
+    "phase2": {
+      "metrics": {
+        "exact": 0,
+        "mae": "241126.2833333333333333333333",
+        "median_ae": "484.775",
+        "normalized_mae": "0.3565720866223286612501893373",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "4642.55",
+          "expected": "25256",
+          "error": "-20613.45",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "22642.55",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "510.84",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "mean_daily": {
+      "metrics": {
+        "exact": 0,
+        "mae": "214286.3233333333333333333333",
+        "median_ae": "451.805",
+        "normalized_mae": "0.3092443626027505784646918433",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "6994.90",
+          "expected": "25256",
+          "error": "-18261.10",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "24994.90",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7363.72",
+              "rate_evidence": "mean_daily; observed=80.91114285714285714285714286 per calendar day; modeled=80.91114285714285714285714286; exposure=175 days; n=13",
+              "amount": "80.92",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10495.94",
+              "rate_evidence": "mean_daily; observed=115.3309039548022598870056497 per calendar day; modeled=115.3309039548022598870056497; exposure=177 days; n=26",
+              "amount": "115.34",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5904.99",
+              "rate_evidence": "mean_daily; observed=64.88130681818181818181818182 per calendar day; modeled=64.88130681818181818181818182; exposure=176 days; n=26",
+              "amount": "64.89",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7791.50",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9647.82",
+              "rate_evidence": "mean_daily; observed=106.0130508474576271186440678 per calendar day; modeled=106.0130508474576271186440678; exposure=177 days; n=26",
+              "amount": "106.02",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2785.51",
+              "rate_evidence": "mean_daily; observed=30.60494318181818181818181818 per calendar day; modeled=30.60494318181818181818181818; exposure=176 days; n=13",
+              "amount": "30.61",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "569.08",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "141.96",
+              "rate_evidence": "mean_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.558171428571428571428571429; exposure=175 days; n=9",
+              "amount": "1.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "413.14",
+              "rate_evidence": "mean_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.532259887005649717514124294; exposure=177 days; n=18",
+              "amount": "4.54",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "112.84",
+              "rate_evidence": "mean_daily; observed=1.233125 per calendar day; modeled=1.233125; exposure=176 days; n=9",
+              "amount": "1.24",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "380.75",
+          "expected": "433.4",
+          "error": "-52.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1680.75",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "434.98",
+              "rate_evidence": "mean_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.774628571428571428571428571; exposure=175 days; n=13",
+              "amount": "4.78",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1332.24",
+              "rate_evidence": "mean_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.63937853107344632768361582; exposure=177 days; n=26",
+              "amount": "14.64",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "603.33",
+              "rate_evidence": "mean_daily; observed=6.621875 per calendar day; modeled=6.621875; exposure=176 days; n=26",
+              "amount": "6.63",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1555.93",
+          "expected": "1543.35",
+          "error": "12.58",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3355.93",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "391.30",
+              "rate_evidence": "mean_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.290971428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.30",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "774.41",
+              "rate_evidence": "mean_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.504576271186440677966101695; exposure=177 days; n=18",
+              "amount": "8.51",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "192.01",
+              "rate_evidence": "mean_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.106988636363636363636363636; exposure=176 days; n=9",
+              "amount": "2.11",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "158512.00",
+          "expected": "1425000",
+          "error": "-1266488.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23537612.00",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13450806.46",
+              "rate_evidence": "mean_daily; observed=147811.0552 per calendar day; modeled=147811.0552; exposure=175 days; n=25",
+              "amount": "147811.06",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11097448.18",
+              "rate_evidence": "mean_daily; observed=121949.9791525423728813559322 per calendar day; modeled=121949.9791525423728813559322; exposure=177 days; n=18",
+              "amount": "121949.98",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "11028787.77",
+              "rate_evidence": "mean_daily; observed=121195.461875 per calendar day; modeled=121195.461875; exposure=176 days; n=36",
+              "amount": "121195.47",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "trimmed_daily": {
+      "metrics": {
+        "exact": 0,
+        "mae": "216043.79",
+        "median_ae": "451.805",
+        "normalized_mae": "0.3089647872241475882800449802",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "7045.86",
+          "expected": "25256",
+          "error": "-18210.14",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "25045.86",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7375.55",
+              "rate_evidence": "trimmed_daily; observed=80.91114285714285714285714286 per calendar day; modeled=81.04740259740259740259740257; exposure=175 days; n=13",
+              "amount": "81.05",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10445.89",
+              "rate_evidence": "trimmed_daily; observed=115.3309039548022598870056497 per calendar day; modeled=114.7873292244478685156651258; exposure=177 days; n=26",
+              "amount": "114.79",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5892.25",
+              "rate_evidence": "trimmed_daily; observed=64.88130681818181818181818182 per calendar day; modeled=64.74678202479338842975206614; exposure=176 days; n=26",
+              "amount": "64.75",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7696.86",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9734.27",
+              "rate_evidence": "trimmed_daily; observed=106.0130508474576271186440678 per calendar day; modeled=106.9647611710323574730354392; exposure=177 days; n=26",
+              "amount": "106.97",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2793.70",
+              "rate_evidence": "trimmed_daily; observed=30.60494318181818181818181818 per calendar day; modeled=30.69530991735537190082644628; exposure=176 days; n=13",
+              "amount": "30.70",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "568.17",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "141.96",
+              "rate_evidence": "trimmed_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.558171428571428571428571429; exposure=175 days; n=9",
+              "amount": "1.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "414.05",
+              "rate_evidence": "trimmed_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.547605932203389830508474576; exposure=177 days; n=18",
+              "amount": "4.55",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "112.84",
+              "rate_evidence": "trimmed_daily; observed=1.233125 per calendar day; modeled=1.2331250000000000000000000; exposure=176 days; n=9",
+              "amount": "1.24",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "380.75",
+          "expected": "433.4",
+          "error": "-52.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1680.75",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "434.98",
+              "rate_evidence": "trimmed_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.775828571428571428571428571; exposure=175 days; n=13",
+              "amount": "4.78",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1334.06",
+              "rate_evidence": "trimmed_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.65681561376476630713918850; exposure=177 days; n=26",
+              "amount": "14.66",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "601.51",
+              "rate_evidence": "trimmed_daily; observed=6.621875 per calendar day; modeled=6.600118801652892561983471074; exposure=176 days; n=26",
+              "amount": "6.61",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1556.19",
+          "expected": "1543.35",
+          "error": "12.84",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3356.19",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "391.30",
+              "rate_evidence": "trimmed_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.290971428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.30",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "772.59",
+              "rate_evidence": "trimmed_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.486122881355932203389830508; exposure=177 days; n=18",
+              "amount": "8.49",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "192.01",
+              "rate_evidence": "trimmed_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.106988636363636363636363636; exposure=176 days; n=9",
+              "amount": "2.11",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "147916.50",
+          "expected": "1425000",
+          "error": "-1277083.50",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23527016.50",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13530198.50",
+              "rate_evidence": "trimmed_daily; observed=147811.0552 per calendar day; modeled=148683.49136054421768707483; exposure=175 days; n=25",
+              "amount": "148683.50",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11110732.36",
+              "rate_evidence": "trimmed_daily; observed=121949.9791525423728813559322 per calendar day; modeled=122095.9593432203389830508475; exposure=177 days; n=18",
+              "amount": "122095.96",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "11032530.60",
+              "rate_evidence": "trimmed_daily; observed=121195.461875 per calendar day; modeled=121236.5933863636363636363636; exposure=176 days; n=36",
+              "amount": "121236.60",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "median_daily": {
+      "metrics": {
+        "exact": 0,
+        "mae": "213206.4233333333333333333333",
+        "median_ae": "451.805",
+        "normalized_mae": "0.2924260982453073529127319128",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "8360.81",
+          "expected": "25256",
+          "error": "-16895.19",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "26360.81",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "6956.95",
+              "rate_evidence": "median_daily; observed=80.91114285714285714285714286 per calendar day; modeled=76.44071428571428571428571429; exposure=175 days; n=13",
+              "amount": "76.45",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "9893.52",
+              "rate_evidence": "median_daily; observed=115.3309039548022598870056497 per calendar day; modeled=108.7164285714285714285714286; exposure=177 days; n=26",
+              "amount": "108.72",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5548.27",
+              "rate_evidence": "median_daily; observed=64.88130681818181818181818182 per calendar day; modeled=60.96285714285714285714285714; exposure=176 days; n=26",
+              "amount": "60.97",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7908.89",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9640.54",
+              "rate_evidence": "median_daily; observed=106.0130508474576271186440678 per calendar day; modeled=105.94; exposure=177 days; n=26",
+              "amount": "105.94",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2675.40",
+              "rate_evidence": "median_daily; observed=30.60494318181818181818181818 per calendar day; modeled=29.39071428571428571428571429; exposure=176 days; n=13",
+              "amount": "29.40",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "571.81",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "130.13",
+              "rate_evidence": "median_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.427142857142857142857142857; exposure=175 days; n=9",
+              "amount": "1.43",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "427.70",
+              "rate_evidence": "median_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.6965; exposure=177 days; n=18",
+              "amount": "4.70",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "107.38",
+              "rate_evidence": "median_daily; observed=1.233125 per calendar day; modeled=1.170952380952380952380952381; exposure=176 days; n=9",
+              "amount": "1.18",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "436.05",
+          "expected": "433.4",
+          "error": "2.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1736.05",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "407.68",
+              "rate_evidence": "median_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.479285714285714285714285714; exposure=175 days; n=13",
+              "amount": "4.48",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1301.30",
+              "rate_evidence": "median_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.29285714285714285714285714; exposure=177 days; n=26",
+              "amount": "14.30",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "589.68",
+              "rate_evidence": "median_daily; observed=6.621875 per calendar day; modeled=6.475714285714285714285714286; exposure=176 days; n=26",
+              "amount": "6.48",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1565.94",
+          "expected": "1543.35",
+          "error": "22.59",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3365.94",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "373.10",
+              "rate_evidence": "median_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.093333333333333333333333333; exposure=175 days; n=9",
+              "amount": "4.10",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "745.29",
+              "rate_evidence": "median_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.185; exposure=177 days; n=18",
+              "amount": "8.19",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "169.26",
+              "rate_evidence": "median_daily; observed=2.106988636363636363636363636 per calendar day; modeled=1.855238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "163585.50",
+          "expected": "1425000",
+          "error": "-1261414.50",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23542685.50",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13666248.96",
+              "rate_evidence": "median_daily; observed=147811.0552 per calendar day; modeled=150178.5528571428571428571429; exposure=175 days; n=25",
+              "amount": "150178.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11208678.39",
+              "rate_evidence": "median_daily; observed=121949.9791525423728813559322 per calendar day; modeled=123172.2845; exposure=177 days; n=18",
+              "amount": "123172.29",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "10655946.21",
+              "rate_evidence": "median_daily; observed=121195.461875 per calendar day; modeled=117098.308; exposure=176 days; n=36",
+              "amount": "117098.31",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "weekly_p75": {
+      "metrics": {
+        "exact": 0,
+        "mae": "241957.9566666666666666666667",
+        "median_ae": "585.20",
+        "normalized_mae": "0.4382832644726676695559174972",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 1
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "0.00",
+          "expected": "25256",
+          "error": "-25256.00",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "16834.93",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "13912.99",
+              "rate_evidence": "weekly_p75; observed=80.91114285714285714285714286 per calendar day; modeled=152.8814285714285714285714286; exposure=175 days; n=13",
+              "amount": "152.89",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11472.37",
+              "rate_evidence": "weekly_p75; observed=115.3309039548022598870056497 per calendar day; modeled=126.0685714285714285714285714; exposure=177 days; n=26",
+              "amount": "126.07",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "weekly_p75; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "4675.66",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "weekly_p75; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5054.14",
+              "rate_evidence": "weekly_p75; observed=30.60494318181818181818181818 per calendar day; modeled=55.53428571428571428571428571; exposure=176 days; n=13",
+              "amount": "55.54",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "-75.20",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "369.46",
+              "rate_evidence": "weekly_p75; observed=1.558171428571428571428571429 per calendar day; modeled=4.058571428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.06",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "636.09",
+              "rate_evidence": "weekly_p75; observed=4.532259887005649717514124294 per calendar day; modeled=6.99; exposure=177 days; n=18",
+              "amount": "6.99",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "306.67",
+              "rate_evidence": "weekly_p75; observed=1.233125 per calendar day; modeled=3.367142857142857142857142857; exposure=176 days; n=9",
+              "amount": "3.37",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "0.00",
+          "expected": "433.4",
+          "error": "-433.40",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1226.45",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "815.36",
+              "rate_evidence": "weekly_p75; observed=4.774628571428571428571428571 per calendar day; modeled=8.958571428571428571428571429; exposure=175 days; n=13",
+              "amount": "8.96",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "weekly_p75; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "weekly_p75; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1388.62",
+          "expected": "1543.35",
+          "error": "-154.73",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3188.62",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "901.81",
+              "rate_evidence": "weekly_p75; observed=4.290971428571428571428571429 per calendar day; modeled=9.901428571428571428571428571; exposure=175 days; n=9",
+              "amount": "9.91",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1177.54",
+              "rate_evidence": "weekly_p75; observed=8.504576271186440677966101695 per calendar day; modeled=12.93857142857142857142857143; exposure=177 days; n=18",
+              "amount": "12.94",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "449.54",
+              "rate_evidence": "weekly_p75; observed=2.106988636363636363636363636 per calendar day; modeled=4.931428571428571428571428571; exposure=176 days; n=9",
+              "amount": "4.94",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "22342741.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "weekly_p75; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "17358837.86",
+              "rate_evidence": "weekly_p75; observed=121949.9791525423728813559322 per calendar day; modeled=190756.4571428571428571428571; exposure=177 days; n=18",
+              "amount": "190756.46",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "14362053.16",
+              "rate_evidence": "weekly_p75; observed=121195.461875 per calendar day; modeled=157824.76; exposure=176 days; n=36",
+              "amount": "157824.76",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "cadence": {
+      "metrics": {
+        "exact": 0,
+        "mae": "241028.645",
+        "median_ae": "484.15",
+        "normalized_mae": "0.3547721752434054291243130355",
+        "date_exact": 2,
+        "date_distances": [
+          12
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "5250.09",
+          "expected": "25256",
+          "error": "-20005.91",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "23250.09",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7282.68",
+              "rate_evidence": "cadence; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "1213.78",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "11687.52",
+              "rate_evidence": "cadence; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "899.04",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "cadence; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "503.02",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6330.67",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "cadence; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "807.31",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "3399.13",
+              "rate_evidence": "cadence; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "485.59",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "537.51",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "131.44",
+              "rate_evidence": "cadence; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "32.86",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "459.27",
+              "rate_evidence": "cadence; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "51.03",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "108.80",
+              "rate_evidence": "cadence; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "27.20",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "202.10",
+          "expected": "433.4",
+          "error": "-231.30",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1502.10",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "422.70",
+              "rate_evidence": "cadence; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "70.45",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "1488.89",
+              "rate_evidence": "cadence; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "114.53",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "655.98",
+              "rate_evidence": "cadence; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "50.46",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1574.4",
+          "expected": "1543.35",
+          "error": "31.05",
+          "earliest": "2026-04-03",
+          "expected_date": "2026-04-15",
+          "low": "3454.27",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "390.68",
+              "rate_evidence": "cadence; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "97.67",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "860.58",
+              "rate_evidence": "cadence; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "95.62",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "191.36",
+              "rate_evidence": "cadence; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "47.84",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "22466531.65",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729476.84",
+              "rate_evidence": "cadence; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "1133036.68",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "12497121.99",
+              "rate_evidence": "cadence; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "1388569.11",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "11934026.82",
+              "rate_evidence": "cadence; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "663001.49",
+              "cadence": "interval"
+            }
+          }
+        }
+      ]
+    },
+    "confirmed_bridge": {
+      "metrics": {
+        "exact": 1,
+        "mae": "237690.7083333333333333333333",
+        "median_ae": "199.58",
+        "normalized_mae": "0.2205420343575202988808513582",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "46789.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "510.84",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "two_payrolls": {
+      "metrics": {
+        "exact": 1,
+        "mae": "237690.7083333333333333333333",
+        "median_ae": "199.58",
+        "normalized_mae": "0.2205420343575202988808513582",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "46789.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "510.84",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "freelance": {
+      "metrics": {
+        "exact": 2,
+        "mae": "237662.94",
+        "median_ae": "120.32",
+        "normalized_mae": "0.05387536769085363221418469165",
+        "date_exact": 5,
+        "date_distances": [
+          0,
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 1,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "46789.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "166.61",
+          "expected": "166.61",
+          "error": "0.00",
+          "earliest": "2026-07-04",
+          "expected_date": "2026-07-04",
+          "low": "1709.10",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "combined_p75_daily": {
+      "metrics": {
+        "exact": 1,
+        "mae": "237690.7083333333333333333333",
+        "median_ae": "199.58",
+        "normalized_mae": "0.2205420343575202988808513582",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "46789.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "510.84",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "combined_mean_daily": {
+      "metrics": {
+        "exact": 1,
+        "mae": "211242.8066666666666666666667",
+        "median_ae": "109.63",
+        "normalized_mae": "0.188737684321682053493727848",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "47125.90",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7363.72",
+              "rate_evidence": "mean_daily; observed=80.91114285714285714285714286 per calendar day; modeled=80.91114285714285714285714286; exposure=175 days; n=13",
+              "amount": "80.92",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10495.94",
+              "rate_evidence": "mean_daily; observed=115.3309039548022598870056497 per calendar day; modeled=115.3309039548022598870056497; exposure=177 days; n=26",
+              "amount": "115.34",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5904.99",
+              "rate_evidence": "mean_daily; observed=64.88130681818181818181818182 per calendar day; modeled=64.88130681818181818181818182; exposure=176 days; n=26",
+              "amount": "64.89",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7791.50",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9647.82",
+              "rate_evidence": "mean_daily; observed=106.0130508474576271186440678 per calendar day; modeled=106.0130508474576271186440678; exposure=177 days; n=26",
+              "amount": "106.02",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2785.51",
+              "rate_evidence": "mean_daily; observed=30.60494318181818181818181818 per calendar day; modeled=30.60494318181818181818181818; exposure=176 days; n=13",
+              "amount": "30.61",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "569.08",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "141.96",
+              "rate_evidence": "mean_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.558171428571428571428571429; exposure=175 days; n=9",
+              "amount": "1.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "413.14",
+              "rate_evidence": "mean_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.532259887005649717514124294; exposure=177 days; n=18",
+              "amount": "4.54",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "112.84",
+              "rate_evidence": "mean_daily; observed=1.233125 per calendar day; modeled=1.233125; exposure=176 days; n=9",
+              "amount": "1.24",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "380.75",
+          "expected": "433.4",
+          "error": "-52.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1680.75",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "434.98",
+              "rate_evidence": "mean_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.774628571428571428571428571; exposure=175 days; n=13",
+              "amount": "4.78",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1332.24",
+              "rate_evidence": "mean_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.63937853107344632768361582; exposure=177 days; n=26",
+              "amount": "14.64",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "603.33",
+              "rate_evidence": "mean_daily; observed=6.621875 per calendar day; modeled=6.621875; exposure=176 days; n=26",
+              "amount": "6.63",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1555.93",
+          "expected": "1543.35",
+          "error": "12.58",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3355.93",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "391.30",
+              "rate_evidence": "mean_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.290971428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.30",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "774.41",
+              "rate_evidence": "mean_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.504576271186440677966101695; exposure=177 days; n=18",
+              "amount": "8.51",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "192.01",
+              "rate_evidence": "mean_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.106988636363636363636363636; exposure=176 days; n=9",
+              "amount": "2.11",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "158512.00",
+          "expected": "1425000",
+          "error": "-1266488.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23537612.00",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13450806.46",
+              "rate_evidence": "mean_daily; observed=147811.0552 per calendar day; modeled=147811.0552; exposure=175 days; n=25",
+              "amount": "147811.06",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11097448.18",
+              "rate_evidence": "mean_daily; observed=121949.9791525423728813559322 per calendar day; modeled=121949.9791525423728813559322; exposure=177 days; n=18",
+              "amount": "121949.98",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "11028787.77",
+              "rate_evidence": "mean_daily; observed=121195.461875 per calendar day; modeled=121195.461875; exposure=176 days; n=36",
+              "amount": "121195.47",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "combined_trimmed_daily": {
+      "metrics": {
+        "exact": 1,
+        "mae": "213008.7666666666666666666667",
+        "median_ae": "109.63",
+        "normalized_mae": "0.1887943986696126922817343477",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "47133.18",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7375.55",
+              "rate_evidence": "trimmed_daily; observed=80.91114285714285714285714286 per calendar day; modeled=81.04740259740259740259740257; exposure=175 days; n=13",
+              "amount": "81.05",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10445.89",
+              "rate_evidence": "trimmed_daily; observed=115.3309039548022598870056497 per calendar day; modeled=114.7873292244478685156651258; exposure=177 days; n=26",
+              "amount": "114.79",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5892.25",
+              "rate_evidence": "trimmed_daily; observed=64.88130681818181818181818182 per calendar day; modeled=64.74678202479338842975206614; exposure=176 days; n=26",
+              "amount": "64.75",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7696.86",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9734.27",
+              "rate_evidence": "trimmed_daily; observed=106.0130508474576271186440678 per calendar day; modeled=106.9647611710323574730354392; exposure=177 days; n=26",
+              "amount": "106.97",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2793.70",
+              "rate_evidence": "trimmed_daily; observed=30.60494318181818181818181818 per calendar day; modeled=30.69530991735537190082644628; exposure=176 days; n=13",
+              "amount": "30.70",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "568.17",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "141.96",
+              "rate_evidence": "trimmed_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.558171428571428571428571429; exposure=175 days; n=9",
+              "amount": "1.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "414.05",
+              "rate_evidence": "trimmed_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.547605932203389830508474576; exposure=177 days; n=18",
+              "amount": "4.55",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "112.84",
+              "rate_evidence": "trimmed_daily; observed=1.233125 per calendar day; modeled=1.2331250000000000000000000; exposure=176 days; n=9",
+              "amount": "1.24",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "380.75",
+          "expected": "433.4",
+          "error": "-52.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1680.75",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "434.98",
+              "rate_evidence": "trimmed_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.775828571428571428571428571; exposure=175 days; n=13",
+              "amount": "4.78",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1334.06",
+              "rate_evidence": "trimmed_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.65681561376476630713918850; exposure=177 days; n=26",
+              "amount": "14.66",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "601.51",
+              "rate_evidence": "trimmed_daily; observed=6.621875 per calendar day; modeled=6.600118801652892561983471074; exposure=176 days; n=26",
+              "amount": "6.61",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1556.19",
+          "expected": "1543.35",
+          "error": "12.84",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3356.19",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "391.30",
+              "rate_evidence": "trimmed_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.290971428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.30",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "772.59",
+              "rate_evidence": "trimmed_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.486122881355932203389830508; exposure=177 days; n=18",
+              "amount": "8.49",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "192.01",
+              "rate_evidence": "trimmed_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.106988636363636363636363636; exposure=176 days; n=9",
+              "amount": "2.11",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "147916.50",
+          "expected": "1425000",
+          "error": "-1277083.50",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23527016.50",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13530198.50",
+              "rate_evidence": "trimmed_daily; observed=147811.0552 per calendar day; modeled=148683.49136054421768707483; exposure=175 days; n=25",
+              "amount": "148683.50",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11110732.36",
+              "rate_evidence": "trimmed_daily; observed=121949.9791525423728813559322 per calendar day; modeled=122095.9593432203389830508475; exposure=177 days; n=18",
+              "amount": "122095.96",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "11032530.60",
+              "rate_evidence": "trimmed_daily; observed=121195.461875 per calendar day; modeled=121236.5933863636363636363636; exposure=176 days; n=36",
+              "amount": "121236.60",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "combined_median_daily": {
+      "metrics": {
+        "exact": 1,
+        "mae": "210390.5583333333333333333333",
+        "median_ae": "94.60",
+        "normalized_mae": "0.180933185670077704512351805",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "47321.03",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "6956.95",
+              "rate_evidence": "median_daily; observed=80.91114285714285714285714286 per calendar day; modeled=76.44071428571428571428571429; exposure=175 days; n=13",
+              "amount": "76.45",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "9893.52",
+              "rate_evidence": "median_daily; observed=115.3309039548022598870056497 per calendar day; modeled=108.7164285714285714285714286; exposure=177 days; n=26",
+              "amount": "108.72",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5548.27",
+              "rate_evidence": "median_daily; observed=64.88130681818181818181818182 per calendar day; modeled=60.96285714285714285714285714; exposure=176 days; n=26",
+              "amount": "60.97",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7908.89",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9640.54",
+              "rate_evidence": "median_daily; observed=106.0130508474576271186440678 per calendar day; modeled=105.94; exposure=177 days; n=26",
+              "amount": "105.94",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2675.40",
+              "rate_evidence": "median_daily; observed=30.60494318181818181818181818 per calendar day; modeled=29.39071428571428571428571429; exposure=176 days; n=13",
+              "amount": "29.40",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "571.81",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "130.13",
+              "rate_evidence": "median_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.427142857142857142857142857; exposure=175 days; n=9",
+              "amount": "1.43",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "427.70",
+              "rate_evidence": "median_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.6965; exposure=177 days; n=18",
+              "amount": "4.70",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "107.38",
+              "rate_evidence": "median_daily; observed=1.233125 per calendar day; modeled=1.170952380952380952380952381; exposure=176 days; n=9",
+              "amount": "1.18",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "436.05",
+          "expected": "433.4",
+          "error": "2.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1736.05",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "407.68",
+              "rate_evidence": "median_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.479285714285714285714285714; exposure=175 days; n=13",
+              "amount": "4.48",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1301.30",
+              "rate_evidence": "median_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.29285714285714285714285714; exposure=177 days; n=26",
+              "amount": "14.30",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "589.68",
+              "rate_evidence": "median_daily; observed=6.621875 per calendar day; modeled=6.475714285714285714285714286; exposure=176 days; n=26",
+              "amount": "6.48",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1565.94",
+          "expected": "1543.35",
+          "error": "22.59",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3365.94",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "373.10",
+              "rate_evidence": "median_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.093333333333333333333333333; exposure=175 days; n=9",
+              "amount": "4.10",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "745.29",
+              "rate_evidence": "median_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.185; exposure=177 days; n=18",
+              "amount": "8.19",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "169.26",
+              "rate_evidence": "median_daily; observed=2.106988636363636363636363636 per calendar day; modeled=1.855238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "163585.50",
+          "expected": "1425000",
+          "error": "-1261414.50",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23542685.50",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13666248.96",
+              "rate_evidence": "median_daily; observed=147811.0552 per calendar day; modeled=150178.5528571428571428571429; exposure=175 days; n=25",
+              "amount": "150178.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11208678.39",
+              "rate_evidence": "median_daily; observed=121949.9791525423728813559322 per calendar day; modeled=123172.2845; exposure=177 days; n=18",
+              "amount": "123172.29",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "10655946.21",
+              "rate_evidence": "median_daily; observed=121195.461875 per calendar day; modeled=117098.308; exposure=176 days; n=36",
+              "amount": "117098.31",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "combined_weekly_p75": {
+      "metrics": {
+        "exact": 1,
+        "mae": "237748.6233333333333333333333",
+        "median_ae": "300.005",
+        "normalized_mae": "0.2716165978060010028892508305",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 2
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "45864.12",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13912.99",
+              "rate_evidence": "weekly_p75; observed=80.91114285714285714285714286 per calendar day; modeled=152.8814285714285714285714286; exposure=175 days; n=13",
+              "amount": "152.89",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11472.37",
+              "rate_evidence": "weekly_p75; observed=115.3309039548022598870056497 per calendar day; modeled=126.0685714285714285714285714; exposure=177 days; n=26",
+              "amount": "126.07",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "weekly_p75; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "4675.66",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "weekly_p75; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5054.14",
+              "rate_evidence": "weekly_p75; observed=30.60494318181818181818181818 per calendar day; modeled=55.53428571428571428571428571; exposure=176 days; n=13",
+              "amount": "55.54",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "-75.20",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "369.46",
+              "rate_evidence": "weekly_p75; observed=1.558171428571428571428571429 per calendar day; modeled=4.058571428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.06",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "636.09",
+              "rate_evidence": "weekly_p75; observed=4.532259887005649717514124294 per calendar day; modeled=6.99; exposure=177 days; n=18",
+              "amount": "6.99",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "306.67",
+              "rate_evidence": "weekly_p75; observed=1.233125 per calendar day; modeled=3.367142857142857142857142857; exposure=176 days; n=9",
+              "amount": "3.37",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "0.00",
+          "expected": "433.4",
+          "error": "-433.40",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1226.45",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "815.36",
+              "rate_evidence": "weekly_p75; observed=4.774628571428571428571428571 per calendar day; modeled=8.958571428571428571428571429; exposure=175 days; n=13",
+              "amount": "8.96",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "weekly_p75; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "weekly_p75; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1388.62",
+          "expected": "1543.35",
+          "error": "-154.73",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3188.62",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "901.81",
+              "rate_evidence": "weekly_p75; observed=4.290971428571428571428571429 per calendar day; modeled=9.901428571428571428571428571; exposure=175 days; n=9",
+              "amount": "9.91",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1177.54",
+              "rate_evidence": "weekly_p75; observed=8.504576271186440677966101695 per calendar day; modeled=12.93857142857142857142857143; exposure=177 days; n=18",
+              "amount": "12.94",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "449.54",
+              "rate_evidence": "weekly_p75; observed=2.106988636363636363636363636 per calendar day; modeled=4.931428571428571428571428571; exposure=176 days; n=9",
+              "amount": "4.94",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "22342741.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "weekly_p75; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "17358837.86",
+              "rate_evidence": "weekly_p75; observed=121949.9791525423728813559322 per calendar day; modeled=190756.4571428571428571428571; exposure=177 days; n=18",
+              "amount": "190756.46",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "14362053.16",
+              "rate_evidence": "weekly_p75; observed=121195.461875 per calendar day; modeled=157824.76; exposure=176 days; n=36",
+              "amount": "157824.76",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "combined_cadence": {
+      "metrics": {
+        "exact": 1,
+        "mae": "237694.3266666666666666666667",
+        "median_ae": "198.955",
+        "normalized_mae": "0.2227513353109801308453562198",
+        "date_exact": 3,
+        "date_distances": [
+          0,
+          12
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "47005.97",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7282.68",
+              "rate_evidence": "cadence; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "1213.78",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "11687.52",
+              "rate_evidence": "cadence; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "899.04",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "cadence; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "503.02",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6330.67",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "cadence; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "807.31",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "3399.13",
+              "rate_evidence": "cadence; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "485.59",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "537.51",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "131.44",
+              "rate_evidence": "cadence; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "32.86",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "459.27",
+              "rate_evidence": "cadence; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "51.03",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "108.80",
+              "rate_evidence": "cadence; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "27.20",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "202.10",
+          "expected": "433.4",
+          "error": "-231.30",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1502.10",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "422.70",
+              "rate_evidence": "cadence; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "70.45",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "1488.89",
+              "rate_evidence": "cadence; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "114.53",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "655.98",
+              "rate_evidence": "cadence; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "50.46",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1574.4",
+          "expected": "1543.35",
+          "error": "31.05",
+          "earliest": "2026-04-03",
+          "expected_date": "2026-04-15",
+          "low": "3454.27",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "390.68",
+              "rate_evidence": "cadence; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "97.67",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "860.58",
+              "rate_evidence": "cadence; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "95.62",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "191.36",
+              "rate_evidence": "cadence; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "47.84",
+              "cadence": "interval"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "22466531.65",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729476.84",
+              "rate_evidence": "cadence; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "1133036.68",
+              "cadence": "interval"
+            },
+            "groceries": {
+              "projection": "12497121.99",
+              "rate_evidence": "cadence; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "1388569.11",
+              "cadence": "interval"
+            },
+            "transport": {
+              "projection": "11934026.82",
+              "rate_evidence": "cadence; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "663001.49",
+              "cadence": "interval"
+            }
+          }
+        }
+      ]
+    },
+    "day89": {
+      "metrics": {
+        "exact": 0,
+        "mae": "241056.78",
+        "median_ae": "484.775",
+        "normalized_mae": "0.2246139253929652231357758913",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "4929.55",
+          "expected": "25256",
+          "error": "-20326.45",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "22929.55",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7803.00",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11559.60",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6467.40",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6723.03",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10379.70",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3122.10",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "130.02",
+          "expected": "166.61",
+          "error": "-36.59",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "730.02",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "141.30",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "459.90",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "117.00",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "453.60",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1473.30",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "648.90",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "419.40",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "861.30",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "205.20",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14567615.10",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12497122.80",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "11934027.00",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "before_salary": {
+      "metrics": {
+        "exact": 0,
+        "mae": "241126.2833333333333333333333",
+        "median_ae": "484.775",
+        "normalized_mae": "0.3565720866223286612501893373",
+        "date_exact": 2,
+        "date_distances": [
+          1
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "4642.55",
+          "expected": "25256",
+          "error": "-20613.45",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "22642.55",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "510.84",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-16",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "overlap": {
+      "metrics": {
+        "exact": 0,
+        "mae": "241126.2833333333333333333333",
+        "median_ae": "484.775",
+        "normalized_mae": "0.3565720866223286612501893373",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "4642.55",
+          "expected": "25256",
+          "error": "-20613.45",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "22642.55",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "510.84",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "grouping": {
+      "metrics": {
+        "exact": 0,
+        "mae": "241126.2833333333333333333333",
+        "median_ae": "484.775",
+        "normalized_mae": "0.3565720866223286612501893373",
+        "date_exact": 3,
+        "date_distances": [
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 3,
+        "baseline_safe_agreement": 3
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "4642.55",
+          "expected": "25256",
+          "error": "-20613.45",
+          "earliest": "",
+          "expected_date": "2024-03-03",
+          "low": "22642.55",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7889.70",
+              "rate_evidence": "p75_daily; observed=80.91114285714285714285714286 per calendar day; modeled=86.69857142857142857142857143; exposure=175 days; n=13",
+              "amount": "86.70",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11688.04",
+              "rate_evidence": "p75_daily; observed=115.3309039548022598870056497 per calendar day; modeled=128.4342857142857142857142857; exposure=177 days; n=26",
+              "amount": "128.44",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "6539.26",
+              "rate_evidence": "p75_daily; observed=64.88130681818181818181818182 per calendar day; modeled=71.86; exposure=176 days; n=26",
+              "amount": "71.86",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "6573.01",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "10495.03",
+              "rate_evidence": "p75_daily; observed=106.0130508474576271186440678 per calendar day; modeled=115.33; exposure=177 days; n=26",
+              "amount": "115.33",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "3156.79",
+              "rate_evidence": "p75_daily; observed=30.60494318181818181818181818 per calendar day; modeled=34.685; exposure=176 days; n=13",
+              "amount": "34.69",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "510.84",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "142.87",
+              "rate_evidence": "p75_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.564761904761904761904761905; exposure=175 days; n=9",
+              "amount": "1.57",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "465.01",
+              "rate_evidence": "p75_daily; observed=4.532259887005649717514124294 per calendar day; modeled=5.103; exposure=177 days; n=18",
+              "amount": "5.11",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "118.30",
+              "rate_evidence": "p75_daily; observed=1.233125 per calendar day; modeled=1.295238095238095238095238095; exposure=176 days; n=9",
+              "amount": "1.30",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "200.85",
+          "expected": "433.4",
+          "error": "-232.55",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1500.85",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "458.64",
+              "rate_evidence": "p75_daily; observed=4.774628571428571428571428571 per calendar day; modeled=5.032142857142857142857142857; exposure=175 days; n=13",
+              "amount": "5.04",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1489.67",
+              "rate_evidence": "p75_daily; observed=14.63937853107344632768361582 per calendar day; modeled=16.36142857142857142857142857; exposure=177 days; n=26",
+              "amount": "16.37",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "656.11",
+              "rate_evidence": "p75_daily; observed=6.621875 per calendar day; modeled=7.208571428571428571428571429; exposure=176 days; n=26",
+              "amount": "7.21",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1535.26",
+          "expected": "1543.35",
+          "error": "-8.09",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3335.26",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "424.06",
+              "rate_evidence": "p75_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.650952380952380952380952381; exposure=175 days; n=9",
+              "amount": "4.66",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "870.87",
+              "rate_evidence": "p75_daily; observed=8.504576271186440677966101695 per calendar day; modeled=9.562; exposure=177 days; n=18",
+              "amount": "9.57",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "207.48",
+              "rate_evidence": "p75_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.278095238095238095238095238; exposure=176 days; n=9",
+              "amount": "2.28",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "0.00",
+          "expected": "1425000",
+          "error": "-1425000.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23113981.00",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "14729477.49",
+              "rate_evidence": "p75_daily; observed=147811.0552 per calendar day; modeled=161862.3828571428571428571429; exposure=175 days; n=25",
+              "amount": "161862.39",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "12635979.72",
+              "rate_evidence": "p75_daily; observed=121949.9791525423728813559322 per calendar day; modeled=138856.911; exposure=177 days; n=18",
+              "amount": "138856.92",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "12066627.30",
+              "rate_evidence": "p75_daily; observed=121195.461875 per calendar day; modeled=132600.298; exposure=176 days; n=36",
+              "amount": "132600.30",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "selected": {
+      "metrics": {
+        "exact": 1,
+        "mae": "211242.8066666666666666666667",
+        "median_ae": "109.63",
+        "normalized_mae": "0.188737684321682053493727848",
+        "date_exact": 4,
+        "date_distances": [
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "47125.90",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7363.72",
+              "rate_evidence": "mean_daily; observed=80.91114285714285714285714286 per calendar day; modeled=80.91114285714285714285714286; exposure=175 days; n=13",
+              "amount": "80.92",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10495.94",
+              "rate_evidence": "mean_daily; observed=115.3309039548022598870056497 per calendar day; modeled=115.3309039548022598870056497; exposure=177 days; n=26",
+              "amount": "115.34",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5904.99",
+              "rate_evidence": "mean_daily; observed=64.88130681818181818181818182 per calendar day; modeled=64.88130681818181818181818182; exposure=176 days; n=26",
+              "amount": "64.89",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7791.50",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9647.82",
+              "rate_evidence": "mean_daily; observed=106.0130508474576271186440678 per calendar day; modeled=106.0130508474576271186440678; exposure=177 days; n=26",
+              "amount": "106.02",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2785.51",
+              "rate_evidence": "mean_daily; observed=30.60494318181818181818181818 per calendar day; modeled=30.60494318181818181818181818; exposure=176 days; n=13",
+              "amount": "30.61",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "569.08",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "141.96",
+              "rate_evidence": "mean_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.558171428571428571428571429; exposure=175 days; n=9",
+              "amount": "1.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "413.14",
+              "rate_evidence": "mean_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.532259887005649717514124294; exposure=177 days; n=18",
+              "amount": "4.54",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "112.84",
+              "rate_evidence": "mean_daily; observed=1.233125 per calendar day; modeled=1.233125; exposure=176 days; n=9",
+              "amount": "1.24",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "380.75",
+          "expected": "433.4",
+          "error": "-52.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1680.75",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "434.98",
+              "rate_evidence": "mean_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.774628571428571428571428571; exposure=175 days; n=13",
+              "amount": "4.78",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1332.24",
+              "rate_evidence": "mean_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.63937853107344632768361582; exposure=177 days; n=26",
+              "amount": "14.64",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "603.33",
+              "rate_evidence": "mean_daily; observed=6.621875 per calendar day; modeled=6.621875; exposure=176 days; n=26",
+              "amount": "6.63",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1555.93",
+          "expected": "1543.35",
+          "error": "12.58",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3355.93",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "391.30",
+              "rate_evidence": "mean_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.290971428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.30",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "774.41",
+              "rate_evidence": "mean_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.504576271186440677966101695; exposure=177 days; n=18",
+              "amount": "8.51",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "192.01",
+              "rate_evidence": "mean_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.106988636363636363636363636; exposure=176 days; n=9",
+              "amount": "2.11",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "158512.00",
+          "expected": "1425000",
+          "error": "-1266488.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23537612.00",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13450806.46",
+              "rate_evidence": "mean_daily; observed=147811.0552 per calendar day; modeled=147811.0552; exposure=175 days; n=25",
+              "amount": "147811.06",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11097448.18",
+              "rate_evidence": "mean_daily; observed=121949.9791525423728813559322 per calendar day; modeled=121949.9791525423728813559322; exposure=177 days; n=18",
+              "amount": "121949.98",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "11028787.77",
+              "rate_evidence": "mean_daily; observed=121195.461875 per calendar day; modeled=121195.461875; exposure=176 days; n=36",
+              "amount": "121195.47",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "selected_day89": {
+      "metrics": {
+        "exact": 2,
+        "mae": "211215.0383333333333333333333",
+        "median_ae": "32.615",
+        "normalized_mae": "0.02207101765501538682706118147",
+        "date_exact": 5,
+        "date_distances": [
+          0,
+          0,
+          0
+        ],
+        "false_present": 0,
+        "false_absent": 1,
+        "baseline_safe_agreement": 5
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "47125.90",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7282.80",
+              "rate_evidence": "mean_daily; observed=80.91114285714285714285714286 per calendar day; modeled=80.91114285714285714285714286; exposure=175 days; n=13",
+              "amount": "80.92",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10380.60",
+              "rate_evidence": "mean_daily; observed=115.3309039548022598870056497 per calendar day; modeled=115.3309039548022598870056497; exposure=177 days; n=26",
+              "amount": "115.34",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5840.10",
+              "rate_evidence": "mean_daily; observed=64.88130681818181818181818182 per calendar day; modeled=64.88130681818181818181818182; exposure=176 days; n=26",
+              "amount": "64.89",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7928.13",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9541.80",
+              "rate_evidence": "mean_daily; observed=106.0130508474576271186440678 per calendar day; modeled=106.0130508474576271186440678; exposure=177 days; n=26",
+              "amount": "106.02",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2754.90",
+              "rate_evidence": "mean_daily; observed=30.60494318181818181818181818 per calendar day; modeled=30.60494318181818181818181818; exposure=176 days; n=13",
+              "amount": "30.61",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "166.61",
+          "expected": "166.61",
+          "error": "0.00",
+          "earliest": "2026-07-04",
+          "expected_date": "2026-07-04",
+          "low": "787.62",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "140.40",
+              "rate_evidence": "mean_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.558171428571428571428571429; exposure=175 days; n=9",
+              "amount": "1.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "408.60",
+              "rate_evidence": "mean_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.532259887005649717514124294; exposure=177 days; n=18",
+              "amount": "4.54",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "111.60",
+              "rate_evidence": "mean_daily; observed=1.233125 per calendar day; modeled=1.233125; exposure=176 days; n=9",
+              "amount": "1.24",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "380.75",
+          "expected": "433.4",
+          "error": "-52.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1680.75",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "430.20",
+              "rate_evidence": "mean_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.774628571428571428571428571; exposure=175 days; n=13",
+              "amount": "4.78",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1317.60",
+              "rate_evidence": "mean_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.63937853107344632768361582; exposure=177 days; n=26",
+              "amount": "14.64",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "596.70",
+              "rate_evidence": "mean_daily; observed=6.621875 per calendar day; modeled=6.621875; exposure=176 days; n=26",
+              "amount": "6.63",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1555.93",
+          "expected": "1543.35",
+          "error": "12.58",
+          "earliest": "2026-04-15",
+          "expected_date": "2026-04-15",
+          "low": "3355.93",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "387.00",
+              "rate_evidence": "mean_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.290971428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.30",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "765.90",
+              "rate_evidence": "mean_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.504576271186440677966101695; exposure=177 days; n=18",
+              "amount": "8.51",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "189.90",
+              "rate_evidence": "mean_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.106988636363636363636363636; exposure=176 days; n=9",
+              "amount": "2.11",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "158512.00",
+          "expected": "1425000",
+          "error": "-1266488.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23537612.00",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13302995.40",
+              "rate_evidence": "mean_daily; observed=147811.0552 per calendar day; modeled=147811.0552; exposure=175 days; n=25",
+              "amount": "147811.06",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10975498.20",
+              "rate_evidence": "mean_daily; observed=121949.9791525423728813559322 per calendar day; modeled=121949.9791525423728813559322; exposure=177 days; n=18",
+              "amount": "121949.98",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "10907592.30",
+              "rate_evidence": "mean_daily; observed=121195.461875 per calendar day; modeled=121195.461875; exposure=176 days; n=36",
+              "amount": "121195.47",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    },
+    "selected_before_salary": {
+      "metrics": {
+        "exact": 1,
+        "mae": "211242.8066666666666666666667",
+        "median_ae": "109.63",
+        "normalized_mae": "0.188737684321682053493727848",
+        "date_exact": 3,
+        "date_distances": [
+          0,
+          1
+        ],
+        "false_present": 0,
+        "false_absent": 2,
+        "baseline_safe_agreement": 4
+      },
+      "cases": [
+        {
+          "request": "request_01",
+          "requested": "25256",
+          "safe": "25256",
+          "expected": "25256",
+          "error": "0",
+          "earliest": "2024-03-03",
+          "expected_date": "2024-03-03",
+          "low": "47125.90",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "7363.72",
+              "rate_evidence": "mean_daily; observed=80.91114285714285714285714286 per calendar day; modeled=80.91114285714285714285714286; exposure=175 days; n=13",
+              "amount": "80.92",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "10495.94",
+              "rate_evidence": "mean_daily; observed=115.3309039548022598870056497 per calendar day; modeled=115.3309039548022598870056497; exposure=177 days; n=26",
+              "amount": "115.34",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "5904.99",
+              "rate_evidence": "mean_daily; observed=64.88130681818181818181818182 per calendar day; modeled=64.88130681818181818181818182; exposure=176 days; n=26",
+              "amount": "64.89",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_05",
+          "requested": "15488",
+          "safe": "0.00",
+          "expected": "737",
+          "error": "-737.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "7791.50",
+          "baseline_safe": false,
+          "spending": {
+            "groceries": {
+              "projection": "9647.82",
+              "rate_evidence": "mean_daily; observed=106.0130508474576271186440678 per calendar day; modeled=106.0130508474576271186440678; exposure=177 days; n=26",
+              "amount": "106.02",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "2785.51",
+              "rate_evidence": "mean_daily; observed=30.60494318181818181818181818 per calendar day; modeled=30.60494318181818181818181818; exposure=176 days; n=13",
+              "amount": "30.61",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_09",
+          "requested": "166.61",
+          "safe": "0.00",
+          "expected": "166.61",
+          "error": "-166.61",
+          "earliest": "",
+          "expected_date": "2026-07-04",
+          "low": "569.08",
+          "baseline_safe": false,
+          "spending": {
+            "dining": {
+              "projection": "141.96",
+              "rate_evidence": "mean_daily; observed=1.558171428571428571428571429 per calendar day; modeled=1.558171428571428571428571429; exposure=175 days; n=9",
+              "amount": "1.56",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "413.14",
+              "rate_evidence": "mean_daily; observed=4.532259887005649717514124294 per calendar day; modeled=4.532259887005649717514124294; exposure=177 days; n=18",
+              "amount": "4.54",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "112.84",
+              "rate_evidence": "mean_daily; observed=1.233125 per calendar day; modeled=1.233125; exposure=176 days; n=9",
+              "amount": "1.24",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_13",
+          "requested": "941.6",
+          "safe": "380.75",
+          "expected": "433.4",
+          "error": "-52.65",
+          "earliest": "",
+          "expected_date": "2024-05-15",
+          "low": "1680.75",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "434.98",
+              "rate_evidence": "mean_daily; observed=4.774628571428571428571428571 per calendar day; modeled=4.774628571428571428571428571; exposure=175 days; n=13",
+              "amount": "4.78",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "1332.24",
+              "rate_evidence": "mean_daily; observed=14.63937853107344632768361582 per calendar day; modeled=14.63937853107344632768361582; exposure=177 days; n=26",
+              "amount": "14.64",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "603.33",
+              "rate_evidence": "mean_daily; observed=6.621875 per calendar day; modeled=6.621875; exposure=176 days; n=26",
+              "amount": "6.63",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_21",
+          "requested": "1574.4",
+          "safe": "1555.93",
+          "expected": "1543.35",
+          "error": "12.58",
+          "earliest": "2026-04-16",
+          "expected_date": "2026-04-15",
+          "low": "3355.93",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "391.30",
+              "rate_evidence": "mean_daily; observed=4.290971428571428571428571429 per calendar day; modeled=4.290971428571428571428571429; exposure=175 days; n=9",
+              "amount": "4.30",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "774.41",
+              "rate_evidence": "mean_daily; observed=8.504576271186440677966101695 per calendar day; modeled=8.504576271186440677966101695; exposure=177 days; n=18",
+              "amount": "8.51",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "192.01",
+              "rate_evidence": "mean_daily; observed=2.106988636363636363636363636 per calendar day; modeled=2.106988636363636363636363636; exposure=176 days; n=9",
+              "amount": "2.11",
+              "cadence": "daily"
+            }
+          }
+        },
+        {
+          "request": "request_25",
+          "requested": "60496000",
+          "safe": "158512.00",
+          "expected": "1425000",
+          "error": "-1266488.00",
+          "earliest": "",
+          "expected_date": "",
+          "low": "23537612.00",
+          "baseline_safe": true,
+          "spending": {
+            "dining": {
+              "projection": "13450806.46",
+              "rate_evidence": "mean_daily; observed=147811.0552 per calendar day; modeled=147811.0552; exposure=175 days; n=25",
+              "amount": "147811.06",
+              "cadence": "daily"
+            },
+            "groceries": {
+              "projection": "11097448.18",
+              "rate_evidence": "mean_daily; observed=121949.9791525423728813559322 per calendar day; modeled=121949.9791525423728813559322; exposure=177 days; n=18",
+              "amount": "121949.98",
+              "cadence": "daily"
+            },
+            "transport": {
+              "projection": "11028787.77",
+              "rate_evidence": "mean_daily; observed=121195.461875 per calendar day; modeled=121195.461875; exposure=176 days; n=36",
+              "amount": "121195.47",
+              "cadence": "daily"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "decomposition": {
+    "request_01": {
+      "binding_date": "2024-06-01",
+      "opening": "58481.1",
+      "minimum": "18000",
+      "binding_components": {
+        "pending": "-567.6",
+        "dining": "-7889.70",
+        "groceries": "-11688.04",
+        "transport": "-6539.26",
+        "fixed_and_other": "-32473.95",
+        "confirmed_income": "23320"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "11688.04",
+          "low_delta": "11688.04",
+          "earliest": ""
+        },
+        "transport": {
+          "safe_delta": "6539.26",
+          "low_delta": "6539.26",
+          "earliest": ""
+        },
+        "dining": {
+          "safe_delta": "7889.70",
+          "low_delta": "7889.70",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "20613.45",
+          "low_delta": "26117.00",
+          "earliest": "2024-03-03"
+        },
+        "fixed": {
+          "safe_delta": "20613.45",
+          "low_delta": "31539.95",
+          "earliest": "2024-03-03"
+        },
+        "inferred_income": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "567.60",
+          "low_delta": "567.60",
+          "earliest": ""
+        },
+        "fx": []
+      }
+    },
+    "request_05": {
+      "binding_date": "2026-02-04",
+      "opening": "46475.1",
+      "minimum": "13100",
+      "binding_components": {
+        "groceries": "-10495.03",
+        "transport": "-3156.79",
+        "fixed_and_other": "-26250.27"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "3968.04",
+          "low_delta": "10495.03",
+          "earliest": ""
+        },
+        "transport": {
+          "safe_delta": "0.00",
+          "low_delta": "3156.79",
+          "earliest": ""
+        },
+        "dining": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "7124.83",
+          "low_delta": "13651.82",
+          "earliest": ""
+        },
+        "fixed": {
+          "safe_delta": "15488.00",
+          "low_delta": "26250.27",
+          "earliest": "2025-11-06"
+        },
+        "inferred_income": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": []
+      }
+    },
+    "request_09": {
+      "binding_date": "2026-10-02",
+      "opening": "2231.1",
+      "minimum": "600",
+      "binding_components": {
+        "dining": "-142.87",
+        "groceries": "-465.01",
+        "transport": "-118.30",
+        "fixed_and_other": "-994.08"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "166.61",
+          "low_delta": "465.01",
+          "earliest": "2026-07-04"
+        },
+        "transport": {
+          "safe_delta": "29.14",
+          "low_delta": "118.30",
+          "earliest": ""
+        },
+        "dining": {
+          "safe_delta": "53.71",
+          "low_delta": "142.87",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "166.61",
+          "low_delta": "726.18",
+          "earliest": "2026-07-04"
+        },
+        "fixed": {
+          "safe_delta": "166.61",
+          "low_delta": "994.08",
+          "earliest": "2026-07-04"
+        },
+        "inferred_income": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": []
+      }
+    },
+    "request_13": {
+      "binding_date": "2024-05-15",
+      "opening": "2789.52",
+      "minimum": "1300",
+      "binding_components": {
+        "dining": "-352.80",
+        "groceries": "-1145.90",
+        "transport": "-504.70",
+        "fixed_and_other": "-1972.35",
+        "confirmed_income": "1343.54",
+        "inferred_income": "1343.54"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "740.75",
+          "low_delta": "1033.59",
+          "earliest": "2024-03-07"
+        },
+        "transport": {
+          "safe_delta": "504.70",
+          "low_delta": "504.70",
+          "earliest": "2024-05-15"
+        },
+        "dining": {
+          "safe_delta": "352.80",
+          "low_delta": "352.80",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "740.75",
+          "low_delta": "1143.84",
+          "earliest": "2024-03-07"
+        },
+        "fixed": {
+          "safe_delta": "740.75",
+          "low_delta": "1031.09",
+          "earliest": "2024-03-07"
+        },
+        "inferred_income": {
+          "safe_delta": "-200.85",
+          "low_delta": "-2567.16",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": []
+      }
+    },
+    "request_21": {
+      "binding_date": "2026-04-15",
+      "opening": "3911.35",
+      "minimum": "1800",
+      "binding_components": {
+        "pending": "-53",
+        "dining": "-60.58",
+        "groceries": "-124.41",
+        "transport": "-29.64",
+        "fixed_and_other": "-308.46"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "39.14",
+          "low_delta": "124.41",
+          "earliest": "2026-04-03"
+        },
+        "transport": {
+          "safe_delta": "29.64",
+          "low_delta": "29.64",
+          "earliest": "2026-04-15"
+        },
+        "dining": {
+          "safe_delta": "39.14",
+          "low_delta": "60.58",
+          "earliest": "2026-04-03"
+        },
+        "all_variable": {
+          "safe_delta": "39.14",
+          "low_delta": "214.63",
+          "earliest": "2026-04-03"
+        },
+        "fixed": {
+          "safe_delta": "39.14",
+          "low_delta": "308.46",
+          "earliest": "2026-04-03"
+        },
+        "inferred_income": {
+          "safe_delta": "-1535.26",
+          "low_delta": "-1805.10",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "39.14",
+          "low_delta": "53.00",
+          "earliest": "2026-04-03"
+        },
+        "fx": []
+      }
+    },
+    "request_25": {
+      "binding_date": "2024-03-15",
+      "opening": "32063050",
+      "minimum": "23379100",
+      "binding_components": {
+        "dining": "-1618623.90",
+        "groceries": "-1388569.20",
+        "transport": "-1326003.00",
+        "fixed_and_other": "-4615872.90"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "1123450.20",
+          "low_delta": "1388569.20",
+          "earliest": ""
+        },
+        "transport": {
+          "safe_delta": "1060884.00",
+          "low_delta": "1326003.00",
+          "earliest": ""
+        },
+        "dining": {
+          "safe_delta": "1353504.90",
+          "low_delta": "1618623.90",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "4068077.10",
+          "low_delta": "4333196.10",
+          "earliest": ""
+        },
+        "fixed": {
+          "safe_delta": "4350753.90",
+          "low_delta": "4615872.90",
+          "earliest": ""
+        },
+        "inferred_income": {
+          "safe_delta": "0.00",
+          "low_delta": "-36692640.21",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": [
+          {
+            "source": "event_2288",
+            "original": "1800",
+            "rate": "15833.33",
+            "date": "2024-03-15",
+            "home": "28499994.00"
+          },
+          {
+            "source": "series:salary|international employer payroll|credit|USD",
+            "original": "1800",
+            "rate": "15833.33",
+            "date": "2024-04-15",
+            "home": "28499994.00"
+          },
+          {
+            "source": "series:salary|international employer payroll|credit|USD",
+            "original": "1800",
+            "rate": "15833.33",
+            "date": "2024-05-15",
+            "home": "28499994.00"
+          }
+        ]
+      }
+    },
+    "request_01:selected": {
+      "binding_date": "2024-03-15",
+      "opening": "58481.1",
+      "minimum": "18000",
+      "binding_components": {
+        "pending": "-567.6",
+        "dining": "-1051.96",
+        "groceries": "-1499.42",
+        "transport": "-843.57",
+        "fixed_and_other": "-7392.65"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "0",
+          "low_delta": "1499.42",
+          "earliest": "2024-03-03"
+        },
+        "transport": {
+          "safe_delta": "0",
+          "low_delta": "843.57",
+          "earliest": "2024-03-03"
+        },
+        "dining": {
+          "safe_delta": "0",
+          "low_delta": "1051.96",
+          "earliest": "2024-03-03"
+        },
+        "all_variable": {
+          "safe_delta": "0",
+          "low_delta": "3394.95",
+          "earliest": "2024-03-03"
+        },
+        "fixed": {
+          "safe_delta": "0",
+          "low_delta": "7392.65",
+          "earliest": "2024-03-03"
+        },
+        "inferred_income": {
+          "safe_delta": "-18261.10",
+          "low_delta": "-22131.00",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0",
+          "low_delta": "567.60",
+          "earliest": "2024-03-03"
+        },
+        "fx": []
+      }
+    },
+    "request_05:selected": {
+      "binding_date": "2026-02-04",
+      "opening": "46475.1",
+      "minimum": "13100",
+      "binding_components": {
+        "groceries": "-9647.82",
+        "transport": "-2785.51",
+        "fixed_and_other": "-26250.27"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "4339.32",
+          "low_delta": "9647.82",
+          "earliest": ""
+        },
+        "transport": {
+          "safe_delta": "0.00",
+          "low_delta": "2785.51",
+          "earliest": ""
+        },
+        "dining": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "7124.83",
+          "low_delta": "12433.33",
+          "earliest": ""
+        },
+        "fixed": {
+          "safe_delta": "15488.00",
+          "low_delta": "26250.27",
+          "earliest": "2025-11-06"
+        },
+        "inferred_income": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": []
+      }
+    },
+    "request_09:selected": {
+      "binding_date": "2026-10-02",
+      "opening": "2231.1",
+      "minimum": "600",
+      "binding_components": {
+        "dining": "-141.96",
+        "groceries": "-413.14",
+        "transport": "-112.84",
+        "fixed_and_other": "-994.08"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "166.61",
+          "low_delta": "413.14",
+          "earliest": "2026-07-04"
+        },
+        "transport": {
+          "safe_delta": "81.92",
+          "low_delta": "112.84",
+          "earliest": ""
+        },
+        "dining": {
+          "safe_delta": "111.04",
+          "low_delta": "141.96",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "166.61",
+          "low_delta": "667.94",
+          "earliest": "2026-07-04"
+        },
+        "fixed": {
+          "safe_delta": "166.61",
+          "low_delta": "994.08",
+          "earliest": "2026-07-04"
+        },
+        "inferred_income": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": []
+      }
+    },
+    "request_13:selected": {
+      "binding_date": "2024-05-15",
+      "opening": "2789.52",
+      "minimum": "1300",
+      "binding_components": {
+        "dining": "-334.60",
+        "groceries": "-1024.80",
+        "transport": "-464.10",
+        "fixed_and_other": "-1972.35",
+        "confirmed_income": "1343.54",
+        "inferred_income": "1343.54"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "560.85",
+          "low_delta": "861.25",
+          "earliest": "2024-03-07"
+        },
+        "transport": {
+          "safe_delta": "464.10",
+          "low_delta": "464.10",
+          "earliest": "2024-05-15"
+        },
+        "dining": {
+          "safe_delta": "334.60",
+          "low_delta": "334.60",
+          "earliest": "2024-05-15"
+        },
+        "all_variable": {
+          "safe_delta": "560.85",
+          "low_delta": "963.94",
+          "earliest": "2024-03-07"
+        },
+        "fixed": {
+          "safe_delta": "560.85",
+          "low_delta": "874.32",
+          "earliest": "2024-03-07"
+        },
+        "inferred_income": {
+          "safe_delta": "-380.75",
+          "low_delta": "-2513.19",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": []
+      }
+    },
+    "request_21:selected": {
+      "binding_date": "2026-04-15",
+      "opening": "3911.35",
+      "minimum": "1800",
+      "binding_components": {
+        "pending": "-53",
+        "dining": "-55.90",
+        "groceries": "-110.63",
+        "transport": "-27.43",
+        "fixed_and_other": "-308.46"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "18.47",
+          "low_delta": "110.63",
+          "earliest": "2026-04-03"
+        },
+        "transport": {
+          "safe_delta": "18.47",
+          "low_delta": "27.43",
+          "earliest": "2026-04-03"
+        },
+        "dining": {
+          "safe_delta": "18.47",
+          "low_delta": "55.90",
+          "earliest": "2026-04-03"
+        },
+        "all_variable": {
+          "safe_delta": "18.47",
+          "low_delta": "193.96",
+          "earliest": "2026-04-03"
+        },
+        "fixed": {
+          "safe_delta": "18.47",
+          "low_delta": "308.46",
+          "earliest": "2026-04-03"
+        },
+        "inferred_income": {
+          "safe_delta": "-1555.93",
+          "low_delta": "-1681.08",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "18.47",
+          "low_delta": "53.00",
+          "earliest": "2026-04-03"
+        },
+        "fx": []
+      }
+    },
+    "request_25:selected": {
+      "binding_date": "2024-03-15",
+      "opening": "32063050",
+      "minimum": "23379100",
+      "binding_components": {
+        "dining": "-1478110.60",
+        "groceries": "-1219499.80",
+        "transport": "-1211954.70",
+        "fixed_and_other": "-4615872.90"
+      },
+      "ablations": {
+        "groceries": {
+          "safe_delta": "1219499.80",
+          "low_delta": "1219499.80",
+          "earliest": ""
+        },
+        "transport": {
+          "safe_delta": "1211954.70",
+          "low_delta": "1211954.70",
+          "earliest": ""
+        },
+        "dining": {
+          "safe_delta": "1478110.60",
+          "low_delta": "1478110.60",
+          "earliest": ""
+        },
+        "all_variable": {
+          "safe_delta": "3909565.10",
+          "low_delta": "3909565.10",
+          "earliest": ""
+        },
+        "fixed": {
+          "safe_delta": "4615872.90",
+          "low_delta": "4615872.90",
+          "earliest": ""
+        },
+        "inferred_income": {
+          "safe_delta": "-158512.00",
+          "low_delta": "-33261229.11",
+          "earliest": ""
+        },
+        "pending": {
+          "safe_delta": "0.00",
+          "low_delta": "0.00",
+          "earliest": ""
+        },
+        "fx": [
+          {
+            "source": "event_2288",
+            "original": "1800",
+            "rate": "15833.33",
+            "date": "2024-03-15",
+            "home": "28499994.00"
+          },
+          {
+            "source": "series:salary|international employer payroll|credit|USD",
+            "original": "1800",
+            "rate": "15833.33",
+            "date": "2024-04-15",
+            "home": "28499994.00"
+          },
+          {
+            "source": "series:salary|international employer payroll|credit|USD",
+            "original": "1800",
+            "rate": "15833.33",
+            "date": "2024-05-15",
+            "home": "28499994.00"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "request_01": {
+    "safe": "4642.55",
+    "earliest": "None",
+    "low": "22642.55"
+  },
+  "request_05": {
+    "safe": "0.00",
+    "earliest": "None",
+    "low": "6573.01"
+  },
+  "request_09": {
+    "safe": "0.00",
+    "earliest": "None",
+    "low": "510.84"
+  },
+  "request_13": {
+    "safe": "200.85",
+    "earliest": "None",
+    "low": "1500.85"
+  },
+  "request_21": {
+    "safe": "1535.26",
+    "earliest": "2026-04-15",
+    "low": "3335.26"
+  },
+  "request_25": {
+    "safe": "0.00",
+    "earliest": "None",
+    "low": "23113981.00"
+  }
+}
