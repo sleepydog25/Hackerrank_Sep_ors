@@ -1,0 +1,601 @@
+{
+  "tables": {
+    "exchange_rates": {
+      "rows": 134,
+      "columns": [
+        "rate_date",
+        "from_currency",
+        "to_currency",
+        "rate"
+      ],
+      "nulls": {}
+    },
+    "financial_events": {
+      "rows": 25342,
+      "columns": [
+        "event_id",
+        "user_id",
+        "event_type",
+        "description",
+        "category",
+        "direction",
+        "amount",
+        "currency",
+        "event_date",
+        "settlement_date",
+        "status",
+        "linked_event_id",
+        "flexibility",
+        "minimum_allowed_amount"
+      ],
+      "nulls": {
+        "amount": 16,
+        "settlement_date": 10,
+        "linked_event_id": 25284,
+        "minimum_allowed_amount": 22435
+      }
+    },
+    "financial_profiles": {
+      "rows": 275,
+      "columns": [
+        "user_id",
+        "home_currency",
+        "current_available_balance",
+        "minimum_balance_to_keep",
+        "financial_priorities",
+        "expense_categories_to_protect",
+        "expense_categories_user_is_willing_to_reduce",
+        "expense_categories_user_is_willing_to_stop",
+        "payment_methods_user_will_consider",
+        "max_installment_months"
+      ],
+      "nulls": {
+        "expense_categories_user_is_willing_to_reduce": 39,
+        "expense_categories_user_is_willing_to_stop": 62,
+        "max_installment_months": 119
+      }
+    },
+    "images": {
+      "rows": 16,
+      "columns": [
+        "image_id",
+        "user_id",
+        "request_id",
+        "related_event_id"
+      ],
+      "nulls": {}
+    },
+    "messages": {
+      "rows": 215,
+      "columns": [
+        "message_id",
+        "user_id",
+        "request_id",
+        "related_event_id",
+        "sent_at",
+        "source_type",
+        "message_text"
+      ],
+      "nulls": {
+        "request_id": 87,
+        "related_event_id": 176
+      }
+    },
+    "output": {
+      "rows": 250,
+      "columns": [
+        "request_id",
+        "amount_safe_to_pay",
+        "affordability_status",
+        "recommended_payment_method",
+        "payment_plan",
+        "earliest_date_for_full_payment",
+        "spending_changes_needed",
+        "decision_explanation"
+      ],
+      "nulls": {
+        "amount_safe_to_pay": 250,
+        "affordability_status": 250,
+        "recommended_payment_method": 250,
+        "payment_plan": 250,
+        "earliest_date_for_full_payment": 250,
+        "spending_changes_needed": 250,
+        "decision_explanation": 250
+      }
+    },
+    "request_payment_options": {
+      "rows": 790,
+      "columns": [
+        "payment_option_id",
+        "request_id",
+        "payment_method",
+        "payment_amount",
+        "number_of_payments",
+        "first_payment_date",
+        "payment_frequency_days",
+        "financing_fee",
+        "total_payable_amount"
+      ],
+      "nulls": {
+        "payment_frequency_days": 275
+      }
+    },
+    "requests": {
+      "rows": 250,
+      "columns": [
+        "request_id",
+        "user_id",
+        "request_date",
+        "request_type",
+        "requested_amount",
+        "desired_completion_date",
+        "allows_partial_payment",
+        "request_text"
+      ],
+      "nulls": {}
+    },
+    "sample_requests": {
+      "rows": 25,
+      "columns": [
+        "request_id",
+        "user_id",
+        "request_date",
+        "request_type",
+        "requested_amount",
+        "desired_completion_date",
+        "allows_partial_payment",
+        "request_text",
+        "amount_safe_to_pay",
+        "affordability_status",
+        "recommended_payment_method",
+        "payment_plan",
+        "earliest_date_for_full_payment",
+        "spending_changes_needed",
+        "decision_explanation"
+      ],
+      "nulls": {
+        "earliest_date_for_full_payment": 7
+      }
+    }
+  },
+  "integrity_errors": [],
+  "samples": [
+    {
+      "request": "request_01",
+      "status": "affordable_now",
+      "method": "full_payment",
+      "messages": [],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_02",
+      "status": "affordable_with_plan",
+      "method": "installments",
+      "messages": [
+        "message_01"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_03",
+      "status": "affordable_later",
+      "method": "wait",
+      "messages": [
+        "message_02"
+      ],
+      "images": [
+        "image_01"
+      ],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_04",
+      "status": "affordable_later",
+      "method": "wait",
+      "messages": [
+        "message_03"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_05",
+      "status": "not_affordable",
+      "method": "not_recommended",
+      "messages": [],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_06",
+      "status": "affordable_with_plan",
+      "method": "full_payment",
+      "messages": [
+        "message_04"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "stop:event_476"
+    },
+    {
+      "request": "request_07",
+      "status": "affordable_with_plan",
+      "method": "installments",
+      "messages": [
+        "message_05"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_08",
+      "status": "affordable_later",
+      "method": "wait",
+      "messages": [
+        "message_06"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_09",
+      "status": "affordable_now",
+      "method": "full_payment",
+      "messages": [],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_10",
+      "status": "not_affordable",
+      "method": "not_recommended",
+      "messages": [
+        "message_07"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_11",
+      "status": "affordable_with_plan",
+      "method": "full_payment",
+      "messages": [
+        "message_08"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "reduce_to:event_989:665950"
+    },
+    {
+      "request": "request_12",
+      "status": "affordable_with_plan",
+      "method": "installments",
+      "messages": [
+        "message_09"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_13",
+      "status": "affordable_later",
+      "method": "wait",
+      "messages": [],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_14",
+      "status": "not_affordable",
+      "method": "not_recommended",
+      "messages": [
+        "message_10"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_15",
+      "status": "not_affordable",
+      "method": "not_recommended",
+      "messages": [
+        "message_11"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_16",
+      "status": "affordable_now",
+      "method": "full_payment",
+      "messages": [
+        "message_12"
+      ],
+      "images": [
+        "image_02"
+      ],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_17",
+      "status": "affordable_with_plan",
+      "method": "installments",
+      "messages": [],
+      "images": [
+        "image_03"
+      ],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_18",
+      "status": "affordable_later",
+      "method": "wait",
+      "messages": [
+        "message_13"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_19",
+      "status": "affordable_with_plan",
+      "method": "partial_payment",
+      "messages": [],
+      "images": [
+        "image_04"
+      ],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_20",
+      "status": "not_affordable",
+      "method": "not_recommended",
+      "messages": [
+        "message_14"
+      ],
+      "images": [
+        "image_05"
+      ],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_21",
+      "status": "affordable_with_plan",
+      "method": "full_payment",
+      "messages": [],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "stop:event_1815|reduce_to:event_1816:23.50"
+    },
+    {
+      "request": "request_22",
+      "status": "affordable_with_plan",
+      "method": "installments",
+      "messages": [
+        "message_15"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_23",
+      "status": "affordable_later",
+      "method": "wait",
+      "messages": [
+        "message_16"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_24",
+      "status": "not_affordable",
+      "method": "not_recommended",
+      "messages": [
+        "message_17"
+      ],
+      "images": [],
+      "fx": false,
+      "recurring_expense_history": true,
+      "changes": "none"
+    },
+    {
+      "request": "request_25",
+      "status": "not_affordable",
+      "method": "not_recommended",
+      "messages": [],
+      "images": [],
+      "fx": true,
+      "recurring_expense_history": true,
+      "changes": "none"
+    }
+  ],
+  "foreign": {
+    "events": 140,
+    "users": 27,
+    "pairs": {
+      "USD->IDR": 28,
+      "USD->INR": 54,
+      "USD->EUR": 22,
+      "EUR->ZAR": 20,
+      "EUR->USD": 16
+    },
+    "missing_rates": []
+  },
+  "images_missing": [],
+  "blank_amounts_without_image": [],
+  "option_counts": {
+    "4": 30,
+    "3": 180,
+    "2": 65
+  },
+  "option_money_errors": [],
+  "dates": {
+    "requests": {
+      "request_date": [
+        "2023-01-20",
+        "2026-09-04"
+      ],
+      "desired_completion_date": [
+        "2023-02-13",
+        "2026-10-19"
+      ]
+    },
+    "sample_requests": {
+      "request_date": [
+        "2019-09-03",
+        "2026-07-07"
+      ]
+    },
+    "financial_events": {
+      "event_date": [
+        "2019-03-09",
+        "2026-09-03"
+      ],
+      "settlement_date": [
+        "2019-03-09",
+        "2026-09-03"
+      ]
+    },
+    "exchange_rates": {
+      "rate_date": [
+        "2023-10-15",
+        "2026-11-15"
+      ]
+    }
+  },
+  "sample_counts": {
+    "affordability_status": {
+      "affordable_now": 3,
+      "affordable_with_plan": 9,
+      "affordable_later": 6,
+      "not_affordable": 7
+    },
+    "recommended_payment_method": {
+      "full_payment": 6,
+      "installments": 5,
+      "wait": 6,
+      "not_recommended": 7,
+      "partial_payment": 1
+    }
+  },
+  "sample_evidence_counts": {
+    "neither": 6,
+    "messages_only": 14,
+    "both": 3,
+    "images_only": 2
+  },
+  "event_values": {
+    "event_type": {
+      "expense": 20525,
+      "debt_payment": 567,
+      "subscription": 2488,
+      "income": 1696,
+      "refund": 22,
+      "investment_purchase": 29,
+      "investment_valuation": 10,
+      "investment_sale": 5
+    },
+    "category": {
+      "rent": 1355,
+      "utilities": 1452,
+      "education": 306,
+      "debt_repayment": 553,
+      "music_subscription": 451,
+      "delivery_membership": 351,
+      "salary": 1690,
+      "groceries": 5812,
+      "transport": 5626,
+      "dining": 3479,
+      "shopping": 813,
+      "housing": 246,
+      "insurance": 456,
+      "healthcare": 356,
+      "entertainment": 521,
+      "cloud_storage": 833,
+      "streaming": 683,
+      "gym": 170,
+      "family_support": 125,
+      "work_expense": 14,
+      "investment": 44,
+      "windfall": 6
+    },
+    "direction": {
+      "debit": 23609,
+      "credit": 1723,
+      "non_cash": 10
+    },
+    "status": {
+      "settled": 25148,
+      "cancelled": 22,
+      "pending": 71,
+      "scheduled": 70,
+      "failed": 21,
+      "unrealized": 10
+    },
+    "flexibility": {
+      "fixed": 21138,
+      "stoppable": 1297,
+      "reducible": 2682,
+      "reducible_or_stoppable": 225
+    },
+    "currency": {
+      "ZAR": 4489,
+      "IDR": 4992,
+      "EUR": 5585,
+      "INR": 6457,
+      "USD": 3819
+    }
+  },
+  "request_user_counts": {
+    "requests": 250,
+    "sample_requests": 25
+  },
+  "sample_evaluation_overlap": [],
+  "template_matches_requests": true
+}
