@@ -1,16 +1,16 @@
 # Runtime checkpoint
 
 ## Current phase
-Phase 2.6 — Forecast Semantics Audit; Checkpoint B complete.
+Phase 2.6 — Forecast Semantics Audit; Checkpoint C complete.
 
 ## Current branch
 feat/forecast-semantics
 
 ## Last known good commit
-`3130e43` Checkpoint A; restart `a586391`; accepted production baseline `226adac`.
+`8c5dfc7` Checkpoint B; A `3130e43`; restart `a586391`; accepted baseline `226adac`.
 
 ## Last completed checkpoint
-Checkpoint B: no production behavior change justified. Added 14 semantic tests; 84 tests pass. All 132 Phase 2.5 case-policy direct/replay checks pass. Dataset unchanged.
+Checkpoint C: metrics and dataset-wide impact reproduced against isolated code from 226adac. 84 tests pass; 250 requests run without exceptions (50 complete, 200 provisional). 0/250 changes in amount/date/safety. Six-case metrics unchanged: 1/6 amounts, 4/6 dates, normalized MAE 18.8738%.
 
 ## Last passing test command
 `.\.venv\Scripts\python.exe -m unittest discover -s tests -q`
@@ -34,7 +34,7 @@ Checkpoint B: no production behavior change justified. Added 14 semantic tests; 
 - Statistical expense-model residuals remain intentional; do not fit them.
 
 ## Files currently being changed
-RESUME.md and tests/test_semantics.py; production unchanged.
+RESUME.md; code/evaluation/semantics.py; evaluation/phase2_6-results.md and phase2_6-details.json. Production unchanged.
 
 ## Reproduction commands
 ```powershell
@@ -42,12 +42,13 @@ RESUME.md and tests/test_semantics.py; production unchanged.
 .\.venv\Scripts\python.exe code/evaluation/experiments.py
 .\.venv\Scripts\python.exe code/evaluation/audit.py
 .\.venv\Scripts\python.exe code/evaluation/scope_audit.py
+.\.venv\Scripts\python.exe code/evaluation/semantics.py
 git diff --check
 git diff --exit-code HEAD -- dataset
 ```
 
 ## Exact next action
-Commit Checkpoint B test coverage. Next C: add reproducible six-case metrics and all-250 comparison against immutable Phase 2.5 commit, then adversarial review for D. Existing five amount residuals are preserved.
+Commit Checkpoint C; exact next action: adversarial review (read-only first pass), then fix confirmed P0/P1/P2 findings, rerun tests/diagnostics, and commit D. Preserve five amount residuals; do not chase labels.
 
 ## Do-not-do list
 Do not optimize plans, integrate LLM/VLM, generate output.csv, change dataset, chase request_21, introduce overrides, or begin another estimator search. Stage explicit paths only. Keep log.txt ignored and append-only. Preserve existing commits.
