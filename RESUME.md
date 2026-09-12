@@ -1,22 +1,22 @@
 # Runtime checkpoint
 
 ## Current phase
-Phase 3A — Evidence Contract & Reconciliation Foundation. Starting point verified.
+Phase 3A — Evidence Contract & Reconciliation Foundation. Checkpoint A complete.
 
 ## Current branch
 feat/evidence-contract
 
 ## Last known good commit
-`b04f7ad` completed Phase 2.6. 84 tests verified passing; initial tree clean.
+`d77b78f` restart; frozen baseline `b04f7ad`.
 
 ## Last completed checkpoint
-Phase 3A restart state. A schema, B validation/reconciliation, C fixture integration/inventory, D adversarial review remain.
+A: typed evidence schema, provenance, certainty/scope/amount labels and strict JSON transport complete. 92 tests pass; dataset unchanged. No reconciliation yet.
 
 ## Last passing test command
 `.\.venv\Scripts\python.exe -m unittest discover -s tests -v`
 
 ## Last passing test count
-84. Windows Python 3.12.14, standard-library unittest; no PATH changes needed.
+92. Windows Python 3.12.14, standard-library unittest; no PATH changes needed.
 
 ## Accepted decisions
 - Calendar-day mean variable spending, provisionally; confirmed payroll bridge.
@@ -36,7 +36,7 @@ Phase 3A restart state. A schema, B validation/reconciliation, C fixture integra
 - Statistical expense-model residuals remain intentional; do not fit them.
 
 ## Files currently being changed
-RESUME.md only; deterministic core frozen after Phase 2.6.
+RESUME.md; evidence.py; docs/evidence-contract.md; tests/test_evidence.py.
 
 ## Reproduction commands
 ```powershell
@@ -50,7 +50,7 @@ git diff --exit-code HEAD -- dataset
 ```
 
 ## Exact next action
-Commit restart state; implement Checkpoint A typed evidence schema, provenance and tests, then commit before reconciliation. New request is Phase 3A only: no model extractor. Keep candidate, validation and normalized amendment distinct. Scope and certainty must govern interpretation; confidence never authorizes money.
+Commit A, then implement B deterministic validation and reconciliation. Validate canonical source identity, semantic meaning, certainty, scope and dates; conflict may remain unresolved. Only normalized amendments may feed the frozen financial engine. C fixture integration/inventory and D review remain.
 
 ## Do-not-do list
 Do not optimize plans, integrate LLM/VLM, generate output.csv, change dataset, chase request_21, introduce overrides, or begin another estimator search. Stage explicit paths only. Keep log.txt ignored and append-only. Preserve existing commits.
