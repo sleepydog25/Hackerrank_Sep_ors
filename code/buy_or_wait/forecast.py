@@ -9,12 +9,14 @@ from .policy import DEFAULT_POLICY, ForecastPolicy
 from .reconcile import reconcile, salary_event
 from .recurrence import infer_series, project_dates, normalize, series_description
 from .income import supplement
+from .evidence_state import NormalizedEvidenceState, SeriesAction
 
 
 def forecast(profile: FinancialProfile, request: FinanceRequest,
              events: tuple[FinancialEvent, ...], rates: RateBook,
              messages: tuple[Message, ...] = (), images: tuple[ImageReference, ...] = (),
-             policy: ForecastPolicy = DEFAULT_POLICY) -> ForecastResult:
+             policy: ForecastPolicy = DEFAULT_POLICY,
+             normalized_state: NormalizedEvidenceState | None = None) -> ForecastResult:
     if request.user_id != profile.user_id or any(e.user_id != profile.user_id for e in events):
         raise ValueError('forecast context contains another user')
     start, end = request.request_date, request.request_date + timedelta(days=policy.horizon_days)
@@ -26,15 +28,32 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
         if i.user_id == profile.user_id and i.request_id in {None, request.request_id}:
             issues.append(f'unresolved image {i.image_id}: extraction not implemented')
     for e in events:
-        if e.amount is None:
+        if e.amount is None and not (normalized_state and e.status in {'cancelled','failed','unrealized'}):
             issues.append(f'missing amount {e.event_id}: never substituted with zero')
-    reconciled = reconcile(events, start)
+    if normalized_state is not None and tuple(events)!=normalized_state.events:
+        raise ValueError('normalized state/events mismatch')
+    reconciled = reconcile(events, start,normalized_state.confirmed_credit_ids if normalized_state else frozenset())
     flows = []
     notes = list(reconciled.notes)
-    series = infer_series(reconciled.history, start, policy, notes)
-    added,income_evidence=supplement(reconciled.history,reconciled.obligations,series,start,policy)
+    inference=reconcile(normalized_state.original_events,start) if normalized_state else reconciled
+    series = infer_series(inference.history, start, policy, notes)
+    added,income_evidence=supplement(inference.history,inference.obligations,series,start,policy)
     series=series+tuple(added)
     notes.extend(f'{e.source}: {e.state}: {e.reason}' for e in income_evidence)
+    original_dates={a.after.event_id:a.before.settlement_date for a in normalized_state.amendments
+                    if a.before and a.after} if normalized_state else {}
+    provenance={a.after.event_id:f'{a.source.source_id} -> {a.fact_id}' for a in normalized_state.amendments if a.after} if normalized_state else {}
+    def matches_target(s,target):
+        return (s.description!='*' and s.category==target.category and s.currency==target.currency
+                and s.direction==target.direction and (target.event_id in s.event_ids
+                or series_description(target.description,policy.robust_grouping)==s.description
+                or (salary_event(target) and sum(x.direction=='credit' and x.currency==s.currency for x in series)==1)))
+    scoped_rules={}
+    for rule in normalized_state.series_amendments if normalized_state else ():
+        matching=[s for s in series if matches_target(s,rule.target)]
+        if len(matching)==1:scoped_rules.setdefault(matching[0].series_id,[]).append(rule)
+        elif rule.action!=SeriesAction.SKIP_OCCURRENCE or matching:
+            issues.append(f'unresolved series amendment {rule.source_id} -> {rule.fact_id}: ambiguous or unsupported recurrence')
 
     def add(day, amount, direction, source, reason, inferred, currency, rate_date):
         try:
@@ -51,12 +70,24 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
         # Pending funds are unavailable immediately, not deducted again on settlement.
         day = start if e.status == 'pending' else max(start, e.settlement_date)
         if day <= end:
-            add(day, e.amount, e.direction, e.event_id,
-                'pending reservation (once)' if e.status == 'pending' else f'{e.status} cash event',
+            amount=e.amount
+            reason='pending reservation (once)' if e.status == 'pending' else f'{e.status} cash event'
+            if e.event_id in provenance:reason+='; '+provenance[e.event_id]
+            add(day, amount, e.direction, e.event_id, reason,
                 False, e.currency, e.settlement_date)
 
     for s in series:
         for day in project_dates(s, start, end):
+            amount=s.amount; reason=s.reason; skip=False
+            for rule in scoped_rules.get(s.series_id,()):
+                same_occurrence=((day.year,day.month)==(rule.effective_date.year,rule.effective_date.month)
+                                 if s.cadence=='monthly' else day==rule.effective_date)
+                applicable=day>=rule.effective_date and (rule.end_date is None or day<=rule.end_date)
+                if rule.action==SeriesAction.SKIP_OCCURRENCE and same_occurrence:skip=True
+                if rule.action==SeriesAction.END and applicable:skip=True
+                if rule.action==SeriesAction.AMOUNT and applicable:amount=rule.amount
+                if applicable or same_occurrence:reason+=f'; {rule.source_id} -> {rule.fact_id}'
+            if skip:continue
             matches = []
             # Request-exclusive inference must not reintroduce an occurrence
             # already paid today and included in the opening snapshot.
@@ -71,13 +102,14 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
                                or e.linked_event_id in s.event_ids
                                or (salary_event(e) and s.direction == 'credit'
                                    and sum(x.direction == 'credit' and x.currency == s.currency for x in series) == 1))
-                same_cycle = (e.settlement_date.year, e.settlement_date.month) == (day.year, day.month) if s.cadence == 'monthly' else e.settlement_date == day
+                occurrence_date=original_dates.get(e.event_id,e.settlement_date)
+                same_cycle = (occurrence_date.year, occurrence_date.month) == (day.year, day.month) if s.cadence == 'monthly' else occurrence_date == day
                 if same_series and same_cycle:
                     matches.append(e)
             if matches:
                 notes.append(f'{s.series_id} {day}: inferred occurrence replaced by '+','.join(e.event_id for e in matches))
                 continue
-            add(day, s.amount, s.direction, s.series_id, s.reason, True, s.currency, day)
+            add(day, amount, s.direction, s.series_id, reason, True, s.currency, day)
 
     if policy.pending_overlap:
         flows=resolve_overlap(flows,events,series,start,notes,policy)
@@ -168,7 +200,10 @@ def simulate(profile,request,flows,policy=DEFAULT_POLICY):
     return ledger,low,baseline_safe,safe,earliest
 
 
-def forecast_request(dataset, request: FinanceRequest) -> ForecastResult:
+def forecast_request(dataset, request: FinanceRequest, evidence_batches=()) -> ForecastResult:
+    if evidence_batches:
+        from .evidence_integration import forecast_dataset_evidence
+        return forecast_dataset_evidence(dataset,request,evidence_batches).forecast
     result = forecast(dataset.profiles[request.user_id], request,
                       dataset.events_by_user.get(request.user_id, ()), RateBook(dataset.rates),
                       dataset.messages_by_user.get(request.user_id, ()),
