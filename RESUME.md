@@ -1,5 +1,34 @@
 # Runtime checkpoint
 
+## EMERGENCY SUBMISSION BASELINE
+
+S0 replaces the earlier roadmap priority. Deterministic release implemented from
+`12ba13b` without changing frozen financial or Phase 3A policies. The commit
+containing this section is titled `feat: package deterministic emergency submission`;
+the exact hash will be recorded in the immediately following checkpoint update.
+
+Reproduce: `powershell -ExecutionPolicy Bypass -File scripts/finalize-submission.ps1`
+(or `.\.venv\Scripts\python.exe code/finalize_submission.py --require-log`).
+
+Root `output.csv` has 250 validated rows; root `code.zip` opens, contains
+`evaluation/usage_report.md`, passes secret/manifest checks, and reproduces output
+byte-for-byte when extracted. Root `log.txt` remains separate and ignored.
+230 tests pass. Dataset unchanged. Final inference calls/tokens/cost are zero.
+Usage is tied to output SHA-256
+`62a1801f90d4a20b569aea475a23f8b3712bd5d0f28fba502245cf5b7f4a89db`.
+
+Full/partial/wait/supplied installments are independently validated and ranked.
+Spending changes are disabled conservatively; no unvalidated model evidence or
+historical cache is used. Baseline capacity may remain provisional where evidence
+is missing. Missing cash amount/FX prevents plan certification. See
+`evaluation/s0-release.md` and `SUBMISSION_README.md` for limitations and the
+conservative installment-duration rule. Sample exact matches (25): safe amount 2,
+status/method/plan 10 each, earliest date 15, spending changes 22. No sample tuning.
+
+The older checkpoint notes below are retained as development history, not the
+current release instructions. Always preserve this passing release before any
+optional bounded Gemini qualification. No Nemotron/Nex retries or paid fallback.
+
 ## Current checkpoint / branch
 Phase 3B D hardening checkpoint, NOT final freeze; feat/message-extraction. NOT READY for Phase 3C.
 
