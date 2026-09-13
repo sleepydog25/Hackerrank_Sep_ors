@@ -78,7 +78,8 @@ def build_input(message,request,profile,events):
              'context_cutoff':message.sent_at.date().isoformat(),'related_event':None}
     target=next((e for e in events if e.event_id==message.related_event_id),None)
     if target and target.user_id!=message.user_id:raise ValueError('event ownership mismatch')
-    if target and target.event_date<=message.sent_at.date():
+    if (target and target.event_date<=message.sent_at.date()
+            and not (target.status=='settled' and target.settlement_date and target.settlement_date>message.sent_at.date())):
         # Conservative v1: if recording chronology is unavailable, withhold it.
         context['related_event']={k:(str(v) if isinstance(v,(Decimal,date)) else v)
                                   for k,v in asdict(target).items()

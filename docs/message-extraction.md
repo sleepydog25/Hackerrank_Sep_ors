@@ -10,10 +10,28 @@ The thin response envelope is `{outcome, facts, reasons}`. FACTS requires one to
 
 Offline fixtures cover 21 financial situations and ten instruction-style attacks. They test deterministic construction/parsing, not model accuracy or immunity to semantic hallucinations. The model has no tools, and message content cannot replace system instructions, schema or trusted source metadata.
 
-The provider adapter will use the Responses API `text.format` JSON schema and local strict validation; see the [official structured-output guide](https://developers.openai.com/api/docs/guides/structured-outputs). Refusals/truncation and unknown usage must be handled separately from valid structured output. No live call is allowed until Checkpoint B is committed.
+The provider adapter uses the Responses API `text.format` JSON schema and local strict validation; see the [official structured-output guide](https://developers.openai.com/api/docs/guides/structured-outputs). Refusals/truncation and unknown usage are handled separately from valid structured output. No live call is allowed until Checkpoint B is committed.
 
 Reproduce Checkpoint A:
 ```powershell
 .\.venv\Scripts\python.exe code/evaluation/message_audit.py
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
+
+## Provider, cache and usage
+
+Configuration is environment-only: MESSAGE_PROVIDER=openai, MESSAGE_MODEL (required exact identifier), OPENAI_API_KEY (secret), MESSAGE_TIMEOUT (1-60 seconds, default 45), MESSAGE_MAX_ATTEMPTS (1-3, default 2), MESSAGE_MAX_OUTPUT_TOKENS (256-8000, default 3000). There is no implicit model substitution or credential discovery outside the configured environment. Offline tests mock the transport and never spend tokens. No SDK/runtime dependency is added.
+
+SQLite at ignored `cache/messages.sqlite` uses WAL and FULL synchronization. Cache identity hashes raw content, complete supplied context, trusted source associations, provider/model, schema/prompt/extractor versions and their actual content hashes, and output-token limit. Successful facts, no-fact and unresolved interpretations are cached; deterministic parse/provider failures are also retained to avoid repeated charges. Retryable failures permit later retry. Each call intent is persisted before I/O; completion, usage and cache result commit in one transaction. An in-flight crash remains unknown and blocks silent redispatch. Review its exact key before using `--release-interrupted KEY`; a lost provider response cannot honestly be assigned zero tokens/cost. No secret or raw provider error body is stored. Only validated response envelopes (including bounded evidence quotes) are retained; cache hits reparse against current trusted input.
+
+Normal reruns use cache. `--refresh --message-id ID` deliberately refreshes selected entries; never refresh an entire corpus merely for diagnostics. `--cache-only` forbids calls and works without an API key when MESSAGE_MODEL is configured. Ordering is evaluation requests then samples, sorted request ID, sent_at, message ID; messages are independently interpreted with no later-message history. The cache is reusable after process restart. Reports never call providers.
+
+Usage records each attempt separately, including retries, provider/model, versions, source associations, timestamps, provider counts and unknown fields. Cache hits have external_call=false and incremental tokens/cost exactly zero. IN_FLIGHT counts are dispatch intents with uncertain outcomes, not verified completed calls. Optional MESSAGE_INPUT_USD_PER_MILLION, MESSAGE_OUTPUT_USD_PER_MILLION and MESSAGE_CACHED_INPUT_USD_PER_MILLION allow an explicit local Decimal estimate; unknown rates or counts yield unknown cost. Provider-reported costs are unavailable in this adapter. Development application inference remains separate from Codex tokens and the eventual final-run `evaluation/usage_report.md`.
+
+After B is committed and the environment is configured, run:
+```powershell
+.\.venv\Scripts\python.exe code/evaluation/message_extract.py
+.\.venv\Scripts\python.exe code/evaluation/message_extract.py
+.\.venv\Scripts\python.exe code/evaluation/message_extract.py --cache-only
+```
+The first unchanged rerun must report zero external attempts and zero incremental tokens/cost. A preflight missing-configuration exit makes no calls and is not evidence of a completed batch.

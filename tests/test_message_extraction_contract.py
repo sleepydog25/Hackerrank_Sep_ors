@@ -65,6 +65,11 @@ class MessageContractTests(unittest.TestCase):
         m=Message('m','person','question',None,datetime(2026,4,2,tzinfo=timezone.utc),'bank','Notice')
         with self.assertRaises(ValueError):build_input(m,request(),profile(),())
 
+    def test_later_settlement_state_not_leaked_from_older_event(self):
+        m=Message('m','person','question','bill',datetime(2026,3,31,tzinfo=timezone.utc),'bank','Bill information')
+        e=event(day=START-timedelta(days=5),status='settled',settlement=START)
+        self.assertIsNone(build_input(m,request(),profile(),[e]).context['related_event'])
+
     def test_metadata_override_is_rejected(self):
         with self.assertRaises(ValueError):parse_output(response([fact(user_id='other')]),task())
 
