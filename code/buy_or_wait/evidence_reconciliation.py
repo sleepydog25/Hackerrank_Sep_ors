@@ -26,13 +26,13 @@ def reconcile_evidence(candidates, context: EvidenceContext) -> NormalizedEviden
         # Atomic per target. Contradictory partial interpretations never partly apply.
         def signature(c):
             return (c.fact_type,c.certainty,c.scope,c.amount_meaning,c.amount,c.currency,
-                    c.effective_date,c.payment_date,c.period_start,c.period_end,c.category)
+                    c.effective_date,c.payment_date,c.due_date,c.period_start,c.period_end,c.category)
         rows.sort(key=lambda c:(c.source.observed_at,c.fact_id))
         chosen=rows[-1]
         if len({signature(c) for c in rows})>1:
             cancellations=[c for c in rows if c.fact_type==F.CANCELLATION]
             same_publisher=len({c.source.publisher_id for c in rows})==1 and rows[0].source.publisher_id is not None
-            if cancellations and all(c.scope in (S.EVENT_SPECIFIC,S.NEXT_OCCURRENCE_ONLY) for c in rows):
+            if cancellations and not any(c.certainty==C.SETTLED for c in rows) and all(c.scope in (S.EVENT_SPECIFIC,S.NEXT_OCCURRENCE_ONLY) for c in rows):
                 chosen=cancellations[-1]
             elif not (same_publisher and chosen.explicit_amendment and chosen.source.observed_at>max(c.source.observed_at for c in rows[:-1])):
                 for c in rows:decide(c,V.UNRESOLVED,R.CONFLICTING_EVIDENCE)

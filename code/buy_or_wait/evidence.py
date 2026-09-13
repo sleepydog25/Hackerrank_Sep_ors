@@ -165,7 +165,13 @@ def to_json(candidate: EvidenceCandidate) -> str:
 
 def from_json(text: str) -> EvidenceCandidate:
     """Strict transport parser. Money must be strings, never JSON float numbers."""
-    raw=json.loads(text)
+    def unique_fields(pairs):
+        result={}
+        for key,value in pairs:
+            if key in result:raise ValueError('duplicate JSON field: '+key)
+            result[key]=value
+        return result
+    raw=json.loads(text,object_pairs_hook=unique_fields)
     if not isinstance(raw,dict) or set(raw)-{f.name for f in fields(EvidenceCandidate)}:
         raise ValueError('invalid candidate fields')
     source=raw.pop('source')

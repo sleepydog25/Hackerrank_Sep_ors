@@ -7,6 +7,7 @@ from .evidence_state import NormalizedEvidenceState
 from .models import ForecastResult
 from .forecast import forecast
 from .fx import RateBook
+from .evidence_scope import bind_series_amendments
 
 
 @dataclass(frozen=True)
@@ -21,6 +22,7 @@ def forecast_with_evidence(profile,request,events,rates,sources,batches):
     key=lambda s:(s.source_type,s.source_id)
     if len({key(s) for s in sources})!=len(sources):raise ValueError('duplicate canonical evidence source')
     if len({key(b.source) for b in batches})!=len(batches):raise ValueError('duplicate evidence batch')
+    if any(type(b.exhaustive) is not bool for b in batches):raise ValueError('exhaustive requires boolean')
     issues=[]; candidates=[]
     for batch in batches:
         if batch.source not in sources or any(c.source!=batch.source for c in batch.candidates):
@@ -28,6 +30,7 @@ def forecast_with_evidence(profile,request,events,rates,sources,batches):
             continue
         candidates.extend(batch.candidates)
     state=reconcile_evidence(candidates,EvidenceContext(request,tuple(events),sources))
+    state=bind_series_amendments(state,request.request_date)
     for s in sources:
         if s.user_id!=request.user_id or s.request_id not in (None,request.request_id):continue
         if s.observed_at and s.observed_at.date()>request.request_date:continue

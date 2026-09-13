@@ -54,6 +54,10 @@ def validate(c: EvidenceCandidate, context: EvidenceContext) -> EvidenceDecision
         return result(V.UNRESOLVED,R.INVALID_DATES)
     if c.scope in (S.ONGOING,S.FROM_DATE,S.UNTIL_DATE) and c.fact_type not in (F.SALARY,F.RENT,F.EMPLOYMENT_ENDED):
         return result(V.UNRESOLVED,R.UNSUPPORTED_SCOPE)
+    if c.fact_type==F.EMPLOYMENT_ENDED and c.scope not in (S.ONGOING,S.FROM_DATE):
+        return result(V.UNRESOLVED,R.UNSUPPORTED_SCOPE)
+    if c.fact_type==F.RESCHEDULE and c.scope not in (S.EVENT_SPECIFIC,S.NEXT_OCCURRENCE_ONLY):
+        return result(V.UNRESOLVED,R.UNSUPPORTED_SCOPE)
     if c.fact_type in (F.CANCELLATION,F.RESCHEDULE,F.EMPLOYMENT_ENDED,F.FINAL_PAYROLL,F.SALARY,F.RENT,F.PAYMENT_RECEIVED) and event is None:
         return result(V.UNRESOLVED,R.MISSING_LINK)
     if c.fact_type in (F.SALARY,F.FINAL_PAYROLL,F.EMPLOYMENT_ENDED) and (event.category!='salary' or event.direction!='credit'):
@@ -61,6 +65,14 @@ def validate(c: EvidenceCandidate, context: EvidenceContext) -> EvidenceDecision
     if c.fact_type in (F.EXPENSE,F.RENT) and event and event.direction!='debit':
         return result(V.UNRESOLVED,R.SOURCE_EVENT_MISMATCH)
     if c.fact_type==F.RENT and event.category!='rent':return result(V.UNRESOLVED,R.SOURCE_EVENT_MISMATCH)
+    if event and c.fact_type in (F.REFUND,F.REIMBURSEMENT,F.INVESTMENT_SALE,F.INVOICE_APPROVED):
+        # A lifecycle association is not permission to turn payroll or a
+        # valuation record into a different kind of cash transaction.
+        compatible={F.REFUND:{'refund'},F.REIMBURSEMENT:{'refund','income'},
+                    F.INVESTMENT_SALE:{'investment_sale'},F.INVOICE_APPROVED:{'income'}}
+        if (event.direction!='credit' or event.event_type not in compatible[c.fact_type]
+                or event.category=='salary'):
+            return result(V.UNRESOLVED,R.SOURCE_EVENT_MISMATCH)
     if c.fact_type in (F.CANCELLATION,F.EMPLOYMENT_ENDED):
         if not c.effective_date:return result(V.UNRESOLVED,R.INVALID_DATES)
         if c.fact_type==F.CANCELLATION and (event.status=='settled' or c.scope not in (S.EVENT_SPECIFIC,S.NEXT_OCCURRENCE_ONLY)):
@@ -69,6 +81,8 @@ def validate(c: EvidenceCandidate, context: EvidenceContext) -> EvidenceDecision
             return result(V.UNRESOLVED,R.INVALID_DATES)
         return result(V.ACCEPTED,R.VALIDATED)
     if c.payment_date is None:return result(V.UNRESOLVED,R.INVALID_DATES)
+    if event is None and c.payment_date<q.request_date and c.certainty!=C.SETTLED:
+        return result(V.UNRESOLVED,R.UNCONFIRMED_SETTLEMENT)
     if c.certainty==C.SETTLED and c.payment_date>q.request_date:
         return result(V.UNRESOLVED,R.INVALID_DATES)
     if event and event.status=='pending' and event.direction=='credit' and c.certainty!=C.SETTLED and c.fact_type!=F.RESCHEDULE:

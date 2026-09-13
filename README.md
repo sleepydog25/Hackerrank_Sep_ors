@@ -31,7 +31,11 @@ See [validation commands](evaluation/phase2_5-validation.md) for the executed ch
 Phase 2.6 completed the [specification audit](evaluation/phase2_6-semantics-audit.md)
 and [dataset-wide comparison](evaluation/phase2_6-results.md), retaining production
 behavior with 84 passing tests. Start with [RESUME.md](RESUME.md) to continue work.
-The next phase is evidence normalization; payment-plan optimization remains deferred.
+Phase 3A now provides the [typed evidence boundary](docs/evidence-contract.md),
+fixture-driven reconciliation, and [adversarial review](evaluation/phase3a-review.md).
+The suite has 143 passing tests; the frozen baseline remains unchanged. Real evidence
+extraction and payment-plan optimization remain deferred. Reproduce its metadata
+inventory with `.\.venv\Scripts\python.exe code/evaluation/evidence_inventory.py`.
 Reproduce the latest audit with:
 
 ```powershell

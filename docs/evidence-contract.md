@@ -10,7 +10,7 @@ Fact types distinguish salary, expense/rent, receipt, refund/reimbursement, appr
 
 `EvidenceDecision` is ACCEPTED, REJECTED or UNRESOLVED with a machine-readable reason. Only validation can wrap a candidate in `ValidatedEvidenceFact`; later reconciliation can still find conflicts. Confidence is diagnostic and never authorizes cash. `EvidenceBatch.exhaustive` tracks whether a source has been fully accounted for; one accepted number does not establish that a cropped image has been resolved.
 
-Checkpoint A provides only schema/transport/tests. Checkpoint B must implement validation and deterministic normalized amendments, and Checkpoint C connects those amendments through a typed forecast interface. No external extractor, prompt, credential, API or model usage is part of Phase 3A. No sample label belongs in production.
+Checkpoint A provides schema/transport/tests; B implements validation and deterministic normalized amendments; C connects them through a typed forecast interface; D hardens the boundary after adversarial review. No external extractor, prompt, credential, API or model usage is part of Phase 3A. No sample label belongs in production.
 
 ## Deterministic validation and reconciliation (Checkpoint B)
 
@@ -31,3 +31,17 @@ The engine receives normalized immutable events and explicit scoped projection d
 Every source requires an exhaustive batch. A missing batch, partial interpretation, empty batch, rejected schema/context, unresolved fact, missing required amount, missing rate or ambiguous recurring target keeps the result provisional. Clearly hypothetical, conditional, nonfinancial and valuation facts can be rejected and resolved. A cancelled missing-amount obligation no longer requires its amount; the engine records cancellation rather than inventing zero cash. Provenance survives in normalized amendments, flow reasons and decision notes.
 
 Synthetic fixtures cover the full pipeline. Real requests are not populated with hand-read facts. The metadata inventory and empty-adapter regression reproduce with `.venv\Scripts\python.exe code/evaluation/evidence_inventory.py`; full tests use `.venv\Scripts\python.exe -m unittest discover -s tests -v`.
+
+## Adversarial hardening (Checkpoint D)
+
+`evidence_scope.bind_series_amendments` binds directives to supported original history before the forecast. Exact event/lifecycle identities and normalized descriptions identify a series; generic payroll fallback cannot bridge different named employers. An unsupported or ambiguous recurring target reverts the whole affected fact and returns UNRESOLVED/UNSUPPORTED_SCOPE. Overlapping different amounts for the same series, including a separately amended next-pay occurrence, revert the involved facts with CONFLICTING_EVIDENCE. Non-overlapping scopes remain independent. Cross-target precedence is intentionally conservative; no input ordering chooses a winner.
+
+An accepted ongoing amount applies to both explicit future occurrences and inferred occurrences within its effective/end dates. It replaces each occurrence's amount and retains its identity and provenance. It never adds an extra occurrence or retrains historical recurrence. Termination stops supported inferred continuation; a separately confirmed final payment remains. Cancellation and reschedule scopes stay event/next-occurrence specific. Conflicting explicit cancellation and settlement need supported precedence or remain unresolved.
+
+Transport rejects duplicate JSON fields and non-boolean exhaustive flags. An unlinked past-due promise without settlement is unresolved, not opening cash. Refund/sale/invoice semantics must match a linked event's financial type. Missing-amount exemptions require an actual accepted cancellation; an empty evidence adapter cannot silently improve baseline completeness. The review and regression evidence are in `evaluation/phase3a-review.md`.
+
+## Phase 3B integration obligations
+
+The extractor supplies candidates and coverage; it cannot supply a balance, authorize a rate, or promote its own publisher identity into trusted metadata. Source records must be constructed by the dataset adapter. `CONFIRMED` for new one-off cash means an unconditional, dated disbursement, not a pending estimate, approval contingent on further work, or an investment valuation. A pending CSV credit still requires SETTLED evidence; historical settlement is already represented by the opening snapshot.
+
+Return UNRESOLVED for uncertain amount labels, dates, links, conditionality, or source coverage. Numeric fields in a provisional forecast are diagnostic only. Real image observation dates and publisher identity need an explicit trusted-context design in their later phase. Date-tiered bills, partial-paid arithmetic without an explicit balance, and complex overlapping amendments remain represented but unresolved. No inference from solved output columns is permitted.

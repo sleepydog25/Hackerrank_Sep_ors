@@ -10,6 +10,7 @@ from .reconcile import reconcile, salary_event
 from .recurrence import infer_series, project_dates, normalize, series_description
 from .income import supplement
 from .evidence_state import NormalizedEvidenceState, SeriesAction
+from .evidence_scope import matches_series
 
 
 def forecast(profile: FinancialProfile, request: FinanceRequest,
@@ -27,8 +28,10 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
     for i in images:
         if i.user_id == profile.user_id and i.request_id in {None, request.request_id}:
             issues.append(f'unresolved image {i.image_id}: extraction not implemented')
+    resolved_cancellations={a.after.event_id for a in normalized_state.amendments
+                            if a.after and a.after.status=='cancelled'} if normalized_state else set()
     for e in events:
-        if e.amount is None and not (normalized_state and e.status in {'cancelled','failed','unrealized'}):
+        if e.amount is None and e.event_id not in resolved_cancellations:
             issues.append(f'missing amount {e.event_id}: never substituted with zero')
     if normalized_state is not None and tuple(events)!=normalized_state.events:
         raise ValueError('normalized state/events mismatch')
@@ -44,10 +47,7 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
                     if a.before and a.after} if normalized_state else {}
     provenance={a.after.event_id:f'{a.source.source_id} -> {a.fact_id}' for a in normalized_state.amendments if a.after} if normalized_state else {}
     def matches_target(s,target):
-        return (s.description!='*' and s.category==target.category and s.currency==target.currency
-                and s.direction==target.direction and (target.event_id in s.event_ids
-                or series_description(target.description,policy.robust_grouping)==s.description
-                or (salary_event(target) and sum(x.direction=='credit' and x.currency==s.currency for x in series)==1)))
+        return matches_series(s,target,series,policy)
     scoped_rules={}
     for rule in normalized_state.series_amendments if normalized_state else ():
         matching=[s for s in series if matches_target(s,rule.target)]
@@ -72,6 +72,13 @@ def forecast(profile: FinancialProfile, request: FinanceRequest,
         if day <= end:
             amount=e.amount
             reason='pending reservation (once)' if e.status == 'pending' else f'{e.status} cash event'
+            for s in series:
+                if not matches_target(s,e):continue
+                for rule in scoped_rules.get(s.series_id,()):
+                    if (rule.action==SeriesAction.AMOUNT and e.settlement_date>=rule.effective_date
+                            and (rule.end_date is None or e.settlement_date<=rule.end_date)):
+                        amount=rule.amount
+                        reason+=f'; {rule.source_id} -> {rule.fact_id}'
             if e.event_id in provenance:reason+='; '+provenance[e.event_id]
             add(day, amount, e.direction, e.event_id, reason,
                 False, e.currency, e.settlement_date)
