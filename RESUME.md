@@ -3,9 +3,10 @@
 ## EMERGENCY SUBMISSION BASELINE
 
 S0 replaces the earlier roadmap priority. Deterministic release implemented from
-`12ba13b` without changing frozen financial or Phase 3A policies. The commit
-containing this section is titled `feat: package deterministic emergency submission`;
-the exact hash will be recorded in the immediately following checkpoint update.
+`12ba13b` without changing frozen financial or Phase 3A policies. Exact known-good
+release commit: `70859c23b12b2e887fdfad94ecbdcb588a027d0d`
+(`feat: package deterministic emergency submission`). Its committed output and
+archive are always available as the S0 fallback.
 
 Reproduce: `powershell -ExecutionPolicy Bypass -File scripts/finalize-submission.ps1`
 (or `.\.venv\Scripts\python.exe code/finalize_submission.py --require-log`).
