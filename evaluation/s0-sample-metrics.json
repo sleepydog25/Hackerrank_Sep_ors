@@ -1,0 +1,12 @@
+{
+  "strategy": "deterministic S0; post-implementation evaluation; no sample tuning",
+  "sample_count": 25,
+  "exact_matches": {
+    "amount_safe_to_pay": 2,
+    "affordability_status": 10,
+    "recommended_payment_method": 10,
+    "payment_plan": 10,
+    "earliest_date_for_full_payment": 15,
+    "spending_changes_needed": 22
+  }
+}

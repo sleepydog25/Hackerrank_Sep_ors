@@ -1,0 +1,171 @@
+{
+  "cases": [
+    {
+      "case": "termination",
+      "status": "SUCCESS",
+      "cache_hit": false,
+      "passed": true,
+      "safety_passed": true,
+      "candidates": [
+        {
+          "type": "EMPLOYMENT_ENDED",
+          "certainty": "CONFIRMED",
+          "scope": "EVENT_SPECIFIC",
+          "meaning": "gross_pay",
+          "payment_date": null
+        }
+      ]
+    },
+    {
+      "case": "conditional",
+      "status": "UNRESOLVED_SUCCESS",
+      "cache_hit": false,
+      "passed": true,
+      "safety_passed": true,
+      "candidates": [
+        {
+          "type": "PENDING_PAYOUT",
+          "certainty": "CONDITIONAL",
+          "scope": "EVENT_SPECIFIC",
+          "meaning": "gross_pay",
+          "payment_date": null
+        },
+        {
+          "type": "NON_FINANCIAL",
+          "certainty": "DISPUTED",
+          "scope": "ONE_OFF",
+          "meaning": "unknown",
+          "payment_date": null
+        }
+      ]
+    },
+    {
+      "case": "valuation",
+      "status": "SUCCESS",
+      "cache_hit": false,
+      "passed": true,
+      "safety_passed": true,
+      "candidates": [
+        {
+          "type": "INVESTMENT_VALUE",
+          "certainty": "CONFIRMED",
+          "scope": "UNTIL_DATE",
+          "meaning": "invoice_amount",
+          "payment_date": null
+        }
+      ]
+    },
+    {
+      "case": "invoice",
+      "status": "SUCCESS",
+      "cache_hit": false,
+      "passed": true,
+      "safety_passed": true,
+      "candidates": [
+        {
+          "type": "INVOICE_APPROVED",
+          "certainty": "CONFIRMED",
+          "scope": "ONGOING",
+          "meaning": "invoice_amount",
+          "payment_date": "2026-04-10"
+        }
+      ]
+    }
+  ],
+  "run_usage": {
+    "external_attempts": 4,
+    "cache_hits": 0,
+    "call_statuses": {
+      "SUCCESS": 3,
+      "UNRESOLVED_SUCCESS": 1
+    },
+    "cache_statuses": {},
+    "statuses": {
+      "SUCCESS": 3,
+      "UNRESOLVED_SUCCESS": 1
+    },
+    "uncertain_attempts": 0,
+    "retries": 0,
+    "providers": [
+      "openrouter"
+    ],
+    "configured_models": [
+      "nvidia/nemotron-3-super-120b-a12b:free"
+    ],
+    "actual_models": [
+      "nvidia/nemotron-3-super-120b-a12b:free"
+    ],
+    "input_tokens": 4492,
+    "known_input_tokens": 4492,
+    "unknown_input_tokens_attempts": 0,
+    "output_tokens": 847,
+    "known_output_tokens": 847,
+    "unknown_output_tokens_attempts": 0,
+    "total_tokens": 5339,
+    "known_total_tokens": 5339,
+    "unknown_total_tokens_attempts": 0,
+    "cached_input_tokens": 0,
+    "known_cached_input_tokens": 0,
+    "unknown_cached_input_tokens_attempts": 0,
+    "estimated_cost_usd": "0",
+    "known_estimated_cost_usd": "0",
+    "unknown_cost_attempts": 0,
+    "reported_cost_usd": "0",
+    "known_reported_cost_usd": "0",
+    "upstream_providers": [
+      "Nvidia"
+    ],
+    "per_model": {
+      "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {
+        "external_attempts": 4,
+        "cache_hits": 0,
+        "call_statuses": {
+          "SUCCESS": 3,
+          "UNRESOLVED_SUCCESS": 1
+        },
+        "cache_statuses": {},
+        "statuses": {
+          "SUCCESS": 3,
+          "UNRESOLVED_SUCCESS": 1
+        },
+        "uncertain_attempts": 0,
+        "retries": 0,
+        "providers": [
+          "openrouter"
+        ],
+        "configured_models": [
+          "nvidia/nemotron-3-super-120b-a12b:free"
+        ],
+        "actual_models": [
+          "nvidia/nemotron-3-super-120b-a12b:free"
+        ],
+        "input_tokens": 4492,
+        "known_input_tokens": 4492,
+        "unknown_input_tokens_attempts": 0,
+        "output_tokens": 847,
+        "known_output_tokens": 847,
+        "unknown_output_tokens_attempts": 0,
+        "total_tokens": 5339,
+        "known_total_tokens": 5339,
+        "unknown_total_tokens_attempts": 0,
+        "cached_input_tokens": 0,
+        "known_cached_input_tokens": 0,
+        "unknown_cached_input_tokens_attempts": 0,
+        "estimated_cost_usd": "0",
+        "known_estimated_cost_usd": "0",
+        "unknown_cost_attempts": 0,
+        "reported_cost_usd": "0",
+        "known_reported_cost_usd": "0",
+        "upstream_providers": [
+          "Nvidia"
+        ]
+      }
+    }
+  },
+  "schema_version": "message-2",
+  "prompt_version": "message-3",
+  "extractor_version": "message-2",
+  "assessment_scope": "NARROW_CHECKS_ONLY_NOT_FULL_SEMANTIC_OR_FINANCIAL_APPROVAL",
+  "overall_model_approved": false,
+  "review_note": "Subsequent real-source review found semantic errors; see phase3b-review.md. This historical smoke was not rerun under extractor-4."
+}

@@ -1,0 +1,4753 @@
+{
+  "run_status": "BLOCKED_OR_INCOMPLETE",
+  "extraction": {
+    "messages_total": 215,
+    "statuses": {
+      "NOT_RUN": 215
+    },
+    "successful_parse": 0,
+    "no_fact": 0,
+    "facts_by_type": {},
+    "facts_by_certainty": {},
+    "facts_by_scope": {},
+    "facts_by_amount_meaning": {},
+    "ambiguity": {
+      "AMBIGUOUS_DATE": 0,
+      "AMBIGUOUS_CURRENCY": 0,
+      "UNRESOLVED_TARGET": 0
+    },
+    "multi_fact_messages": 0,
+    "messages": [
+      {
+        "message_id": "message_75",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_76",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_77",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_78",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_79",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_80",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_81",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_82",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_83",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_84",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_85",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_86",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_87",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_88",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_89",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_90",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_91",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_92",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_93",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_94",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_95",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_96",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_97",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_98",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_99",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_100",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_101",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_102",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_103",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_104",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_105",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_106",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_107",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_108",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_109",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_110",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_111",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_112",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_113",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_114",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_115",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_116",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_117",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_118",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_119",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_120",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_121",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_122",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_123",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_124",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_125",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_126",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_127",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_128",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_129",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_130",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_131",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_132",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_133",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_134",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_135",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_136",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_137",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_138",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_139",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_140",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_141",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_142",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_143",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_144",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_145",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_146",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_147",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_148",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_149",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_150",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_151",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_152",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_153",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_154",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_155",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_156",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_157",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_158",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_159",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_160",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_161",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_162",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_163",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_164",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_165",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_166",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_167",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_168",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_169",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_170",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_171",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_172",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_173",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_174",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_175",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_176",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_177",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_178",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_179",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_180",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_181",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_182",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_183",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_184",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_185",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_186",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_187",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_188",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_189",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_190",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_191",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_192",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_193",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_194",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_195",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_196",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_197",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_198",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_199",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_200",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_201",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_18",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_202",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_203",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_204",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_205",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_206",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_207",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_208",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_209",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_210",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_19",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_211",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_212",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_213",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_214",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_215",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_20",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_21",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_22",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_23",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_24",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_25",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_26",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_27",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_28",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_29",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_30",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_31",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_32",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_33",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_34",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_35",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_36",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_37",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_38",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_39",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_40",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_41",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_42",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_43",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_44",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_45",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_46",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_47",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_48",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_49",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_50",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_51",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_52",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_53",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_54",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_55",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_56",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_57",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_58",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_59",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_60",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_61",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_62",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_63",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_64",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_65",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_66",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_67",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_68",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_69",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_70",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_71",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_72",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_73",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_74",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_01",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_02",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_03",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_04",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_05",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_06",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_07",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_08",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_09",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_10",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_11",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_12",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_13",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_14",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_15",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_16",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      },
+      {
+        "message_id": "message_17",
+        "status": "NOT_RUN",
+        "facts": 0,
+        "error": "CACHE_MISS"
+      }
+    ]
+  },
+  "evaluation": {
+    "summary": {
+      "complete_before": 50,
+      "complete_after": 50,
+      "provisional_before": 200,
+      "provisional_after": 200,
+      "financially_changed": 0,
+      "safe_changed": 0,
+      "earliest_changed": 0,
+      "baseline_safety_changed": 0,
+      "unresolved_messages": 198,
+      "unresolved_both": 9,
+      "unresolved_images_only": 0
+    },
+    "validation": {},
+    "unresolved_reasons": {},
+    "requests": [
+      {
+        "request_id": "request_100",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "24248.42",
+        "baseline_earliest_date": "2024-08-15",
+        "amount_safe_to_pay": "24248.42",
+        "earliest_date_for_full_payment": "2024-08-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_101",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "140849.11",
+        "baseline_earliest_date": "2025-11-15",
+        "amount_safe_to_pay": "140849.11",
+        "earliest_date_for_full_payment": "2025-11-15",
+        "issues": [
+          "missing amount event_9421: never substituted with zero",
+          "message_75: SOURCE_NOT_EXHAUSTED",
+          "image_14: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_102",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1256.18",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "1256.18",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_76: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_103",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_77: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_104",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "5433.01",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "5433.01",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_78: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_105",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "50032.94",
+        "baseline_earliest_date": "2026-06-15",
+        "amount_safe_to_pay": "50032.94",
+        "earliest_date_for_full_payment": "2026-06-15",
+        "issues": [
+          "missing amount event_9806: never substituted with zero",
+          "message_79: SOURCE_NOT_EXHAUSTED",
+          "image_15: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_106",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_80: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_107",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_81: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_108",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2348.59",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "2348.59",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_82: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_109",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "439.40",
+        "baseline_earliest_date": "2024-05-15",
+        "amount_safe_to_pay": "439.40",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_110",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "16742.26",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "16742.26",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_83: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_111",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "15530973.60",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "15530973.60",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_84: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_112",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_85: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_113",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "18096.87",
+        "baseline_earliest_date": "2026-10-15",
+        "amount_safe_to_pay": "18096.87",
+        "earliest_date_for_full_payment": "2026-10-15",
+        "issues": [
+          "missing amount event_10521: never substituted with zero",
+          "message_86: SOURCE_NOT_EXHAUSTED",
+          "image_16: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_114",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_87: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_115",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "13323.51",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "13323.51",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [
+          "message_88: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_116",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "6908.20",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "6908.20",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_117",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "859.51",
+        "baseline_earliest_date": "2026-07-15",
+        "amount_safe_to_pay": "859.51",
+        "earliest_date_for_full_payment": "2026-07-15",
+        "issues": [
+          "message_89: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_118",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "637.83",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "637.83",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_90: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_119",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_91: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_120",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "7714000",
+        "baseline_earliest_date": "2026-04-06",
+        "amount_safe_to_pay": "7714000",
+        "earliest_date_for_full_payment": "2026-04-06",
+        "issues": [
+          "message_92: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_121",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "619.88",
+        "baseline_earliest_date": "2024-03-15",
+        "amount_safe_to_pay": "619.88",
+        "earliest_date_for_full_payment": "2024-03-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_122",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "16364343.74",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "16364343.74",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_93: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_123",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_94: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_124",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "1303.23",
+        "baseline_earliest_date": "2024-08-15",
+        "amount_safe_to_pay": "1303.23",
+        "earliest_date_for_full_payment": "2024-08-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_125",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "5601.03",
+        "baseline_earliest_date": "2025-11-15",
+        "amount_safe_to_pay": "5601.03",
+        "earliest_date_for_full_payment": "2025-11-15",
+        "issues": [
+          "message_95: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_126",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "4447.47",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "4447.47",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_96: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_127",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_97: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_128",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "25168",
+        "baseline_earliest_date": "2025-02-07",
+        "amount_safe_to_pay": "25168",
+        "earliest_date_for_full_payment": "2025-02-07",
+        "issues": [
+          "message_98: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_129",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "58.69",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "58.69",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_99: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_130",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_100: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_131",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_101: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_132",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_102: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_133",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_103: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_134",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "4015001.95",
+        "baseline_earliest_date": "2025-10-15",
+        "amount_safe_to_pay": "4015001.95",
+        "earliest_date_for_full_payment": "2025-10-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_135",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "287.07",
+        "baseline_earliest_date": "2026-07-15",
+        "amount_safe_to_pay": "287.07",
+        "earliest_date_for_full_payment": "2026-07-15",
+        "issues": [
+          "message_104: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_136",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "521.71",
+        "baseline_earliest_date": "2024-06-15",
+        "amount_safe_to_pay": "521.71",
+        "earliest_date_for_full_payment": "2024-06-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_137",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "20867.05",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "20867.05",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_105: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_138",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "672.16",
+        "baseline_earliest_date": "2026-04-15",
+        "amount_safe_to_pay": "672.16",
+        "earliest_date_for_full_payment": "2026-04-15",
+        "issues": [
+          "message_106: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_139",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "1263.11",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "1263.11",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_140",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_107: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_141",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "16158.10",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "16158.10",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_108: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_142",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "508.81",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "508.81",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_109: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_143",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2770.81",
+        "baseline_earliest_date": "2025-07-15",
+        "amount_safe_to_pay": "2770.81",
+        "earliest_date_for_full_payment": "2025-07-15",
+        "issues": [
+          "message_110: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_144",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_111: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_145",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "18975.72",
+        "baseline_earliest_date": "2024-05-15",
+        "amount_safe_to_pay": "18975.72",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "issues": [
+          "message_112: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_146",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "4867.71",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "4867.71",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_147",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_113: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_148",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "6728.82",
+        "baseline_earliest_date": "2024-08-15",
+        "amount_safe_to_pay": "6728.82",
+        "earliest_date_for_full_payment": "2024-08-15",
+        "issues": [
+          "message_114: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_149",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "20776.13",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "20776.13",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_150",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_115: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_151",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_116: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_152",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "10632.35",
+        "baseline_earliest_date": "2025-04-15",
+        "amount_safe_to_pay": "10632.35",
+        "earliest_date_for_full_payment": "2025-04-15",
+        "issues": [
+          "message_117: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_153",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_118: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_154",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1528.09",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "1528.09",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_119: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_155",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "6088.36",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "6088.36",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_120: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_156",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "6564.94",
+        "baseline_earliest_date": "2026-06-15",
+        "amount_safe_to_pay": "6564.94",
+        "earliest_date_for_full_payment": "2026-06-15",
+        "issues": [
+          "message_121: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_157",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_122: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_158",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "184975.83",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "184975.83",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_159",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_123: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_160",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_124: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_161",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_125: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_162",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1364448.06",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "1364448.06",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_126: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_163",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "9744380.07",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "9744380.07",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [
+          "message_127: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_164",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "27018000",
+        "baseline_earliest_date": "2025-02-04",
+        "amount_safe_to_pay": "27018000",
+        "earliest_date_for_full_payment": "2025-02-04",
+        "issues": [
+          "message_128: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_165",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "61350.73",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "61350.73",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_129: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_166",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2538.69",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "2538.69",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_130: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_167",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_131: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_168",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_132: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_169",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "41976",
+        "baseline_earliest_date": "2024-03-04",
+        "amount_safe_to_pay": "41976",
+        "earliest_date_for_full_payment": "2024-03-04",
+        "issues": [
+          "message_133: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_170",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "29825426.01",
+        "baseline_earliest_date": "2025-09-15",
+        "amount_safe_to_pay": "29825426.01",
+        "earliest_date_for_full_payment": "2025-09-15",
+        "issues": [
+          "message_134: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_171",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "19.70",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "19.70",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_135: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_172",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "8012.48",
+        "baseline_earliest_date": "2024-06-15",
+        "amount_safe_to_pay": "8012.48",
+        "earliest_date_for_full_payment": "2024-06-15",
+        "issues": [
+          "message_136: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_173",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "56851.10",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "56851.10",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [
+          "message_137: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_174",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "1018.34",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "1018.34",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_175",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_138: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_176",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_139: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_177",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_140: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_178",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2392.08",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "2392.08",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_141: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_179",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "6779147.80",
+        "baseline_earliest_date": "2025-07-15",
+        "amount_safe_to_pay": "6779147.80",
+        "earliest_date_for_full_payment": "2025-07-15",
+        "issues": [
+          "message_142: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_180",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_143: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_181",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "122.63",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "122.63",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_182",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "65714",
+        "baseline_earliest_date": "2025-08-05",
+        "amount_safe_to_pay": "65714",
+        "earliest_date_for_full_payment": "2025-08-05",
+        "issues": [
+          "message_144: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_183",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "22890187.43",
+        "baseline_earliest_date": "2026-05-15",
+        "amount_safe_to_pay": "22890187.43",
+        "earliest_date_for_full_payment": "2026-05-15",
+        "issues": [
+          "message_145: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_184",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "603.15",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "603.15",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_146: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_185",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "265.27",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "265.27",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_147: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_186",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_148: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_187",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_149: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_188",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "84.31",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "84.31",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_150: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_189",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "488.4",
+        "baseline_earliest_date": "2026-07-04",
+        "amount_safe_to_pay": "488.4",
+        "earliest_date_for_full_payment": "2026-07-04",
+        "issues": [
+          "message_151: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_190",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "474.76",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "474.76",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_191",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "664.4",
+        "baseline_earliest_date": "2025-05-03",
+        "amount_safe_to_pay": "664.4",
+        "earliest_date_for_full_payment": "2025-05-03",
+        "issues": [
+          "message_152: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_192",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "49.58",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "49.58",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_193",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_153: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_194",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_154: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_195",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_155: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_196",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "762.3",
+        "baseline_earliest_date": "2024-06-03",
+        "amount_safe_to_pay": "762.3",
+        "earliest_date_for_full_payment": "2024-06-03",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_197",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_156: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_198",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "185800",
+        "baseline_earliest_date": "2026-07-07",
+        "amount_safe_to_pay": "185800",
+        "earliest_date_for_full_payment": "2026-07-07",
+        "issues": [
+          "message_157: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_199",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "23674000",
+        "baseline_earliest_date": "2024-09-04",
+        "amount_safe_to_pay": "23674000",
+        "earliest_date_for_full_payment": "2024-09-04",
+        "issues": [
+          "message_158: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_200",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "21717000",
+        "baseline_earliest_date": "2025-02-06",
+        "amount_safe_to_pay": "21717000",
+        "earliest_date_for_full_payment": "2025-02-06",
+        "issues": [
+          "message_159: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_201",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "21958933.32",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "21958933.32",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_160: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_202",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "123900",
+        "baseline_earliest_date": "2024-12-05",
+        "amount_safe_to_pay": "123900",
+        "earliest_date_for_full_payment": "2024-12-05",
+        "issues": [
+          "message_161: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_203",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "856.94",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "856.94",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_204",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_162: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_205",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "10621000",
+        "baseline_earliest_date": "2024-03-06",
+        "amount_safe_to_pay": "10621000",
+        "earliest_date_for_full_payment": "2024-03-06",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_206",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "1404.7",
+        "baseline_earliest_date": "2025-08-03",
+        "amount_safe_to_pay": "1404.7",
+        "earliest_date_for_full_payment": "2025-08-03",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_207",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "4462.94",
+        "baseline_earliest_date": "2026-07-15",
+        "amount_safe_to_pay": "4462.94",
+        "earliest_date_for_full_payment": "2026-07-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_208",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2909189.61",
+        "baseline_earliest_date": "2024-06-15",
+        "amount_safe_to_pay": "2909189.61",
+        "earliest_date_for_full_payment": "2024-06-15",
+        "issues": [
+          "message_163: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_209",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "972.18",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "972.18",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_210",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "708.41",
+        "baseline_earliest_date": "2026-04-15",
+        "amount_safe_to_pay": "708.41",
+        "earliest_date_for_full_payment": "2026-04-15",
+        "issues": [
+          "message_164: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_211",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "245.03",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "245.03",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_212",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_165: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_213",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2228.46",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "2228.46",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_166: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_214",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "34895.71",
+        "baseline_earliest_date": "2025-01-15",
+        "amount_safe_to_pay": "34895.71",
+        "earliest_date_for_full_payment": "2025-01-15",
+        "issues": [
+          "message_167: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_215",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "26837.07",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "26837.07",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_168: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_216",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "442.27",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "442.27",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_169: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_217",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "18087.52",
+        "baseline_earliest_date": "2024-05-15",
+        "amount_safe_to_pay": "18087.52",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_218",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "22812793.30",
+        "baseline_earliest_date": "2025-09-15",
+        "amount_safe_to_pay": "22812793.30",
+        "earliest_date_for_full_payment": "2025-09-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_219",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_170: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_220",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_171: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_221",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "109800",
+        "baseline_earliest_date": "2025-11-03",
+        "amount_safe_to_pay": "109800",
+        "earliest_date_for_full_payment": "2025-11-03",
+        "issues": [
+          "message_172: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_222",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "29867.72",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "29867.72",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_173: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_223",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "898.7",
+        "baseline_earliest_date": "2024-09-07",
+        "amount_safe_to_pay": "898.7",
+        "earliest_date_for_full_payment": "2024-09-07",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_224",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "8475491.72",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "8475491.72",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_174: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_225",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "8912182.50",
+        "baseline_earliest_date": "2026-09-15",
+        "amount_safe_to_pay": "8912182.50",
+        "earliest_date_for_full_payment": "2026-09-15",
+        "issues": [
+          "message_175: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_226",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "157000",
+        "baseline_earliest_date": "2024-12-03",
+        "amount_safe_to_pay": "157000",
+        "earliest_date_for_full_payment": "2024-12-03",
+        "issues": [
+          "message_176: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_227",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "5783.47",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "5783.47",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_177: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_228",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_178: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_229",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "375.08",
+        "baseline_earliest_date": "2024-05-15",
+        "amount_safe_to_pay": "375.08",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "issues": [
+          "message_179: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_230",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "3537.6",
+        "baseline_earliest_date": "2025-08-06",
+        "amount_safe_to_pay": "3537.6",
+        "earliest_date_for_full_payment": "2025-08-06",
+        "issues": [
+          "message_180: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_231",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "30482.81",
+        "baseline_earliest_date": "2026-03-15",
+        "amount_safe_to_pay": "30482.81",
+        "earliest_date_for_full_payment": "2026-03-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_232",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_181: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_233",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_182: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_234",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "175.40",
+        "baseline_earliest_date": "2026-09-15",
+        "amount_safe_to_pay": "175.40",
+        "earliest_date_for_full_payment": "2026-09-15",
+        "issues": [
+          "message_183: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_235",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "967.2",
+        "baseline_earliest_date": "2024-09-06",
+        "amount_safe_to_pay": "967.2",
+        "earliest_date_for_full_payment": "2024-09-06",
+        "issues": [
+          "message_184: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_236",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "4829885.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "4829885.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_185: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_237",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "19806633.25",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "19806633.25",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_186: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_238",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "633.56",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "633.56",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_187: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_239",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "613.00",
+        "baseline_earliest_date": "2025-05-15",
+        "amount_safe_to_pay": "613.00",
+        "earliest_date_for_full_payment": "2025-05-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_240",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_188: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_241",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "21052000",
+        "baseline_earliest_date": "2024-03-03",
+        "amount_safe_to_pay": "21052000",
+        "earliest_date_for_full_payment": "2024-03-03",
+        "issues": [
+          "message_189: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_242",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_190: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_243",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "17468",
+        "baseline_earliest_date": "2026-07-07",
+        "amount_safe_to_pay": "17468",
+        "earliest_date_for_full_payment": "2026-07-07",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_244",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "49918",
+        "baseline_earliest_date": "2024-06-04",
+        "amount_safe_to_pay": "49918",
+        "earliest_date_for_full_payment": "2024-06-04",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_245",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "22074.53",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "22074.53",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [
+          "message_191: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_246",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "64086",
+        "baseline_earliest_date": "2026-04-03",
+        "amount_safe_to_pay": "64086",
+        "earliest_date_for_full_payment": "2026-04-03",
+        "issues": [
+          "message_192: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_247",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_193: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_248",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "326.33",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "326.33",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_194: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_249",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_195: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_250",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_196: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_251",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "76.01",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "76.01",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_252",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "3951342.32",
+        "baseline_earliest_date": "2026-09-15",
+        "amount_safe_to_pay": "3951342.32",
+        "earliest_date_for_full_payment": "2026-09-15",
+        "issues": [
+          "message_197: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_253",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1350.38",
+        "baseline_earliest_date": "2024-05-15",
+        "amount_safe_to_pay": "1350.38",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "issues": [
+          "message_198: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_254",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "452.68",
+        "baseline_earliest_date": "2025-10-15",
+        "amount_safe_to_pay": "452.68",
+        "earliest_date_for_full_payment": "2025-10-15",
+        "issues": [
+          "message_199: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_255",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_256",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_200: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_257",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "315.44",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "315.44",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_258",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "1113.6",
+        "baseline_earliest_date": "2026-01-07",
+        "amount_safe_to_pay": "1113.6",
+        "earliest_date_for_full_payment": "2026-01-07",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_259",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "179.74",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "179.74",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [
+          "message_201: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_26",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "14063914.46",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "14063914.46",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_18: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_260",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "5582893.33",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "5582893.33",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_261",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1830.4",
+        "baseline_earliest_date": "2026-07-03",
+        "amount_safe_to_pay": "1830.4",
+        "earliest_date_for_full_payment": "2026-07-03",
+        "issues": [
+          "message_202: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_262",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "7688905.81",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "7688905.81",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_203: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_263",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "5562.73",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "5562.73",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_204: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_264",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "18393.60",
+        "baseline_earliest_date": "2026-06-15",
+        "amount_safe_to_pay": "18393.60",
+        "earliest_date_for_full_payment": "2026-06-15",
+        "issues": [
+          "message_205: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_265",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_206: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_266",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "726.50",
+        "baseline_earliest_date": "2025-10-15",
+        "amount_safe_to_pay": "726.50",
+        "earliest_date_for_full_payment": "2025-10-15",
+        "issues": [
+          "message_207: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_267",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1584.89",
+        "baseline_earliest_date": "2026-02-15",
+        "amount_safe_to_pay": "1584.89",
+        "earliest_date_for_full_payment": "2026-02-15",
+        "issues": [
+          "message_208: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_268",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1015.36",
+        "baseline_earliest_date": "2024-07-15",
+        "amount_safe_to_pay": "1015.36",
+        "earliest_date_for_full_payment": "2024-07-15",
+        "issues": [
+          "message_209: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_269",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_210: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_27",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "6670",
+        "baseline_earliest_date": "2026-07-05",
+        "amount_safe_to_pay": "6670",
+        "earliest_date_for_full_payment": "2026-07-05",
+        "issues": [
+          "message_19: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_270",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "107.92",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "107.92",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_271",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "14453.45",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "14453.45",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [
+          "message_211: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_272",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "5164197.69",
+        "baseline_earliest_date": "2025-03-15",
+        "amount_safe_to_pay": "5164197.69",
+        "earliest_date_for_full_payment": "2025-03-15",
+        "issues": [
+          "message_212: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_273",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "8650549.79",
+        "baseline_earliest_date": "2026-04-15",
+        "amount_safe_to_pay": "8650549.79",
+        "earliest_date_for_full_payment": "2026-04-15",
+        "issues": [
+          "message_213: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_274",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2063.41",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "2063.41",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_214: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_275",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "15884000",
+        "baseline_earliest_date": "2025-05-06",
+        "amount_safe_to_pay": "15884000",
+        "earliest_date_for_full_payment": "2025-05-06",
+        "issues": [
+          "message_215: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_28",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "269.54",
+        "baseline_earliest_date": "2024-08-15",
+        "amount_safe_to_pay": "269.54",
+        "earliest_date_for_full_payment": "2024-08-15",
+        "issues": [
+          "message_20: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_29",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_21: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_30",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "169.50",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "169.50",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_31",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "2523237.92",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "2523237.92",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_32",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_22: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_33",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "25994.91",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "25994.91",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "missing amount event_3051: never substituted with zero",
+          "message_23: SOURCE_NOT_EXHAUSTED",
+          "image_06: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_34",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "58183.25",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "58183.25",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_24: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_35",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "25867.65",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "25867.65",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [
+          "missing amount event_3231: never substituted with zero",
+          "message_25: SOURCE_NOT_EXHAUSTED",
+          "image_07: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_36",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "542.80",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "542.80",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_26: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_37",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "3352452.42",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "3352452.42",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_27: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_38",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "155.71",
+        "baseline_earliest_date": "2025-10-15",
+        "amount_safe_to_pay": "155.71",
+        "earliest_date_for_full_payment": "2025-10-15",
+        "issues": [
+          "message_28: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_39",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "44446.32",
+        "baseline_earliest_date": "2026-06-15",
+        "amount_safe_to_pay": "44446.32",
+        "earliest_date_for_full_payment": "2026-06-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_40",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_29: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_41",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "6275528.67",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "6275528.67",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_42",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "16575.60",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "16575.60",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_30: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_43",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_31: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_44",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_32: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_45",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "3563105.12",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "3563105.12",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_33: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_46",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "29076.28",
+        "baseline_earliest_date": "2024-12-15",
+        "amount_safe_to_pay": "29076.28",
+        "earliest_date_for_full_payment": "2024-12-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_47",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1116221.95",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "1116221.95",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_34: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_48",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "45700",
+        "baseline_earliest_date": "2026-07-25",
+        "amount_safe_to_pay": "45700",
+        "earliest_date_for_full_payment": "2026-07-25",
+        "issues": [
+          "missing amount event_4535: never substituted with zero",
+          "message_35: SOURCE_NOT_EXHAUSTED",
+          "image_08: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_49",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_36: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_50",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "37807.62",
+        "baseline_earliest_date": "2025-10-15",
+        "amount_safe_to_pay": "37807.62",
+        "earliest_date_for_full_payment": "2025-10-15",
+        "issues": [
+          "message_37: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_51",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "2191000",
+        "baseline_earliest_date": "2026-01-03",
+        "amount_safe_to_pay": "2191000",
+        "earliest_date_for_full_payment": "2026-01-03",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_52",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_38: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_53",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "441.00",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "441.00",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [
+          "message_39: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_54",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1712.17",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "1712.17",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_40: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_55",
+        "cohort": "image_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "113736.50",
+        "baseline_earliest_date": "2026-08-15",
+        "amount_safe_to_pay": "113736.50",
+        "earliest_date_for_full_payment": "2026-08-15",
+        "issues": [
+          "missing amount event_5170: never substituted with zero",
+          "image_09: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_56",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "517.28",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "517.28",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_57",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "10663.04",
+        "baseline_earliest_date": "2026-06-15",
+        "amount_safe_to_pay": "10663.04",
+        "earliest_date_for_full_payment": "2026-06-15",
+        "issues": [
+          "message_41: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_58",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "12871696.74",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "12871696.74",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_42: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_59",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "133993.15",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "133993.15",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_43: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_60",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_44: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_61",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "29062",
+        "baseline_earliest_date": "2024-03-03",
+        "amount_safe_to_pay": "29062",
+        "earliest_date_for_full_payment": "2024-03-03",
+        "issues": [
+          "message_45: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_62",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_46: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_63",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "36085.70",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "36085.70",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_64",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "40048.60",
+        "baseline_earliest_date": "2024-08-15",
+        "amount_safe_to_pay": "40048.60",
+        "earliest_date_for_full_payment": "2024-08-15",
+        "issues": [
+          "missing amount event_6033: never substituted with zero",
+          "message_47: SOURCE_NOT_EXHAUSTED",
+          "image_10: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_65",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "5402.04",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "5402.04",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_48: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_66",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "22200",
+        "baseline_earliest_date": "2026-04-03",
+        "amount_safe_to_pay": "22200",
+        "earliest_date_for_full_payment": "2026-04-03",
+        "issues": [
+          "message_49: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_67",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "342.94",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "342.94",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_68",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_50: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_69",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "499.35",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "499.35",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [
+          "message_51: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_70",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "46807.51",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "46807.51",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_52: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_71",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "135859.61",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "135859.61",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_53: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_72",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_54: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_73",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "71400",
+        "baseline_earliest_date": "2023-01-20",
+        "amount_safe_to_pay": "71400",
+        "earliest_date_for_full_payment": "2023-01-20",
+        "issues": [
+          "missing amount event_6859: never substituted with zero",
+          "message_55: SOURCE_NOT_EXHAUSTED",
+          "image_11: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_74",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "5010",
+        "baseline_earliest_date": "2025-08-04",
+        "amount_safe_to_pay": "5010",
+        "earliest_date_for_full_payment": "2025-08-04",
+        "issues": [
+          "message_56: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_75",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "9429.01",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "9429.01",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_57: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_76",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "102.20",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "102.20",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_58: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_77",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "56747.00",
+        "baseline_earliest_date": "2025-11-15",
+        "amount_safe_to_pay": "56747.00",
+        "earliest_date_for_full_payment": "2025-11-15",
+        "issues": [
+          "message_59: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_78",
+        "cohort": "image_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "39962.22",
+        "baseline_earliest_date": "2025-11-15",
+        "amount_safe_to_pay": "39962.22",
+        "earliest_date_for_full_payment": "2025-11-15",
+        "issues": [
+          "missing amount event_7307: never substituted with zero",
+          "image_12: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_79",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "233.87",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "233.87",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_80",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_60: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_81",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "2029.38",
+        "baseline_earliest_date": "2026-07-15",
+        "amount_safe_to_pay": "2029.38",
+        "earliest_date_for_full_payment": "2026-07-15",
+        "issues": [
+          "message_61: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_82",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "289.64",
+        "baseline_earliest_date": "2025-02-15",
+        "amount_safe_to_pay": "289.64",
+        "earliest_date_for_full_payment": "2025-02-15",
+        "issues": [
+          "message_62: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_83",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_63: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_84",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "16085.14",
+        "baseline_earliest_date": "2026-06-15",
+        "amount_safe_to_pay": "16085.14",
+        "earliest_date_for_full_payment": "2026-06-15",
+        "issues": [
+          "missing amount event_7941: never substituted with zero",
+          "message_64: SOURCE_NOT_EXHAUSTED",
+          "image_13: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_85",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_65: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_86",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "41353.57",
+        "baseline_earliest_date": "2025-08-23",
+        "amount_safe_to_pay": "41353.57",
+        "earliest_date_for_full_payment": "2025-08-23",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_87",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_66: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_88",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "10124.51",
+        "baseline_earliest_date": "2024-07-15",
+        "amount_safe_to_pay": "10124.51",
+        "earliest_date_for_full_payment": "2024-07-15",
+        "issues": [
+          "message_67: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_89",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "8515549.99",
+        "baseline_earliest_date": "2026-01-15",
+        "amount_safe_to_pay": "8515549.99",
+        "earliest_date_for_full_payment": "2026-01-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_90",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_68: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_91",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "331.92",
+        "baseline_earliest_date": "2024-11-15",
+        "amount_safe_to_pay": "331.92",
+        "earliest_date_for_full_payment": "2024-11-15",
+        "issues": [
+          "message_69: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_92",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "34034",
+        "baseline_earliest_date": "2025-02-05",
+        "amount_safe_to_pay": "34034",
+        "earliest_date_for_full_payment": "2025-02-05",
+        "issues": [
+          "message_70: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_93",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "1729.2",
+        "baseline_earliest_date": "2026-04-07",
+        "amount_safe_to_pay": "1729.2",
+        "earliest_date_for_full_payment": "2026-04-07",
+        "issues": [
+          "message_71: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_94",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "116.07",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "116.07",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_72: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_95",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_73: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_96",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "71312.60",
+        "baseline_earliest_date": "2026-03-15",
+        "amount_safe_to_pay": "71312.60",
+        "earliest_date_for_full_payment": "2026-03-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_97",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "651.67",
+        "baseline_earliest_date": "2024-05-15",
+        "amount_safe_to_pay": "651.67",
+        "earliest_date_for_full_payment": "2024-05-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_98",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "4879.70",
+        "baseline_earliest_date": "2025-10-15",
+        "amount_safe_to_pay": "4879.70",
+        "earliest_date_for_full_payment": "2025-10-15",
+        "issues": [
+          "message_74: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": []
+      },
+      {
+        "request_id": "request_99",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "16919.37",
+        "baseline_earliest_date": "2026-07-15",
+        "amount_safe_to_pay": "16919.37",
+        "earliest_date_for_full_payment": "2026-07-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": []
+      }
+    ]
+  },
+  "samples": null
+}

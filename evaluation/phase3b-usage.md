@@ -1,0 +1,222 @@
+# Phase 3B development application usage
+
+Not Codex usage; not the final submission run. Unknown provider usage/cost remains null.
+
+```json
+{
+  "external_attempts": 311,
+  "cache_hits": 724,
+  "call_statuses": {
+    "SUCCESS": 199,
+    "UNRESOLVED_SUCCESS": 27,
+    "PERMANENT_PARSE_FAILURE": 30,
+    "NON_ACTIONABLE_SUCCESS": 13,
+    "PERMANENT_PROVIDER_FAILURE": 41,
+    "IN_FLIGHT": 1
+  },
+  "cache_statuses": {
+    "SUCCESS": 502,
+    "UNRESOLVED_SUCCESS": 59,
+    "PERMANENT_PARSE_FAILURE": 88,
+    "NON_ACTIONABLE_SUCCESS": 36,
+    "PERMANENT_PROVIDER_FAILURE": 39
+  },
+  "statuses": {
+    "SUCCESS": 701,
+    "UNRESOLVED_SUCCESS": 86,
+    "PERMANENT_PARSE_FAILURE": 118,
+    "NON_ACTIONABLE_SUCCESS": 49,
+    "PERMANENT_PROVIDER_FAILURE": 80,
+    "IN_FLIGHT": 1
+  },
+  "uncertain_attempts": 1,
+  "retries": 0,
+  "providers": [
+    "openrouter"
+  ],
+  "configured_models": [
+    "nex-agi/nex-n2.5-pro:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "openai/gpt-4.1-mini"
+  ],
+  "actual_models": [
+    "nex-agi/nex-n2.5-pro:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "openai/gpt-4.1-mini"
+  ],
+  "input_tokens": null,
+  "known_input_tokens": 268637,
+  "unknown_input_tokens_attempts": 41,
+  "output_tokens": null,
+  "known_output_tokens": 38261,
+  "unknown_output_tokens_attempts": 41,
+  "total_tokens": null,
+  "known_total_tokens": 306898,
+  "unknown_total_tokens_attempts": 41,
+  "cached_input_tokens": null,
+  "known_cached_input_tokens": 9856,
+  "unknown_cached_input_tokens_attempts": 41,
+  "estimated_cost_usd": null,
+  "known_estimated_cost_usd": "0.1492180",
+  "unknown_cost_attempts": 41,
+  "reported_cost_usd": null,
+  "known_reported_cost_usd": "0.1492180",
+  "upstream_providers": [
+    "Nex AGI",
+    "Nvidia",
+    "OpenAI"
+  ],
+  "per_model": {
+    "openrouter/nex-agi/nex-n2.5-pro:free": {
+      "external_attempts": 4,
+      "cache_hits": 0,
+      "call_statuses": {
+        "PERMANENT_PROVIDER_FAILURE": 1,
+        "SUCCESS": 3
+      },
+      "cache_statuses": {},
+      "statuses": {
+        "PERMANENT_PROVIDER_FAILURE": 1,
+        "SUCCESS": 3
+      },
+      "uncertain_attempts": 0,
+      "retries": 0,
+      "providers": [
+        "openrouter"
+      ],
+      "configured_models": [
+        "nex-agi/nex-n2.5-pro:free"
+      ],
+      "actual_models": [
+        "nex-agi/nex-n2.5-pro:free"
+      ],
+      "input_tokens": 3862,
+      "known_input_tokens": 3862,
+      "unknown_input_tokens_attempts": 0,
+      "output_tokens": 4852,
+      "known_output_tokens": 4852,
+      "unknown_output_tokens_attempts": 0,
+      "total_tokens": 8714,
+      "known_total_tokens": 8714,
+      "unknown_total_tokens_attempts": 0,
+      "cached_input_tokens": 1792,
+      "known_cached_input_tokens": 1792,
+      "unknown_cached_input_tokens_attempts": 0,
+      "estimated_cost_usd": "0",
+      "known_estimated_cost_usd": "0",
+      "unknown_cost_attempts": 0,
+      "reported_cost_usd": "0",
+      "known_reported_cost_usd": "0",
+      "upstream_providers": [
+        "Nex AGI"
+      ]
+    },
+    "openrouter/nvidia/nemotron-3-super-120b-a12b:free": {
+      "external_attempts": 11,
+      "cache_hits": 0,
+      "call_statuses": {
+        "SUCCESS": 8,
+        "NON_ACTIONABLE_SUCCESS": 1,
+        "PERMANENT_PROVIDER_FAILURE": 1,
+        "UNRESOLVED_SUCCESS": 1
+      },
+      "cache_statuses": {},
+      "statuses": {
+        "SUCCESS": 8,
+        "NON_ACTIONABLE_SUCCESS": 1,
+        "PERMANENT_PROVIDER_FAILURE": 1,
+        "UNRESOLVED_SUCCESS": 1
+      },
+      "uncertain_attempts": 0,
+      "retries": 0,
+      "providers": [
+        "openrouter"
+      ],
+      "configured_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "actual_models": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "input_tokens": null,
+      "known_input_tokens": 10934,
+      "unknown_input_tokens_attempts": 1,
+      "output_tokens": null,
+      "known_output_tokens": 2096,
+      "unknown_output_tokens_attempts": 1,
+      "total_tokens": null,
+      "known_total_tokens": 13030,
+      "unknown_total_tokens_attempts": 1,
+      "cached_input_tokens": null,
+      "known_cached_input_tokens": 0,
+      "unknown_cached_input_tokens_attempts": 1,
+      "estimated_cost_usd": null,
+      "known_estimated_cost_usd": "0",
+      "unknown_cost_attempts": 1,
+      "reported_cost_usd": null,
+      "known_reported_cost_usd": "0",
+      "upstream_providers": [
+        "Nvidia"
+      ]
+    },
+    "openrouter/openai/gpt-4.1-mini": {
+      "external_attempts": 296,
+      "cache_hits": 724,
+      "call_statuses": {
+        "SUCCESS": 188,
+        "UNRESOLVED_SUCCESS": 26,
+        "PERMANENT_PARSE_FAILURE": 30,
+        "NON_ACTIONABLE_SUCCESS": 12,
+        "PERMANENT_PROVIDER_FAILURE": 39,
+        "IN_FLIGHT": 1
+      },
+      "cache_statuses": {
+        "SUCCESS": 502,
+        "UNRESOLVED_SUCCESS": 59,
+        "PERMANENT_PARSE_FAILURE": 88,
+        "NON_ACTIONABLE_SUCCESS": 36,
+        "PERMANENT_PROVIDER_FAILURE": 39
+      },
+      "statuses": {
+        "SUCCESS": 690,
+        "UNRESOLVED_SUCCESS": 85,
+        "PERMANENT_PARSE_FAILURE": 118,
+        "NON_ACTIONABLE_SUCCESS": 48,
+        "PERMANENT_PROVIDER_FAILURE": 78,
+        "IN_FLIGHT": 1
+      },
+      "uncertain_attempts": 1,
+      "retries": 0,
+      "providers": [
+        "openrouter"
+      ],
+      "configured_models": [
+        "openai/gpt-4.1-mini"
+      ],
+      "actual_models": [
+        "openai/gpt-4.1-mini"
+      ],
+      "input_tokens": null,
+      "known_input_tokens": 253841,
+      "unknown_input_tokens_attempts": 40,
+      "output_tokens": null,
+      "known_output_tokens": 31313,
+      "unknown_output_tokens_attempts": 40,
+      "total_tokens": null,
+      "known_total_tokens": 285154,
+      "unknown_total_tokens_attempts": 40,
+      "cached_input_tokens": null,
+      "known_cached_input_tokens": 8064,
+      "unknown_cached_input_tokens_attempts": 40,
+      "estimated_cost_usd": null,
+      "known_estimated_cost_usd": "0.1492180",
+      "unknown_cost_attempts": 40,
+      "reported_cost_usd": null,
+      "known_reported_cost_usd": "0.1492180",
+      "upstream_providers": [
+        "OpenAI"
+      ]
+    }
+  }
+}
+```

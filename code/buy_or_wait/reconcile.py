@@ -19,7 +19,8 @@ class Reconciliation:
     notes: tuple[str, ...]
 
 
-def reconcile(events: tuple[FinancialEvent, ...], start: date) -> Reconciliation:
+def reconcile(events: tuple[FinancialEvent, ...], start: date,
+              confirmed_credit_ids: frozenset[str] = frozenset()) -> Reconciliation:
     if len({e.event_id for e in events}) != len(events):
         raise ValueError('duplicate event IDs in forecast context')
     events = tuple(sorted(events, key=lambda e: (e.event_date, e.event_id)))
@@ -47,7 +48,7 @@ def reconcile(events: tuple[FinancialEvent, ...], start: date) -> Reconciliation
             notes.append(f'{e.event_id}: pending credit excluded, settlement date is not confirmation')
         elif e.direction == 'debit':
             future.append(e)
-        elif e.status == 'settled' or (e.status == 'scheduled' and salary_event(e)):
+        elif e.status == 'settled' or (e.status == 'scheduled' and (salary_event(e) or e.event_id in confirmed_credit_ids)):
             future.append(e)
         else:
             notes.append(f'{e.event_id}: unconfirmed non-salary credit excluded')

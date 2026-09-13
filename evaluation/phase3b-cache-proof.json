@@ -1,0 +1,37 @@
+{
+  "message_1_rerun": {
+    "external_attempts": 0,
+    "cache_hits": 215,
+    "statuses": {
+      "SUCCESS": 157,
+      "UNRESOLVED_SUCCESS": 17,
+      "PERMANENT_PARSE_FAILURE": 29,
+      "NON_ACTIONABLE_SUCCESS": 12
+    },
+    "uncertain_attempts": 0,
+    "retries": 0,
+    "providers": [],
+    "configured_models": [],
+    "actual_models": [],
+    "input_tokens": 0,
+    "known_input_tokens": 0,
+    "unknown_input_tokens_attempts": 0,
+    "output_tokens": 0,
+    "known_output_tokens": 0,
+    "unknown_output_tokens_attempts": 0,
+    "total_tokens": 0,
+    "known_total_tokens": 0,
+    "unknown_total_tokens_attempts": 0,
+    "cached_input_tokens": 0,
+    "known_cached_input_tokens": 0,
+    "unknown_cached_input_tokens_attempts": 0,
+    "estimated_cost_usd": "0",
+    "known_estimated_cost_usd": "0",
+    "unknown_cost_attempts": 0,
+    "reported_cost_usd": "0",
+    "known_reported_cost_usd": "0",
+    "upstream_providers": []
+  },
+  "messages": 215,
+  "all_cache_hits": true
+}
