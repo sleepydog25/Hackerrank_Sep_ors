@@ -1,0 +1,41 @@
+{
+  "external_attempts": 215,
+  "cache_hits": 648,
+  "statuses": {
+    "SUCCESS": 631,
+    "UNRESOLVED_SUCCESS": 68,
+    "PERMANENT_PARSE_FAILURE": 116,
+    "NON_ACTIONABLE_SUCCESS": 48
+  },
+  "uncertain_attempts": 0,
+  "retries": 0,
+  "providers": [
+    "openrouter"
+  ],
+  "configured_models": [
+    "openai/gpt-4.1-mini"
+  ],
+  "actual_models": [
+    "openai/gpt-4.1-mini"
+  ],
+  "input_tokens": 198785,
+  "known_input_tokens": 198785,
+  "unknown_input_tokens_attempts": 0,
+  "output_tokens": 25507,
+  "known_output_tokens": 25507,
+  "unknown_output_tokens_attempts": 0,
+  "total_tokens": 224292,
+  "known_total_tokens": 224292,
+  "unknown_total_tokens_attempts": 0,
+  "cached_input_tokens": 0,
+  "known_cached_input_tokens": 0,
+  "unknown_cached_input_tokens_attempts": 0,
+  "estimated_cost_usd": "0.1203252",
+  "known_estimated_cost_usd": "0.1203252",
+  "unknown_cost_attempts": 0,
+  "reported_cost_usd": "0.1203252",
+  "known_reported_cost_usd": "0.1203252",
+  "upstream_providers": [
+    "OpenAI"
+  ]
+}

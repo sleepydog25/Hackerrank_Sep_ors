@@ -15,7 +15,7 @@ $secretPointer = [IntPtr]::Zero
 try {
     if ($Mode -eq 'extract') {
         $protectedKey = Get-Content -LiteralPath (Join-Path $repoRoot 'cache/openrouter-key.dpapi') -Raw
-        $secureKey = ConvertTo-SecureString $protectedKey
+        $secureKey = ConvertTo-SecureString $protectedKey.Trim()
         $secretPointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secureKey)
         $env:OPENROUTER_API_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($secretPointer)
     }
