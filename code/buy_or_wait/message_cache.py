@@ -14,11 +14,15 @@ CACHEABLE=SUCCESS|{'PERMANENT_PARSE_FAILURE','PERMANENT_PROVIDER_FAILURE'}
 
 def identity(task,config):
     source=asdict(task.source); source['observed_at']=task.source.observed_at.isoformat()
-    return dict(content_hash=contract.digest(task.text),context_hash=contract.digest(task.context),
+    result=dict(content_hash=contract.digest(task.text),context_hash=contract.digest(task.context),
                 source=source,provider=config.provider,model=config.model,
                 schema_version=contract.SCHEMA_VERSION,prompt_version=contract.PROMPT_VERSION,
                 extractor_version=contract.EXTRACTOR_VERSION,schema_hash=contract.digest(contract.output_schema()),
                 prompt_hash=contract.digest(contract.SYSTEM_INSTRUCTION),max_output_tokens=config.max_output_tokens)
+    # Preserve existing default-route keys; new routing choices are explicit identity.
+    if config.upstream!='OpenAI':result['upstream']=config.upstream
+    if config.reasoning_enabled is not None:result['reasoning_enabled']=config.reasoning_enabled
+    return result
 
 @dataclass(frozen=True)
 class ExtractionResult:
@@ -67,7 +71,10 @@ class ExtractionStore:
                         timestamp=datetime.now(timezone.utc).isoformat())
             with self.db:self.db.execute('INSERT INTO usage VALUES (?,?,?,?,?)',(str(uuid.uuid4()),key,run_id,'CACHE_HIT',contract.canonical(record)))
             return ExtractionResult(key,row[0],batch,True,row[2])
-        if cache_only:return ExtractionResult(key,'NOT_RUN',None,False,'CACHE_MISS')
+        if cache_only:
+            if self.db.execute("SELECT 1 FROM usage WHERE key=? AND state='IN_FLIGHT'",(key,)).fetchone():
+                return ExtractionResult(key,'INTERRUPTED_ATTEMPT',None,False,'REVIEW_IN_FLIGHT_ATTEMPT')
+            return ExtractionResult(key,'NOT_RUN',None,False,'CACHE_MISS')
         if not config.api_key:return ExtractionResult(key,'NOT_RUN',None,False,'CONFIGURATION_MISSING')
         if self.db.execute("SELECT 1 FROM usage WHERE key=? AND state='IN_FLIGHT'",(key,)).fetchone():
             return ExtractionResult(key,'INTERRUPTED_ATTEMPT',None,False,'REVIEW_IN_FLIGHT_ATTEMPT')
@@ -99,9 +106,19 @@ class ExtractionStore:
                     parsed=contract.strict_json(reply.text)
                     output=contract.canonical(parsed)
                     status={'FACTS':'SUCCESS','NO_FACT':'NON_ACTIONABLE_SUCCESS','UNRESOLVED':'UNRESOLVED_SUCCESS'}[parsed['outcome']]
-                except (ValueError,TypeError,KeyError,OverflowError,RecursionError,UnicodeError):
+                except (ValueError,TypeError,KeyError,OverflowError,RecursionError,UnicodeError) as exc:
                     status='PERMANENT_PARSE_FAILURE'; error='SCHEMA_VALIDATION_FAILED'
+                    safe_details={'oversized/non-text output','duplicate JSON field','nonfinite JSON',
+                                  'top-level schema','outcome','facts','reasons','incompatible outcome',
+                                  'incompatible no-fact','missing unresolved reason','fact schema/provenance override',
+                                  'amendment boolean','label/quote','unsupported evidence quote','nullable string',
+                                  'invalid Decimal','invalid date','quote currency conflict','incompatible amount meaning'}
+                    record['parse_detail']=str(exc) if str(exc) in safe_details else 'INVALID_FIELD_OR_JSON'
+                    if isinstance(reply.text,str):
+                        record['response_hash']=contract.sha256(reply.text.encode('utf-8',errors='replace')).hexdigest()
+                        record['response_bytes']=len(reply.text.encode('utf-8',errors='replace'))
             record.update(usage,status=status,error=error,actual_model=reply.actual_model,
+                          http_status=reply.http_status,
                           reported_cost_usd=reply.reported_cost_usd,upstream_provider=reply.upstream_provider,
                           estimated_cost_usd=estimated_cost(usage,config),
                           price_basis={k:str(getattr(config,k)) if getattr(config,k) is not None else None

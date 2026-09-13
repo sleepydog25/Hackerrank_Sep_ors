@@ -19,9 +19,12 @@ class ModelConfig:
     input_per_million: Decimal | None = None
     output_per_million: Decimal | None = None
     cached_input_per_million: Decimal | None = None
+    upstream: str = 'OpenAI'
+    reasoning_enabled: bool | None = None
 
     def __post_init__(self):
         if not self.model or self.provider not in ('openai','openrouter'):raise ValueError('Configure MESSAGE_MODEL and MESSAGE_PROVIDER=openai or openrouter')
+        if not self.upstream or (self.reasoning_enabled is not None and type(self.reasoning_enabled) is not bool):raise ValueError('invalid routing configuration')
         if not 1<=self.timeout<=60 or not 1<=self.max_attempts<=3 or not 256<=self.max_output_tokens<=8000:
             raise ValueError('invalid bounded provider configuration')
         for value in (self.input_per_million,self.output_per_million,self.cached_input_per_million):
@@ -30,13 +33,17 @@ class ModelConfig:
     @classmethod
     def from_env(cls):
         def price(name):return Decimal(os.environ[name]) if os.environ.get(name) else None
+        reasoning=os.environ.get('MESSAGE_REASONING','')
+        if reasoning not in ('','enabled','disabled'):raise ValueError('invalid MESSAGE_REASONING')
         return cls(model=os.environ.get('MESSAGE_MODEL',''),provider=os.environ.get('MESSAGE_PROVIDER','openai'),
                    api_key=os.environ.get('OPENROUTER_API_KEY' if os.environ.get('MESSAGE_PROVIDER')=='openrouter' else 'OPENAI_API_KEY',''),timeout=int(os.environ.get('MESSAGE_TIMEOUT','45')),
                    max_attempts=int(os.environ.get('MESSAGE_MAX_ATTEMPTS','2')),
                    max_output_tokens=int(os.environ.get('MESSAGE_MAX_OUTPUT_TOKENS','3000')),
                    input_per_million=price('MESSAGE_INPUT_USD_PER_MILLION'),
                    output_per_million=price('MESSAGE_OUTPUT_USD_PER_MILLION'),
-                   cached_input_per_million=price('MESSAGE_CACHED_INPUT_USD_PER_MILLION'))
+                   cached_input_per_million=price('MESSAGE_CACHED_INPUT_USD_PER_MILLION'),
+                   upstream=os.environ.get('MESSAGE_UPSTREAM','OpenAI'),
+                   reasoning_enabled=None if not reasoning else reasoning=='enabled')
 
 @dataclass(frozen=True)
 class ProviderReply:
@@ -47,6 +54,7 @@ class ProviderReply:
     actual_model: str | None = None
     reported_cost_usd: str | None = None
     upstream_provider: str | None = None
+    http_status: int | None = None
 
 def usage_fields(raw):
     raw=raw if isinstance(raw,dict) else {}
@@ -67,11 +75,14 @@ class OpenAIMessageProvider:
 
     def payload(self,task):
         if self.config.provider=='openrouter':
-            return dict(model=self.config.model,temperature=0,max_tokens=self.config.max_output_tokens,
+            payload=dict(model=self.config.model,temperature=0,max_tokens=self.config.max_output_tokens,
                         messages=[{'role':'system','content':SYSTEM_INSTRUCTION},
                                   {'role':'user','content':canonical(task.model_input())}],
-                        provider={'only':['OpenAI'],'allow_fallbacks':False,'require_parameters':True},
+                        provider={'only':[self.config.upstream],'allow_fallbacks':False,'require_parameters':True},
                         response_format={'type':'json_schema','json_schema':{'name':'message_evidence','strict':True,'schema':output_schema()}})
+            if self.config.reasoning_enabled is not None:payload['reasoning']={'enabled':self.config.reasoning_enabled}
+            if self.config.model.endswith(':free'):payload['provider']['max_price']={'prompt':0,'completion':0}
+            return payload
         return dict(model=self.config.model,store=False,max_output_tokens=self.config.max_output_tokens,
                     input=[{'role':'system','content':SYSTEM_INSTRUCTION},
                            {'role':'user','content':canonical(task.model_input())}],
@@ -90,7 +101,7 @@ class OpenAIMessageProvider:
         except HTTPError as exc:
             # Never retain provider error bodies/headers; they may echo input or credentials.
             return ProviderReply(error='MODEL_RATE_LIMIT' if exc.code==429 else 'MODEL_PROVIDER_ERROR',
-                                 retryable=exc.code in (408,429,500,502,503,504))
+                                 retryable=exc.code in (408,429,500,502,503,504),http_status=exc.code)
         except (TimeoutError,socket.timeout):return ProviderReply(error='MODEL_TIMEOUT',retryable=True)
         except URLError as exc:
             return ProviderReply(error='MODEL_TIMEOUT' if isinstance(exc.reason,(TimeoutError,socket.timeout)) else 'MODEL_PROVIDER_ERROR',retryable=True)

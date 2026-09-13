@@ -9,10 +9,10 @@ sys.path.insert(0,str(ROOT/'code'))
 from buy_or_wait.load import load_dataset
 from buy_or_wait.forecast import forecast_request
 from buy_or_wait.evidence_integration import forecast_dataset_evidence
-from buy_or_wait.message_cache import ExtractionStore,ExtractionResult,SUCCESS
+from buy_or_wait.message_cache import ExtractionStore,ExtractionResult,SUCCESS,identity
 from buy_or_wait.message_provider import ModelConfig
 from buy_or_wait.message_usage import summarize
-from buy_or_wait.evidence import to_json
+from buy_or_wait.message_extraction import parse_output,canonical,digest
 from message_extract import tasks
 
 def evaluate(data,extractions):
@@ -80,24 +80,49 @@ def write_artifacts(payload,usage):
                 if key in seen or n>=20:continue
                 seen.add(key);n+=1
                 lines.append('| '+' | '.join(c[k] for k in ('message_id','type','certainty','scope','status','reason'))+' |')
-        lines+=['','This table is a review queue, not a claim that manual semantic review has been completed.']
+        lines+=['','This table is a review queue. Actual source-level assessments are in phase3b-manual-review.md.']
+        if payload.get('samples'):
+            lines+=['','### Solved samples (diagnostic only)','',
+                    '| Request | Cohort | Complete | Safe | Difference | Earliest | Expected earliest |',
+                    '|---|---|---|---:|---:|---|---|']
+            for r in payload['samples']['requests']:
+                lines.append('| '+' | '.join(str(r[k]) for k in ('request_id','cohort','complete','amount_safe_to_pay',
+                              'amount_difference','earliest_date_for_full_payment','expected_earliest_date_for_full_payment'))+' |')
     (directory/'phase3b-message-results.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     (directory/'phase3b-usage.md').write_text('# Phase 3B development application usage\n\nNot Codex usage; not the final submission run. Unknown provider usage/cost remains null.\n\n```json\n'+json.dumps(usage,indent=2)+'\n```\n',encoding='utf-8')
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--skip-samples',action='store_true',help='Publish extraction and evaluation metrics without reading labels')
+    parser.add_argument('--artifact',type=Path,help='Replay sanitized committed extraction outputs without credentials or operational cache')
     args=parser.parse_args()
-    try:config=ModelConfig.from_env()
-    except (ValueError,ArithmeticError):config=None
+    artifact=json.loads(args.artifact.read_text(encoding='utf-8')) if args.artifact else None
+    if artifact:
+        config=ModelConfig(artifact['model'],provider=artifact['provider'],max_output_tokens=artifact['max_output_tokens'],
+                           upstream=artifact.get('upstream','OpenAI'),reasoning_enabled=artifact.get('reasoning_enabled'))
+        replay={r['key']:r for r in artifact['extractions']}
+        if len(replay)!=len(artifact['extractions']):raise ValueError('duplicate snapshot keys')
+    else:
+        try:config=ModelConfig.from_env()
+        except (ValueError,ArithmeticError):config=None
     store=ExtractionStore(ROOT/'cache/messages.sqlite')
     try:
         datasets={name:load_dataset(ROOT/'dataset',name) for name in ('requests.csv','sample_requests.csv')}
-        extracted={};status=Counter();types=Counter();certainty=Counter();scope=Counter();meaning=Counter();ambiguity=Counter();per_message=[]
+        extracted={};status=Counter();types=Counter();certainty=Counter();scope=Counter();meaning=Counter();ambiguity=Counter();per_message=[];snapshot=[]
         for name,data in datasets.items():
             groups={}
             for q,m,t in tasks(data):
-                r=store.extract(t,config,None,'report',cache_only=True) if config else ExtractionResult('','NOT_RUN',None,False,'CONFIGURATION_MISSING')
+                if artifact:
+                    metadata=identity(t,config);key=digest(metadata);saved=replay.get(key)
+                    if saved is None or saved['metadata']!=metadata:raise ValueError('snapshot version/content/context mismatch')
+                    batch=parse_output(canonical(saved['output']),t) if saved['status'] in SUCCESS else None
+                    r=ExtractionResult(key,saved['status'],batch,True,saved['error'])
+                else:
+                    r=store.extract(t,config,None,'report',cache_only=True) if config else ExtractionResult('','NOT_RUN',None,False,'CONFIGURATION_MISSING')
+                if config and not artifact:
+                    saved=store.db.execute('SELECT metadata,status,output,error FROM cache WHERE key=?',(r.key,)).fetchone()
+                    if saved:snapshot.append(dict(key=r.key,metadata=json.loads(saved[0]),status=saved[1],output=json.loads(saved[2]) if saved[2] else None,error=saved[3]))
+                    else:snapshot.append(dict(key=r.key,metadata=identity(t,config),status=r.status,output=None,error=r.error))
                 groups.setdefault(q.request_id,[]).append((m,r));status[r.status]+=1
                 facts=tuple(c for c in r.batch.candidates if c.fact_id.startswith('message-fact:')) if r.batch else ()
                 markers=tuple(c for c in r.batch.candidates if c.fact_id.startswith('message-state:')) if r.batch else ()
@@ -127,7 +152,12 @@ def main():
                 row['amount_difference']=str(Decimal(row['amount_safe_to_pay'])-Decimal(expected['amount_safe_to_pay']))
                 row['expected_earliest_date_for_full_payment']=expected['earliest_date_for_full_payment']
             payload['samples']=samples
-        usage=summarize(store.entries())
+        usage=artifact['usage'] if artifact else summarize(store.entries())
+        if config and not artifact:
+            sanitized=dict(provider=config.provider,model=config.model,max_output_tokens=config.max_output_tokens,
+                           upstream=config.upstream,reasoning_enabled=config.reasoning_enabled,
+                           extractions=snapshot,usage=usage)
+            (ROOT/'evaluation/phase3b-extractions.json').write_text(json.dumps(sanitized,indent=2)+'\n',encoding='utf-8')
         write_artifacts(payload,usage)
         print(json.dumps(dict(run_status=payload['run_status'],extraction_status=dict(status),evaluation=evaluation['summary'],usage=usage),indent=2))
         return 0 if available else 2

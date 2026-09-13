@@ -26,7 +26,7 @@ SQLite at ignored `cache/messages.sqlite` uses WAL and FULL synchronization. Cac
 
 Normal reruns use cache. `--refresh --message-id ID` deliberately refreshes selected entries; never refresh an entire corpus merely for diagnostics. `--cache-only` forbids calls and works without an API key when MESSAGE_MODEL is configured. Ordering is evaluation requests then samples, sorted request ID, sent_at, message ID; messages are independently interpreted with no later-message history. The cache is reusable after process restart. Reports never call providers.
 
-Usage records each attempt separately, including retries, provider/model, versions, source associations, timestamps, provider counts and unknown fields. Cache hits have external_call=false and incremental tokens/cost exactly zero. IN_FLIGHT counts are dispatch intents with uncertain outcomes, not verified completed calls. Optional MESSAGE_INPUT_USD_PER_MILLION, MESSAGE_OUTPUT_USD_PER_MILLION and MESSAGE_CACHED_INPUT_USD_PER_MILLION allow an explicit local Decimal estimate; unknown rates or counts yield unknown cost. Provider-reported costs are unavailable in this adapter. Development application inference remains separate from Codex tokens and the eventual final-run `evaluation/usage_report.md`.
+Usage records each attempt separately, including retries, provider/model, versions, source associations, timestamps, provider counts and unknown fields. Cache hits have external_call=false and incremental tokens/cost exactly zero. IN_FLIGHT counts are dispatch intents with uncertain outcomes, not verified completed calls. Optional MESSAGE_INPUT_USD_PER_MILLION, MESSAGE_OUTPUT_USD_PER_MILLION and MESSAGE_CACHED_INPUT_USD_PER_MILLION allow an explicit local Decimal estimate; unknown rates or counts yield unknown cost. OpenRouter provider-reported costs are retained separately from local estimates. Development application inference remains separate from Codex tokens and the eventual final-run `evaluation/usage_report.md`.
 
 After B is committed and the environment is configured, run:
 ```powershell
@@ -48,3 +48,14 @@ The optional Windows launcher `scripts/message-run.ps1` reads non-secret run set
 .\scripts\message-run.ps1 extract
 .\scripts\message-run.ps1 results
 ```
+
+
+## D hardening checkpoint (not final freeze)
+
+Current schema/prompt/extractor versions: message-2 / message-3 / message-4. Field-local definitions clarify financial subjects and separate dates. Instructions mixed with legitimate facts do not erase those facts. Strict local guards reject a direct quoted currency contradiction and incompatible gross/context amount labels on lifecycle/received-payment facts. These guards do not certify semantic truth.
+
+The user requested free inference after HTTP 402. MESSAGE_UPSTREAM pins an explicit OpenRouter endpoint (default OpenAI preserves earlier identities); MESSAGE_REASONING may be enabled/disabled or omitted. Non-default upstream/reasoning enters cache identity. A :free model additionally enforces a zero-price provider ceiling. The current free NVIDIA model is NOT approved for full extraction: source checks still found wrong types/meanings/scopes. Nex free was also tested and rejected. See phase3b-handoff.md for versioned results and costs.
+
+Batch execution stops on provider failures or unknown in-flight attempts. HTTP status and allowlisted parser details are retained without raw error bodies. --refresh requires explicit --message-id selection. Schema/prompt/model changes never silently promote earlier cache entries. Unknown historical attempts retain unknown costs, including the interrupted paid dispatch.
+
+The sanitized evaluation/phase3b-extractions.json can reproduce the current explicitly incomplete state without credentials using code/evaluation/message_results.py --artifact evaluation/phase3b-extractions.json --skip-samples. This is not an operational-cache seed or a completed free-model run. code/evaluation/message_cache_audit.py audits all preserved namespaces and performs clearly labeled offline parser checks without calling models. Historical C metrics and sample decisions are in phase3b-checkpoint-c.json and Git commit 93ef28f.

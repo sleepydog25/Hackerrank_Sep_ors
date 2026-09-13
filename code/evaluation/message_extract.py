@@ -27,6 +27,7 @@ def main():
     parser.add_argument('--release-interrupted',help='Exact cache key whose unknown provider attempt was reviewed; may incur another call')
     args=parser.parse_args()
     if args.cache_only and args.refresh:parser.error('--refresh cannot be used with --cache-only')
+    if args.refresh and not args.message_id:parser.error('--refresh requires explicit --message-id selection')
     try:config=ModelConfig.from_env()
     except (ValueError,ArithmeticError):
         print('CONFIGURATION_MISSING_OR_INVALID: set MESSAGE_PROVIDER and MESSAGE_MODEL; no external calls made.')
@@ -35,10 +36,11 @@ def main():
         print('CONFIGURATION_MISSING: set the selected provider API key locally. No external calls made.')
         return 2
     store=ExtractionStore(ROOT/'cache/messages.sqlite');provider=OpenAIMessageProvider(config)
-    run_id=str(uuid.uuid4());results=[]
+    run_id=str(uuid.uuid4());results=[];provider_blocked=False
     try:
         if args.release_interrupted:store.release_interrupted(args.release_interrupted)
         for filename in ('requests.csv','sample_requests.csv'):
+            if provider_blocked:break
             data=load_dataset(ROOT/'dataset',filename)  # loader discards solved columns
             for q,m,t in tasks(data):
                 if args.message_id and m.message_id not in args.message_id:continue
@@ -47,6 +49,10 @@ def main():
                 results.append(dict(request_id=q.request_id,message_id=m.message_id,status=r.status,key=r.key,
                                     cache_hit=r.cache_hit,error=r.error))
                 print(m.message_id,r.status,'cache' if r.cache_hit else 'miss',flush=True)
+                if r.status in ('PERMANENT_PROVIDER_FAILURE','RETRYABLE_FAILURE','INTERRUPTED_ATTEMPT') and not args.cache_only:
+                    provider_blocked=True
+                    print('Batch paused on provider failure/unknown attempt; persisted results retained.',flush=True)
+                    break
         payload=dict(run_id=run_id,results=results,run_usage=summarize(store.entries(run_id)),
                      development_usage=summarize(store.entries()))
         # Operational report is ignored; committed sanitized report generated separately.

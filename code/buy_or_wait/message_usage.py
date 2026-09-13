@@ -2,9 +2,11 @@
 from collections import Counter
 from decimal import Decimal
 
-def summarize(records):
+def summarize(records,include_models=True):
     calls=[r for r in records if r['external_call']]
     result=dict(external_attempts=len(calls),cache_hits=sum(r['cache_hit'] for r in records),
+                call_statuses=dict(Counter(r['status'] for r in calls)),
+                cache_statuses=dict(Counter(r['status'] for r in records if r['cache_hit'])),
                 statuses=dict(Counter(r['status'] for r in records)),
                 uncertain_attempts=sum(r['status'] in ('IN_FLIGHT','UNKNOWN_PROVIDER_OUTCOME') for r in calls),
                 retries=sum(r['attempt']>1 for r in calls),providers=sorted({r['provider'] for r in calls}),
@@ -23,4 +25,7 @@ def summarize(records):
     result['reported_cost_usd']=str(sum(reported,Decimal(0))) if len(reported)==len(calls) else None
     result['known_reported_cost_usd']=str(sum(reported,Decimal(0)))
     result['upstream_providers']=sorted({r['upstream_provider'] for r in calls if r.get('upstream_provider')})
+    if include_models:
+        result['per_model']={provider+'/'+model:summarize([r for r in records if r['provider']==provider and r['model']==model],False)
+                             for provider,model in sorted({(r['provider'],r['model']) for r in records})}
     return result

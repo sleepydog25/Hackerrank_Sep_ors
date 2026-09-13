@@ -1,47 +1,51 @@
 # Runtime checkpoint
 
-## Current phase / branch
-Phase 3B - Message Evidence Extraction; feat/message-extraction.
+## Current checkpoint / branch
+Phase 3B D hardening checkpoint, NOT final freeze; feat/message-extraction. NOT READY for Phase 3C.
 
 ## Last completed checkpoint
-C: real-message batch and 250-request integration evaluated. 215 actual calls, 186 parsed (157 facts, 17 unresolved, 12 no-fact), 29 parse failures; zero provider failures/retries. Immediate unchanged rerun: 215 cache hits, zero calls/tokens/cost (evaluation/phase3b-cache-proof.json).
+C 93ef28f: full message-1 extraction, cache reproduction and 250-request integration. D read-only review and offline fixes are persisted, but reliable final-version extraction remains blocked by free-model semantic errors.
 
 ## Last known good commit
-C is the commit containing this RESUME, titled test: evaluate real message extraction. B follow-up c751d23; B 29d9b4a; A 4424afe; frozen Phase 3A 7fc459e.
+C 93ef28f; B follow-up c751d23; B 29d9b4a; A 4424afe. The latest hardening checkpoint is the commit containing this RESUME, titled fix: checkpoint message hardening and free-model findings. Verify its hash with git log. Frozen Phase 3A 7fc459e and financial baseline b04f7ad are unchanged.
 
 ## Last passing test command
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
-198 tests; Python 3.12.14, standard library only. The resumed C preparation added cohort-selection and integration tests; no baseline changes.
+210 tests pass; Python 3.12.14, standard library only. All 250 requests execute with zero frozen-baseline changes. Dataset and whitespace checks pass.
 
-## Frozen dependencies
-Phase 2.x deterministic financial policies and Phase 3A validation/reconciliation/completeness. Only demonstrated integration defects may change these. No baseline tuning, image/VLM, plans/ranking, final output.csv, dataset changes or solved-output-driven prompting.
+## Provider/model and versions
+Configured provider openrouter; model nvidia/nemotron-3-super-120b-a12b:free; upstream nvidia; reasoning disabled; no fallback; zero-price ceiling. The user explicitly requested a free model after paid-model HTTP 402. Do not switch back to paid inference automatically.
+Schema version message-2; prompt version message-3; extractor version message-4. Descriptions/coverage rules and strict currency/amount-meaning contradictions were versioned. Model output remains candidates only.
 
-## Extraction/cache state
-Schema/prompt/extractor: message-1. Configured run: openrouter / openai/gpt-4.1-mini, pinned OpenAI upstream with fallbacks disabled. User supplied an OpenRouter credential, retained only in ignored Windows-user-encrypted cache/openrouter-key.dpapi; the launcher injects it into the child environment. Non-secret run settings: cache/message-config.json. SQLite integrity was verified OK; zero cache rows and zero usage attempts before first live run. No existing entries invalidated by provider selection. Explicit content/context and version hashes remain unchanged; provider is already a cache-key component.
+## Cache location/state
+Ignored cache/messages.sqlite, SQLite integrity ok; all earlier namespaces retained. Ignored cache/message-config.json holds non-secret settings. Ignored cache/openrouter-key.dpapi holds user-bound encrypted credentials, injected only into a child environment. Never print or commit credentials.
+The complete C namespace still has 215 entries and proved 215 cache hits, zero calls/tokens/cost on immediate unchanged rerun. New model/versions are separate: no final-version corpus entries yet. The last parser change invalidated the three free real-message entries; no further calls were made. Offline replay demonstrates the bad gross-pay/receipt output is rejected without changing or promoting its original cache entry.
+One paid-model dispatch was interrupted: message_146, key 6f295a14ce81385739aeb42c72a1290189b640563c2669316b11668556d144f2. Preserve IN_FLIGHT/unknown usage; do not silently release or replay. No active process remains.
 
-## Corpus
-215 messages, 215 users and message-bearing requests (198 evaluation + 17 samples); 39 linked / 176 unlinked. All messages precede requests, no empty texts or exact/normalized duplicates. 127-330 characters. Keyword topics are evaluation-only; English/Indonesian require semantic extraction.
+## Message extraction progress
+Corpus 215 (198 evaluation + 17 samples), 39 linked / 176 unlinked. C: 157 FACTS, 17 unresolved, 12 no-fact, 29 parse failures; 186 parsed. Original C complete count 50 to 90 is not an accuracy claim: manual review found false no-fact termination. Paid prompt-2 extracted 33 corpus messages before account failure. Free-model assessment made 12 synthetic calls across two free models and three real-message calls; real semantic errors stopped the free corpus batch. Current exact-version report is intentionally incomplete: 50 evaluation requests complete, 200 provisional, zero numerical changes.
 
-## Current checkpoint / persisted progress
-C complete; D remains. Cache integrity checked and all 215 message-1 entries retained. Actual usage: 198785 input + 25507 output = 224292 tokens, USD 0.1203252 estimated and provider-reported. No unknown calls. 250-request smoke passes: 50 -> 90 complete, 200 -> 160 provisional; zero numerical changes. Completeness improvements are not an accuracy claim: manual review found a false NO_FACT termination and other semantic defects.
+## Actual external-call count / usage
+311 journaled external dispatches/intents: 310 completed attempts and one interrupted unknown. By model: GPT-4.1-mini 296, NVIDIA free 11, Nex free 4. No retries. Known input 268637, output 38261, total 306898 tokens. Known reported and estimated cost USD 0.1492180. 41 attempts have unknown token/cost fields, so all-attempt totals remain unknown. Free success responses report zero cost. Development inference is separate from Codex and final-submission usage.
 
 ## Files currently being changed
-None after this C commit. C includes the previously untracked message_results.py required by the B-follow-up tests. Preserve ignored cache and DPAPI credential.
+None after this hardening checkpoint. Preserve all code, reports, ignored operational cache and log.txt. No dataset, baseline or Phase 3A source edits.
+
+## Known failures / limitations
+P1 extraction-quality blocker: tested free models confuse financial type, scope, currency and amount meaning. Narrow synthetic smoke pass flags are not semantic certification. Strict guards reject demonstrated contradictions but cannot prove model truth or coverage. Paid configuration returned HTTP 402; user now requires free inference. Unlinked targets, unknown dates/currencies, percentage-only amendments and all image evidence remain unresolved. No final output.csv or payment optimization exists.
 
 ## Exact next action
-D: read-only review of full Phase 3B diff, record findings, then address source-grounded false NO_FACT termination, incorrect date/type/amount-meaning extraction and parse diagnostics. No baseline or sample-driven tuning. Any prompt change requires version bump and advance invalidation/cost notice; do not repeat message-1 extraction unchanged. Then synthetic/real adversarial smoke, full tests, cached reproduction, final D freeze.
+Continue only unfinished D. Inspect evaluation/phase3b-review.md, phase3b-manual-review.md and cache audit. Strengthen message-level semantic validation/evaluation and approve a reliable free extractor with a bounded source-level smoke before any full batch. Do not chase random outputs or solved labels. Then extract only missing valid-version entries, prove unchanged zero-call reproduction, run all 250 and freeze D. NOT READY for Phase 3C until that defect is resolved.
 
-## Reproduction commands
-.\.venv\Scripts\python.exe code/evaluation/message_audit.py
+## Reproduction commands (offline, no new model calls)
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe code/evaluation/message_cache_audit.py
+.\.venv\Scripts\python.exe code/evaluation/message_results.py --artifact evaluation/phase3b-extractions.json --skip-samples
 .\.venv\Scripts\python.exe code/evaluation/evidence_inventory.py
-.\.venv\Scripts\python.exe code/evaluation/message_extract.py
-.\.venv\Scripts\python.exe code/evaluation/message_extract.py --cache-only
+.\.venv\Scripts\python.exe code/evaluation/semantics.py
 git diff --check
 git diff --exit-code HEAD -- dataset
-
-## Known limitations
-Qualitative review in evaluation/phase3b-manual-review.md found a material false NO_FACT termination; D must fix before readiness. Unlinked targets, ambiguous currency/date, percent-only amounts, incomplete context remain unresolved. Image timing/publisher identity are still unknown. Exact quote grounding does not prove semantic truth. Future model outputs must pass Phase 3A reconciliation.
+Artifact report exits nonzero intentionally because extraction is incomplete. Full command history and model/version results: evaluation/phase3b-handoff.md. Do not run an unchanged-looking live command under a changed model/version expecting old-namespace hits.
 
 ## Checkpoint protocol
-Update RESUME, run tests, diff check, verify dataset unchanged, stage explicit paths only, inspect staged diff, commit. Keep log.txt append-only and ignored. Never git add .; preserve interrupted changes.
+Update RESUME, run tests, diff check, verify dataset unchanged, stage explicit paths, inspect staged diff, commit. Never git add .; never commit log.txt, secrets or operational cache. Do not repeat earlier checkpoints or change financial policy.

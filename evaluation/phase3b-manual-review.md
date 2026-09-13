@@ -32,3 +32,11 @@ Selection: first distinct type/certainty/scope combinations in persisted extract
 No sample financial output motivated these findings. The source-level defects justify clearer general contract instructions in checkpoint D. The frozen financial engine must not compensate for them.
 
 Per-candidate validator reasons, accepted amendment identities and final complete/provisional states for all reviewed sources are recorded in phase3b-message-results.json. No manual reading is injected into production facts.
+
+## Follow-up source checks
+
+The original full C state is preserved at 93ef28f and in phase3b-checkpoint-c.json; the current results file deliberately reports the final contract's incomplete state.
+
+Paid-model prompt-2 checks: message_103 now contains EMPLOYMENT_ENDED with an ambiguous-date unresolved marker; it no longer exhausts the source as NO_FACT. Message_78 retains the pending commission as a second fact. Message_79 becomes an explicit noncash valuation. Message_80 places the stated date in payment_date and no longer invents net pay. Messages_77/89 preserve unknown net/gross meaning. Message_83 improves invoice type/date but still uses amount_paid and pending certainty; its financial interpretation remains untrusted.
+
+Free-model real checks (schema-2/prompt-3/extractor-3): message_75 retained settled receipt but supplied unsupported scope/meaning and currency; message_76 retained invoice type but lost the payment date and used an unsupported scope; message_77 incorrectly became PAYMENT_RECEIVED with gross_pay. The latter now fails extractor-4 cross-field validation in an offline replay. These checks were selected by the deterministic first-three batch order, not sample labels. Full free-model extraction was stopped; source-level quality remains a blocker.

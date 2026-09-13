@@ -1,0 +1,773 @@
+{
+  "checkpoint": "93ef28f",
+  "prompt": "message-1",
+  "extractor": "message-1",
+  "schema": "message-1",
+  "extraction": {
+    "messages_total": 215,
+    "statuses": {
+      "SUCCESS": 157,
+      "UNRESOLVED_SUCCESS": 17,
+      "PERMANENT_PARSE_FAILURE": 29,
+      "NON_ACTIONABLE_SUCCESS": 12
+    },
+    "successful_parse": 186,
+    "no_fact": 12,
+    "facts_by_type": {
+      "PAYMENT_RECEIVED": 26,
+      "SALARY": 108,
+      "EXPENSE": 1,
+      "INVESTMENT_SALE": 3,
+      "INVOICE_APPROVED": 3,
+      "PENDING_PAYOUT": 7,
+      "REIMBURSEMENT": 3,
+      "REFUND": 7,
+      "INVESTMENT_VALUE": 6,
+      "EMPLOYMENT_ENDED": 2,
+      "NON_FINANCIAL": 1
+    },
+    "facts_by_certainty": {
+      "CONFIRMED": 146,
+      "PENDING": 21
+    },
+    "facts_by_scope": {
+      "ONE_OFF": 79,
+      "NEXT_OCCURRENCE_ONLY": 35,
+      "ONGOING": 26,
+      "EVENT_SPECIFIC": 14,
+      "FROM_DATE": 13
+    },
+    "facts_by_amount_meaning": {
+      "amount_received": 4,
+      "amount_paid": 39,
+      "net_pay": 100,
+      "sale_proceeds": 4,
+      "invoice_amount": 3,
+      "gross_pay": 2,
+      "balance_due": 6,
+      "valuation": 6,
+      "unknown": 3
+    },
+    "ambiguity": {
+      "AMBIGUOUS_DATE": 0,
+      "AMBIGUOUS_CURRENCY": 0,
+      "UNRESOLVED_TARGET": 8
+    },
+    "multi_fact_messages": 10
+  },
+  "evaluation": {
+    "summary": {
+      "complete_before": 50,
+      "complete_after": 90,
+      "provisional_before": 200,
+      "provisional_after": 160,
+      "financially_changed": 0,
+      "safe_changed": 0,
+      "earliest_changed": 0,
+      "baseline_safety_changed": 0,
+      "unresolved_messages": 157,
+      "unresolved_both": 8,
+      "unresolved_images_only": 0
+    },
+    "validation": {
+      "UNRESOLVED": 140,
+      "REJECTED": 41
+    },
+    "unresolved_reasons": {
+      "INVALID_DATES": 18,
+      "MISSING_LINK": 99,
+      "CONFLICTING_EVIDENCE": 16,
+      "MISSING_AMOUNT": 3,
+      "SOURCE_EVENT_MISMATCH": 1,
+      "AMBIGUOUS_AMOUNT_MEANING": 1,
+      "UNSUPPORTED_SCOPE": 1,
+      "INSUFFICIENT_CONTEXT": 1
+    }
+  },
+  "usage": {
+    "external_attempts": 215,
+    "cache_hits": 648,
+    "statuses": {
+      "SUCCESS": 631,
+      "UNRESOLVED_SUCCESS": 68,
+      "PERMANENT_PARSE_FAILURE": 116,
+      "NON_ACTIONABLE_SUCCESS": 48
+    },
+    "uncertain_attempts": 0,
+    "retries": 0,
+    "providers": [
+      "openrouter"
+    ],
+    "configured_models": [
+      "openai/gpt-4.1-mini"
+    ],
+    "actual_models": [
+      "openai/gpt-4.1-mini"
+    ],
+    "input_tokens": 198785,
+    "known_input_tokens": 198785,
+    "unknown_input_tokens_attempts": 0,
+    "output_tokens": 25507,
+    "known_output_tokens": 25507,
+    "unknown_output_tokens_attempts": 0,
+    "total_tokens": 224292,
+    "known_total_tokens": 224292,
+    "unknown_total_tokens_attempts": 0,
+    "cached_input_tokens": 0,
+    "known_cached_input_tokens": 0,
+    "unknown_cached_input_tokens_attempts": 0,
+    "estimated_cost_usd": "0.1203252",
+    "known_estimated_cost_usd": "0.1203252",
+    "unknown_cost_attempts": 0,
+    "reported_cost_usd": "0.1203252",
+    "known_reported_cost_usd": "0.1203252",
+    "upstream_providers": [
+      "OpenAI"
+    ]
+  },
+  "samples": {
+    "summary": {
+      "complete_before": 6,
+      "complete_after": 12,
+      "provisional_before": 19,
+      "provisional_after": 13,
+      "financially_changed": 0,
+      "safe_changed": 0,
+      "earliest_changed": 0,
+      "baseline_safety_changed": 0,
+      "unresolved_messages": 10,
+      "unresolved_both": 2,
+      "unresolved_images_only": 0
+    },
+    "validation": {
+      "REJECTED": 7,
+      "UNRESOLVED": 8
+    },
+    "unresolved_reasons": {
+      "MISSING_LINK": 6,
+      "CONFLICTING_EVIDENCE": 1,
+      "INVALID_DATES": 1
+    },
+    "requests": [
+      {
+        "request_id": "request_01",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "25256",
+        "baseline_earliest_date": "2024-03-03",
+        "amount_safe_to_pay": "25256",
+        "earliest_date_for_full_payment": "2024-03-03",
+        "issues": [],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "25256",
+        "amount_difference": "0",
+        "expected_earliest_date_for_full_payment": "2024-03-03"
+      },
+      {
+        "request_id": "request_02",
+        "cohort": "message_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "16188643.95",
+        "baseline_earliest_date": "2025-10-15",
+        "amount_safe_to_pay": "16188643.95",
+        "earliest_date_for_full_payment": "2025-10-15",
+        "issues": [],
+        "candidates": [
+          {
+            "message_id": "message_01",
+            "fact_id": "message-fact:f866d51a95e04be8bc5c79c6",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "FROM_DATE",
+            "amount_meaning": "gross_pay",
+            "amount": "42750000",
+            "currency": "IDR",
+            "payment_date": null,
+            "status": "REJECTED",
+            "reason": "CONTEXT_ONLY"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "17229139.2",
+        "amount_difference": "-1040495.25",
+        "expected_earliest_date_for_full_payment": "2025-09-15"
+      },
+      {
+        "request_id": "request_03",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "874129.91",
+        "baseline_earliest_date": "2019-11-15",
+        "amount_safe_to_pay": "874129.91",
+        "earliest_date_for_full_payment": "2019-11-15",
+        "issues": [
+          "missing amount event_253: never substituted with zero",
+          "image_01: SOURCE_NOT_EXHAUSTED",
+          "message_02 -> message-fact:195fa361b3eee5dd9af0cfba: MISSING_LINK"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_02",
+            "fact_id": "message-fact:195fa361b3eee5dd9af0cfba",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "NEXT_OCCURRENCE_ONLY",
+            "amount_meaning": "net_pay",
+            "amount": null,
+            "currency": null,
+            "payment_date": null,
+            "status": "UNRESOLVED",
+            "reason": "MISSING_LINK"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "873000",
+        "amount_difference": "1129.91",
+        "expected_earliest_date_for_full_payment": "2019-11-15"
+      },
+      {
+        "request_id": "request_04",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "8931337.15",
+        "baseline_earliest_date": "2024-06-15",
+        "amount_safe_to_pay": "8931337.15",
+        "earliest_date_for_full_payment": "2024-06-15",
+        "issues": [
+          "message_03: SOURCE_NOT_EXHAUSTED",
+          "message_03 -> message-state:62f62b40d47a08073b837ba7: CONFLICTING_EVIDENCE"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_03",
+            "fact_id": "message-state:62f62b40d47a08073b837ba7",
+            "type": "NON_FINANCIAL",
+            "certainty": "DISPUTED",
+            "scope": "ONE_OFF",
+            "amount_meaning": "unknown",
+            "amount": null,
+            "currency": null,
+            "payment_date": null,
+            "status": "UNRESOLVED",
+            "reason": "CONFLICTING_EVIDENCE"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "8401800",
+        "amount_difference": "529537.15",
+        "expected_earliest_date_for_full_payment": "2024-06-15"
+      },
+      {
+        "request_id": "request_05",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "737",
+        "amount_difference": "-737.00",
+        "expected_earliest_date_for_full_payment": ""
+      },
+      {
+        "request_id": "request_06",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_04 -> message-fact:f69ba26b3f7eeb3cef48c498: MISSING_LINK"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_04",
+            "fact_id": "message-fact:f69ba26b3f7eeb3cef48c498",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "NEXT_OCCURRENCE_ONLY",
+            "amount_meaning": "net_pay",
+            "amount": "1037.52",
+            "currency": "EUR",
+            "payment_date": null,
+            "status": "UNRESOLVED",
+            "reason": "MISSING_LINK"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "603.3",
+        "amount_difference": "-603.30",
+        "expected_earliest_date_for_full_payment": "2026-01-15"
+      },
+      {
+        "request_id": "request_07",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_05 -> message-fact:f04b9922e1c447e5821cef6a: MISSING_LINK"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_05",
+            "fact_id": "message-fact:f04b9922e1c447e5821cef6a",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "ONE_OFF",
+            "amount_meaning": "net_pay",
+            "amount": null,
+            "currency": null,
+            "payment_date": "2024-09-23",
+            "status": "UNRESOLVED",
+            "reason": "MISSING_LINK"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "87170.56",
+        "amount_difference": "-87170.56",
+        "expected_earliest_date_for_full_payment": "2024-10-23"
+      },
+      {
+        "request_id": "request_08",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_06 -> message-fact:7c7a9969ca9ca29831fd0b5e: MISSING_LINK"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_06",
+            "fact_id": "message-fact:7c7a9969ca9ca29831fd0b5e",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "NEXT_OCCURRENCE_ONLY",
+            "amount_meaning": "net_pay",
+            "amount": "1422.85",
+            "currency": "EUR",
+            "payment_date": null,
+            "status": "UNRESOLVED",
+            "reason": "MISSING_LINK"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "284.57",
+        "amount_difference": "-284.57",
+        "expected_earliest_date_for_full_payment": "2025-04-15"
+      },
+      {
+        "request_id": "request_09",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "166.61",
+        "amount_difference": "-166.61",
+        "expected_earliest_date_for_full_payment": "2026-07-04"
+      },
+      {
+        "request_id": "request_10",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_07: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "12700",
+        "amount_difference": "-12700.00",
+        "expected_earliest_date_for_full_payment": ""
+      },
+      {
+        "request_id": "request_11",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "9997525.57",
+        "baseline_earliest_date": "2025-07-15",
+        "amount_safe_to_pay": "9997525.57",
+        "earliest_date_for_full_payment": "2025-07-15",
+        "issues": [
+          "message_08 -> message-fact:2d43a9155327017881098e90: INVALID_DATES"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_08",
+            "fact_id": "message-fact:2d43a9155327017881098e90",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "ONGOING",
+            "amount_meaning": "net_pay",
+            "amount": "38760000",
+            "currency": "IDR",
+            "payment_date": null,
+            "status": "UNRESOLVED",
+            "reason": "INVALID_DATES"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "12510645",
+        "amount_difference": "-2513119.43",
+        "expected_earliest_date_for_full_payment": "2025-07-15"
+      },
+      {
+        "request_id": "request_12",
+        "cohort": "message_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "56931.14",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "56931.14",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [
+          {
+            "message_id": "message_09",
+            "fact_id": "message-state:d6eca4a9866d1ff0b0ef5c58",
+            "type": "NON_FINANCIAL",
+            "certainty": "CONFIRMED",
+            "scope": "ONE_OFF",
+            "amount_meaning": "unknown",
+            "amount": null,
+            "currency": null,
+            "payment_date": null,
+            "status": "REJECTED",
+            "reason": "NON_FINANCIAL"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "65164",
+        "amount_difference": "-8232.86",
+        "expected_earliest_date_for_full_payment": "2026-04-05"
+      },
+      {
+        "request_id": "request_13",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "380.75",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "380.75",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "433.4",
+        "amount_difference": "-52.65",
+        "expected_earliest_date_for_full_payment": "2024-05-15"
+      },
+      {
+        "request_id": "request_14",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_10 -> message-fact:7780bd02d8c45885109c1ef4: MISSING_LINK"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_10",
+            "fact_id": "message-fact:7780bd02d8c45885109c1ef4",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "ONGOING",
+            "amount_meaning": "net_pay",
+            "amount": "2717",
+            "currency": "EUR",
+            "payment_date": null,
+            "status": "UNRESOLVED",
+            "reason": "MISSING_LINK"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "597.74",
+        "amount_difference": "-597.74",
+        "expected_earliest_date_for_full_payment": ""
+      },
+      {
+        "request_id": "request_15",
+        "cohort": "message_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "0.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "0.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "message_11 -> message-fact:80482d8b469ecae462829f61: MISSING_LINK"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_11",
+            "fact_id": "message-fact:80482d8b469ecae462829f61",
+            "type": "SALARY",
+            "certainty": "CONFIRMED",
+            "scope": "ONE_OFF",
+            "amount_meaning": "net_pay",
+            "amount": "1661",
+            "currency": "EUR",
+            "payment_date": "2026-01-15",
+            "status": "UNRESOLVED",
+            "reason": "MISSING_LINK"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "83.05",
+        "amount_difference": "-83.05",
+        "expected_earliest_date_for_full_payment": ""
+      },
+      {
+        "request_id": "request_16",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "122500",
+        "baseline_earliest_date": "2023-08-12",
+        "amount_safe_to_pay": "122500",
+        "earliest_date_for_full_payment": "2023-08-12",
+        "issues": [
+          "missing amount event_1442: never substituted with zero",
+          "message_12: SOURCE_NOT_EXHAUSTED",
+          "image_02: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "122500",
+        "amount_difference": "0",
+        "expected_earliest_date_for_full_payment": "2023-08-12"
+      },
+      {
+        "request_id": "request_17",
+        "cohort": "image_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "238964.03",
+        "baseline_earliest_date": "2026-04-15",
+        "amount_safe_to_pay": "238964.03",
+        "earliest_date_for_full_payment": "2026-04-15",
+        "issues": [
+          "missing amount event_1545: never substituted with zero",
+          "image_03: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "243849.58",
+        "amount_difference": "-4885.55",
+        "expected_earliest_date_for_full_payment": "2026-03-15"
+      },
+      {
+        "request_id": "request_18",
+        "cohort": "message_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "492.94",
+        "baseline_earliest_date": "2026-09-15",
+        "amount_safe_to_pay": "492.94",
+        "earliest_date_for_full_payment": "2026-09-15",
+        "issues": [],
+        "candidates": [
+          {
+            "message_id": "message_13",
+            "fact_id": "message-state:516898ac0f9497d278c4a645",
+            "type": "NON_FINANCIAL",
+            "certainty": "CONFIRMED",
+            "scope": "ONE_OFF",
+            "amount_meaning": "unknown",
+            "amount": null,
+            "currency": null,
+            "payment_date": null,
+            "status": "REJECTED",
+            "reason": "NON_FINANCIAL"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "462",
+        "amount_difference": "30.94",
+        "expected_earliest_date_for_full_payment": "2026-09-15"
+      },
+      {
+        "request_id": "request_19",
+        "cohort": "image_only",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "13661.50",
+        "baseline_earliest_date": "2024-10-15",
+        "amount_safe_to_pay": "13661.50",
+        "earliest_date_for_full_payment": "2024-10-15",
+        "issues": [
+          "missing amount event_1700: never substituted with zero",
+          "image_04: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "28820",
+        "amount_difference": "-15158.50",
+        "expected_earliest_date_for_full_payment": "2024-09-15"
+      },
+      {
+        "request_id": "request_20",
+        "cohort": "message+image",
+        "complete": false,
+        "baseline_amount_safe_to_pay": "8888.21",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "8888.21",
+        "earliest_date_for_full_payment": "",
+        "issues": [
+          "missing amount event_1786: never substituted with zero",
+          "image_05: SOURCE_NOT_EXHAUSTED"
+        ],
+        "candidates": [
+          {
+            "message_id": "message_14",
+            "fact_id": "message-fact:eb0de653852acca9b2aa36df",
+            "type": "REFUND",
+            "certainty": "PENDING",
+            "scope": "ONE_OFF",
+            "amount_meaning": "amount_paid",
+            "amount": "8640",
+            "currency": "INR",
+            "payment_date": null,
+            "status": "REJECTED",
+            "reason": "PENDING_NOT_CASH"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "5400",
+        "amount_difference": "3488.21",
+        "expected_earliest_date_for_full_payment": ""
+      },
+      {
+        "request_id": "request_21",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "1555.93",
+        "baseline_earliest_date": "2026-04-15",
+        "amount_safe_to_pay": "1555.93",
+        "earliest_date_for_full_payment": "2026-04-15",
+        "issues": [],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "1543.35",
+        "amount_difference": "12.58",
+        "expected_earliest_date_for_full_payment": "2026-04-15"
+      },
+      {
+        "request_id": "request_22",
+        "cohort": "message_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "433.97",
+        "baseline_earliest_date": "2025-01-15",
+        "amount_safe_to_pay": "433.97",
+        "earliest_date_for_full_payment": "2025-01-15",
+        "issues": [],
+        "candidates": [
+          {
+            "message_id": "message_15",
+            "fact_id": "message-fact:0fb8543685c088e99d737502",
+            "type": "INVESTMENT_VALUE",
+            "certainty": "CONFIRMED",
+            "scope": "ONGOING",
+            "amount_meaning": "valuation",
+            "amount": null,
+            "currency": null,
+            "payment_date": null,
+            "status": "REJECTED",
+            "reason": "VALUATION_NOT_CASH"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "475.46",
+        "amount_difference": "-41.49",
+        "expected_earliest_date_for_full_payment": "2025-01-15"
+      },
+      {
+        "request_id": "request_23",
+        "cohort": "message_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "4516.55",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "4516.55",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [
+          {
+            "message_id": "message_16",
+            "fact_id": "message-fact:fd41a3fb693851209d2218c9",
+            "type": "PENDING_PAYOUT",
+            "certainty": "PENDING",
+            "scope": "ONE_OFF",
+            "amount_meaning": "amount_paid",
+            "amount": null,
+            "currency": null,
+            "payment_date": null,
+            "status": "REJECTED",
+            "reason": "PENDING_NOT_CASH"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "9152",
+        "amount_difference": "-4635.45",
+        "expected_earliest_date_for_full_payment": "2025-07-15"
+      },
+      {
+        "request_id": "request_24",
+        "cohort": "message_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "10796.18",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "10796.18",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [
+          {
+            "message_id": "message_17",
+            "fact_id": "message-fact:b325233c04e03ec460b3723e",
+            "type": "PAYMENT_RECEIVED",
+            "certainty": "CONFIRMED",
+            "scope": "ONE_OFF",
+            "amount_meaning": "amount_received",
+            "amount": "33550",
+            "currency": "INR",
+            "payment_date": "2025-12-28",
+            "status": "REJECTED",
+            "reason": "PAST_CASH_IN_SNAPSHOT"
+          }
+        ],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "13420",
+        "amount_difference": "-2623.82",
+        "expected_earliest_date_for_full_payment": ""
+      },
+      {
+        "request_id": "request_25",
+        "cohort": "structured_only",
+        "complete": true,
+        "baseline_amount_safe_to_pay": "158512.00",
+        "baseline_earliest_date": "",
+        "amount_safe_to_pay": "158512.00",
+        "earliest_date_for_full_payment": "",
+        "issues": [],
+        "candidates": [],
+        "amendments": [],
+        "expected_amount_safe_to_pay": "1425000",
+        "amount_difference": "-1266488.00",
+        "expected_earliest_date_for_full_payment": ""
+      }
+    ]
+  }
+}
