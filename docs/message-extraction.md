@@ -35,3 +35,16 @@ After B is committed and the environment is configured, run:
 .\.venv\Scripts\python.exe code/evaluation/message_extract.py --cache-only
 ```
 The first unchanged rerun must report zero external attempts and zero incremental tokens/cost. A preflight missing-configuration exit makes no calls and is not evidence of a completed batch.
+
+## Configured OpenRouter run
+
+The supplied credential selected OpenRouter explicitly; no call uses it at the OpenAI endpoint. `MESSAGE_PROVIDER=openrouter` uses `/api/v1/chat/completions` with strict response_format, temperature 0 and the OpenAI upstream pinned without fallbacks. Model: `openai/gpt-4.1-mini`, chosen for low-cost structured extraction. [OpenRouter documents schema support and prices](https://openrouter.ai/openai/gpt-4.1-mini): USD 0.40/M input, 1.60/M output, 0.10/M cached input. These are explicit local estimates; provider-reported usage.cost is separately retained using Decimal. Changing provider/model changes the existing cache key; no successful entries existed before this configuration.
+
+The optional Windows launcher `scripts/message-run.ps1` reads non-secret run settings from ignored `cache/message-config.json`, decrypts the user-bound DPAPI credential into a child environment, clears it afterwards, and invokes extract/results. The application still reads credentials only from environment. The encrypted local credential is not portable or part of the submission. Normal environment configuration remains supported on every platform.
+
+```powershell
+.\scripts\message-run.ps1 extract --limit 3
+.\scripts\message-run.ps1 extract
+.\scripts\message-run.ps1 extract
+.\scripts\message-run.ps1 results
+```

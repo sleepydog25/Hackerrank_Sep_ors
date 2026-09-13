@@ -21,7 +21,7 @@ class ModelConfig:
     cached_input_per_million: Decimal | None = None
 
     def __post_init__(self):
-        if not self.model or self.provider!='openai':raise ValueError('Configure MESSAGE_MODEL and supported MESSAGE_PROVIDER=openai')
+        if not self.model or self.provider not in ('openai','openrouter'):raise ValueError('Configure MESSAGE_MODEL and MESSAGE_PROVIDER=openai or openrouter')
         if not 1<=self.timeout<=60 or not 1<=self.max_attempts<=3 or not 256<=self.max_output_tokens<=8000:
             raise ValueError('invalid bounded provider configuration')
         for value in (self.input_per_million,self.output_per_million,self.cached_input_per_million):
@@ -31,7 +31,7 @@ class ModelConfig:
     def from_env(cls):
         def price(name):return Decimal(os.environ[name]) if os.environ.get(name) else None
         return cls(model=os.environ.get('MESSAGE_MODEL',''),provider=os.environ.get('MESSAGE_PROVIDER','openai'),
-                   api_key=os.environ.get('OPENAI_API_KEY',''),timeout=int(os.environ.get('MESSAGE_TIMEOUT','45')),
+                   api_key=os.environ.get('OPENROUTER_API_KEY' if os.environ.get('MESSAGE_PROVIDER')=='openrouter' else 'OPENAI_API_KEY',''),timeout=int(os.environ.get('MESSAGE_TIMEOUT','45')),
                    max_attempts=int(os.environ.get('MESSAGE_MAX_ATTEMPTS','2')),
                    max_output_tokens=int(os.environ.get('MESSAGE_MAX_OUTPUT_TOKENS','3000')),
                    input_per_million=price('MESSAGE_INPUT_USD_PER_MILLION'),
@@ -45,6 +45,8 @@ class ProviderReply:
     retryable: bool = False
     usage: dict | None = None
     actual_model: str | None = None
+    reported_cost_usd: str | None = None
+    upstream_provider: str | None = None
 
 def usage_fields(raw):
     raw=raw if isinstance(raw,dict) else {}
@@ -64,20 +66,27 @@ class OpenAIMessageProvider:
     def __init__(self,config):self.config=config
 
     def payload(self,task):
+        if self.config.provider=='openrouter':
+            return dict(model=self.config.model,temperature=0,max_tokens=self.config.max_output_tokens,
+                        messages=[{'role':'system','content':SYSTEM_INSTRUCTION},
+                                  {'role':'user','content':canonical(task.model_input())}],
+                        provider={'only':['OpenAI'],'allow_fallbacks':False,'require_parameters':True},
+                        response_format={'type':'json_schema','json_schema':{'name':'message_evidence','strict':True,'schema':output_schema()}})
         return dict(model=self.config.model,store=False,max_output_tokens=self.config.max_output_tokens,
                     input=[{'role':'system','content':SYSTEM_INSTRUCTION},
                            {'role':'user','content':canonical(task.model_input())}],
                     text={'format':{'type':'json_schema','name':'message_evidence','strict':True,'schema':output_schema()}})
 
     def call(self,task):
-        if not self.config.api_key:raise ValueError('OPENAI_API_KEY is not configured')
-        req=Request('https://api.openai.com/v1/responses',data=canonical(self.payload(task)).encode('utf-8'),
+        if not self.config.api_key:raise ValueError('Provider API key is not configured')
+        endpoint='https://openrouter.ai/api/v1/chat/completions' if self.config.provider=='openrouter' else 'https://api.openai.com/v1/responses'
+        req=Request(endpoint,data=canonical(self.payload(task)).encode('utf-8'),
                     headers={'Authorization':'Bearer '+self.config.api_key,'Content-Type':'application/json'},method='POST')
         try:
             with urlopen(req,timeout=self.config.timeout) as response:
                 body=response.read(262145)
             if len(body)>262144:return ProviderReply(error='OUTPUT_TRUNCATED')
-            raw=json.loads(body)
+            raw=json.loads(body,parse_float=Decimal)
         except HTTPError as exc:
             # Never retain provider error bodies/headers; they may echo input or credentials.
             return ProviderReply(error='MODEL_RATE_LIMIT' if exc.code==429 else 'MODEL_PROVIDER_ERROR',
@@ -87,6 +96,7 @@ class OpenAIMessageProvider:
             return ProviderReply(error='MODEL_TIMEOUT' if isinstance(exc.reason,(TimeoutError,socket.timeout)) else 'MODEL_PROVIDER_ERROR',retryable=True)
         except (ValueError,UnicodeError):return ProviderReply(error='INVALID_STRUCTURED_OUTPUT')
         if not isinstance(raw,dict):return ProviderReply(error='INVALID_STRUCTURED_OUTPUT')
+        if self.config.provider=='openrouter':return self.parse_openrouter(raw)
         usage=usage_fields(raw.get('usage'))
         model=raw.get('model') if isinstance(raw.get('model'),str) else None
         if raw.get('status')=='incomplete':return ProviderReply(error='OUTPUT_TRUNCATED',usage=usage,actual_model=model)
@@ -105,3 +115,23 @@ class OpenAIMessageProvider:
                     if part.get('type')=='output_text':texts.append(part.get('text',''))
         if len(texts)!=1 or not isinstance(texts[0],str):return ProviderReply(error='INVALID_STRUCTURED_OUTPUT',usage=usage,actual_model=model)
         return ProviderReply(text=texts[0],usage=usage,actual_model=model)
+
+    @staticmethod
+    def parse_openrouter(raw):
+        u=raw.get('usage') if isinstance(raw.get('usage'),dict) else {}
+        details=u.get('prompt_tokens_details')
+        usage=usage_fields(dict(input_tokens=u.get('prompt_tokens'),output_tokens=u.get('completion_tokens'),
+                                total_tokens=u.get('total_tokens'),input_tokens_details=details))
+        cost=u.get('cost')
+        cost=str(cost) if isinstance(cost,(Decimal,int)) and not isinstance(cost,bool) and Decimal(cost).is_finite() and cost>=0 else None
+        meta=dict(usage=usage,actual_model=raw.get('model') if isinstance(raw.get('model'),str) else None,
+                  reported_cost_usd=cost,upstream_provider=raw.get('provider') if isinstance(raw.get('provider'),str) else None)
+        choices=raw.get('choices')
+        if not isinstance(choices,list) or len(choices)!=1 or not isinstance(choices[0],dict):return ProviderReply(error='INVALID_STRUCTURED_OUTPUT',**meta)
+        choice=choices[0];message=choice.get('message')
+        if choice.get('finish_reason')=='length':return ProviderReply(error='OUTPUT_TRUNCATED',**meta)
+        if choice.get('finish_reason')!='stop' or not isinstance(message,dict):return ProviderReply(error='UNSUPPORTED_CONTENT',**meta)
+        if message.get('refusal'):return ProviderReply(error='UNSUPPORTED_CONTENT',**meta)
+        content=message.get('content')
+        if not isinstance(content,str):return ProviderReply(error='INVALID_STRUCTURED_OUTPUT',**meta)
+        return ProviderReply(text=content,**meta)

@@ -52,3 +52,23 @@ class MessageProviderTests(unittest.TestCase):
     def test_config_does_not_accept_unbounded_retries_or_invalid_price(self):
         for kwargs in (dict(max_attempts=100),dict(timeout=0),dict(input_per_million=Decimal('NaN'))):
             with self.assertRaises(ValueError):ModelConfig('fake',**kwargs)
+
+    def test_openrouter_endpoint_and_schema_are_explicit(self):
+        provider=OpenAIMessageProvider(ModelConfig('openai/gpt-4.1-mini',provider='openrouter',api_key='synthetic-only'))
+        payload=provider.payload(task())
+        self.assertTrue(payload['response_format']['json_schema']['strict'])
+        self.assertFalse(payload['provider']['allow_fallbacks'])
+        raw={'model':'openai/gpt-4.1-mini','provider':'OpenAI',
+             'choices':[{'finish_reason':'stop','message':{'content':response()}}],
+             'usage':{'prompt_tokens':100,'completion_tokens':20,'total_tokens':120,
+                      'prompt_tokens_details':{'cached_tokens':0},'cost':0.000072}}
+        with patch('buy_or_wait.message_provider.urlopen',return_value=io.BytesIO(json.dumps(raw).encode())) as send:
+            r=provider.call(task())
+        self.assertEqual(send.call_args.args[0].full_url,'https://openrouter.ai/api/v1/chat/completions')
+        self.assertEqual(r.reported_cost_usd,'0.000072')
+        self.assertEqual(r.usage['total_tokens'],120)
+        self.assertEqual(r.upstream_provider,'OpenAI')
+
+    def test_openrouter_truncation_is_not_parsed_as_success(self):
+        r=OpenAIMessageProvider.parse_openrouter({'choices':[{'finish_reason':'length'}]})
+        self.assertEqual(r.error,'OUTPUT_TRUNCATED')

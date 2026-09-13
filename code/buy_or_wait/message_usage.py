@@ -19,4 +19,8 @@ def summarize(records):
     result['estimated_cost_usd']=str(sum(costs,Decimal(0))) if len(costs)==len(calls) else None
     result['known_estimated_cost_usd']=str(sum(costs,Decimal(0)))
     result['unknown_cost_attempts']=len(calls)-len(costs)
+    reported=[Decimal(r['reported_cost_usd']) for r in calls if r.get('reported_cost_usd') is not None]
+    result['reported_cost_usd']=str(sum(reported,Decimal(0))) if len(reported)==len(calls) else None
+    result['known_reported_cost_usd']=str(sum(reported,Decimal(0)))
+    result['upstream_providers']=sorted({r['upstream_provider'] for r in calls if r.get('upstream_provider')})
     return result

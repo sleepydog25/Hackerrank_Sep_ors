@@ -13,7 +13,7 @@ from buy_or_wait.message_provider import ModelConfig,OpenAIMessageProvider
 from buy_or_wait.message_usage import summarize
 
 def tasks(data):
-    for q in sorted(data.requests.values(),key=lambda q:q.request_id):
+    for q in sorted(data.selected_requests,key=lambda q:q.request_id):
         for m in sorted(data.messages_by_user.get(q.user_id,()),key=lambda m:(m.sent_at,m.message_id)):
             if m.request_id not in (None,q.request_id) or m.sent_at.date()>q.request_date:continue
             yield q,m,build_input(m,q,data.profiles[q.user_id],data.events_by_user.get(q.user_id,()))
@@ -29,10 +29,10 @@ def main():
     if args.cache_only and args.refresh:parser.error('--refresh cannot be used with --cache-only')
     try:config=ModelConfig.from_env()
     except (ValueError,ArithmeticError):
-        print('CONFIGURATION_MISSING_OR_INVALID: set MESSAGE_PROVIDER=openai and MESSAGE_MODEL; no external calls made.')
+        print('CONFIGURATION_MISSING_OR_INVALID: set MESSAGE_PROVIDER and MESSAGE_MODEL; no external calls made.')
         return 2
     if not args.cache_only and not config.api_key:
-        print('CONFIGURATION_MISSING: set OPENAI_API_KEY locally; do not paste it into chat. No external calls made.')
+        print('CONFIGURATION_MISSING: set the selected provider API key locally. No external calls made.')
         return 2
     store=ExtractionStore(ROOT/'cache/messages.sqlite');provider=OpenAIMessageProvider(config)
     run_id=str(uuid.uuid4());results=[]

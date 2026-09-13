@@ -7,26 +7,26 @@ Phase 3B - Message Evidence Extraction; feat/message-extraction.
 B: Responses adapter, strict parsing/failure handling, transactional SQLite cache, per-attempt usage accounting, bounded retries, restart recovery and 192 passing offline tests. No external calls.
 
 ## Last known good commit
-Phase 3B B is the commit containing this RESUME version, titled feat: add cached message model extraction. Resolve with git log -1 --format=%H -- RESUME.md after commit. A: 4424afe. Previous frozen checkpoint: 7fc459e (Phase 3A D); b04f7ad (financial baseline).
+Phase 3B B: 29d9b4a; A: 4424afe. Provider follow-up is the commit containing this RESUME version, titled feat: support configured OpenRouter extraction. This is a B adapter follow-up, not completion of C/D. Frozen checkpoint: 7fc459e (Phase 3A D); b04f7ad (financial baseline).
 
 ## Last passing test command
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
-192 tests; Python 3.12.14, standard library only.
+198 tests; Python 3.12.14, standard library only. The resumed C preparation added cohort-selection and integration tests; no baseline changes.
 
 ## Frozen dependencies
 Phase 2.x deterministic financial policies and Phase 3A validation/reconciliation/completeness. Only demonstrated integration defects may change these. No baseline tuning, image/VLM, plans/ranking, final output.csv, dataset changes or solved-output-driven prompting.
 
 ## Extraction/cache state
-Schema/prompt/extractor: message-1. Provider adapter: openai Responses; exact model must be configured. No real provider calls or real extraction cache yet. No API credentials or model configured in current environment; user has been asked to configure locally. No secrets printed. SQLite stores attempts before dispatch, and output/usage atomically; cached unresolved and successful facts persist. Unknown interrupted calls require explicit review/release.
+Schema/prompt/extractor: message-1. Configured run: openrouter / openai/gpt-4.1-mini, pinned OpenAI upstream with fallbacks disabled. User supplied an OpenRouter credential, retained only in ignored Windows-user-encrypted cache/openrouter-key.dpapi; the launcher injects it into the child environment. Non-secret run settings: cache/message-config.json. SQLite integrity was verified OK; zero cache rows and zero usage attempts before first live run. No existing entries invalidated by provider selection. Explicit content/context and version hashes remain unchanged; provider is already a cache-key component.
 
 ## Corpus
 215 messages, 215 users and message-bearing requests (198 evaluation + 17 samples); 39 linked / 176 unlinked. All messages precede requests, no empty texts or exact/normalized duplicates. 127-330 characters. Keyword topics are evaluation-only; English/Indonesian require semantic extraction.
 
 ## Files currently being changed
-None after B commit. Before commit: message_extraction.py, message_provider.py, message_cache.py, message_usage.py, message_extract.py, message contract/cache/provider tests, docs/message-extraction.md and RESUME.md.
+Provider adapter follow-up plus preserved C preparation: message_results.py, message_extract.py cohort fix, message integration tests, result/usage artifacts. All existing interrupted work preserved. C/D not complete.
 
 ## Exact next action
-Checkpoint C: controlled real batch using MESSAGE_MODEL, MESSAGE_PROVIDER=openai and locally configured OPENAI_API_KEY. First verify B is committed. Run message_extract.py twice; prove unchanged rerun has zero calls/tokens/cost. Build/run aggregate and 250-request integration diagnostics before sample-label comparisons. D remains read-only review then confirmed fixes and final freeze. Do not mark C/D or Phase 3B complete without real execution. Missing credentials permit offline work but block real batch verification.
+Checkpoint C: run scripts/message-run.ps1 extract --limit 3, inspect extraction/schema/usage only, then normal full batch (cached successes skipped). Run unchanged batch again and prove zero calls/tokens/cost. Run scripts/message-run.ps1 results for extraction and 250-request diagnostics before inspecting sample-label diagnostics. Then C commit and D read-only review/hardening/freeze. Never refresh all entries merely after restart.
 
 ## Reproduction commands
 .\.venv\Scripts\python.exe code/evaluation/message_audit.py

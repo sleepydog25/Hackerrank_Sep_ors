@@ -102,6 +102,7 @@ class ExtractionStore:
                 except (ValueError,TypeError,KeyError,OverflowError,RecursionError,UnicodeError):
                     status='PERMANENT_PARSE_FAILURE'; error='SCHEMA_VALIDATION_FAILED'
             record.update(usage,status=status,error=error,actual_model=reply.actual_model,
+                          reported_cost_usd=reply.reported_cost_usd,upstream_provider=reply.upstream_provider,
                           estimated_cost_usd=estimated_cost(usage,config),
                           price_basis={k:str(getattr(config,k)) if getattr(config,k) is not None else None
                                        for k in ('input_per_million','output_per_million','cached_input_per_million')})
